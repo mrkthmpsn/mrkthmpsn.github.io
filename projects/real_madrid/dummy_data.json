@@ -1,0 +1,74 @@
+[
+    {
+        "type": "pre-peak",
+        "percentage": 0.33,
+        "players": [
+            {
+                "name": "Jimmy Camavinga",
+                "age": 18,
+                "position": "CM",
+                "minutes": 1800
+            },
+            {
+                "name": "Jonny Doeno",
+                "age": 21,
+                "position": "CB",
+                "minutes": 900
+            },
+            {
+                "name": "Alan John",
+                "age": 20,
+                "position": "ST",
+                "minutes": 270
+            }
+        ]
+    },
+    {
+        "type": "peak-age",
+        "percentage": 0.33,
+        "players": [
+            {
+                "name": "Marti Ulloa",
+                "age": 26,
+                "position": "CM",
+                "minutes": 900
+            },
+            {
+                "name": "Paolo Lugani",
+                "age": 27,
+                "position": "CB",
+                "minutes": 1800
+            },
+            {
+                "name": "Terry Venables",
+                "age": 29,
+                "position": "GK",
+                "minutes": 270
+            }
+        ]
+    },
+    {
+        "type": "post-peak",
+        "percentage": 0.33,
+        "players": [
+            {
+                "name": "Emiliano Kane",
+                "age": 31,
+                "position": "CM",
+                "minutes": 1800
+            },
+            {
+                "name": "Iago Estevao",
+                "age": 29,
+                "position": "W",
+                "minutes": 900
+            },
+            {
+                "name": "Rory Mazepin",
+                "age": 33,
+                "position": "CB",
+                "minutes": 270
+            }
+        ]
+    }
+]
