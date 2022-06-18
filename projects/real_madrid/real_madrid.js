@@ -4,9 +4,10 @@
 // I'm going to need to define an svg image for each 'call' of this
 // Then it'll just be a 'simple' dynamic bar chart?
 
+// This function needs to have some kind of way of denoting the season and attaching to a specific html div, so that it can be used multiple times in one place.
 async function squad_age_bar() {
     const width = 600
-    const height = 400
+    const height = 200
 
     let svg = d3
         .select(`#graph`)
@@ -62,7 +63,7 @@ async function squad_age_bar() {
         .attr('height', barAreaHeight);
 
     // get the data
-    const request = new Request("./dummy_data.json");
+    const request = new Request("./dummy_data2.json");
 
     const response = await fetch(request);
     const data = await response.json();
@@ -97,10 +98,9 @@ async function squad_age_bar() {
         // Order players by minutes played
         const playersObj = d["players"].sort((a, b) => parseFloat(b.minutes) - parseFloat(a.minutes));
 
-        // So I think what this will look like will be creating an initial empty list; adding formatted html strings to that list while cycling through the `players`; then combining that list into an html string, essentially just joining them up with line breaks?
-
         let playersString = "";
 
+        // Need to make this only for players over X minutes, then count the players with fewer than that and add a "+ Y players on <X mins"
         for (let i = 0; i < playersObj.length; i++) {
             let tempString = `<b>${playersObj[i].name} (${playersObj[i].age})</b> - ${playersObj[i].minutes} mins`
             console.log(tempString);
@@ -117,6 +117,8 @@ async function squad_age_bar() {
     };
 
     let rectStarts = [0];
+
+    // Want to add a number that sits in the middle of each bar with the percentage
 
     barArea.selectAll('rect')
         .data(data)
