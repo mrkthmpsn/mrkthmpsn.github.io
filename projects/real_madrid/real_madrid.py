@@ -98,7 +98,7 @@ for _, row in foo.iterrows():
 
 foo["peak_status"] = peak_status
 
-empty_dict = {}
+empty_list = []
 
 for season in foo["Season"].unique():
     subfoo = foo[foo["Season"] == season]
@@ -161,6 +161,8 @@ for season in foo["Season"].unique():
             "players": post_peak_players,
         },
     ]
+
+    empty_list.append({"season": season, "data": season_json})
 
 
 # {i: "" for i in foo["Player"].unique()}
