@@ -5,18 +5,18 @@
 // Then it'll just be a 'simple' dynamic bar chart?
 
 // This function needs to have some kind of way of denoting the season and attaching to a specific html div, so that it can be used multiple times in one place.
-async function squad_age_bar() {
-    const width = 600
-    const height = 200
-
+async function squad_age_bar(graphId, seasonId) {
+    const width = 600;
+    const height = 100;
+    console.log(`#${graphId}`);
     let svg = d3
-        .select(`#graph`)
+        .select(`#${graphId}`)
         .append(`svg`)
         .attr(`class`, `graph-svg`)
         .attr(`width`, width)
         .attr(`height`, height);
 
-    let tooltip = d3.select("#graph")
+    let tooltip = d3.select(`#${graphId}`)
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
@@ -25,8 +25,10 @@ async function squad_age_bar() {
         .style("padding", "10px")
         .style("color", "black");
 
-    const showTooltip = function (pointerEvent, d) {
-        console.log(pointerEvent);
+    const showTooltip = function (pointerX, pointerY, d) {
+        // console.log(pointerEvent);
+        
+
         tooltip
             .transition()
             .duration(100)
@@ -34,13 +36,14 @@ async function squad_age_bar() {
             .style("opacity", 1)
             .html(barHoverText(d))
             .style('position', 'absolute')
-            .style("left", (pointerEvent[0] + 40) + "px")
-            .style("top", (pointerEvent[1] + 40) + "px")
+            .style("left", (pointerX + 20) + "px")
+            .style("top", (pointerY - 40) + "px")
     }
-    const moveTooltip = function (pointerEvent) {
+    const moveTooltip = function (pointerX, pointerY) {
         tooltip
-            .style("left", (pointerEvent[0] + 40) + "px")
-            .style("top", (pointerEvent[1] + 40) + "px")
+            .style('position', 'absolute')
+            .style("left", (pointerX + 20) + "px")
+            .style("top", (pointerY - 40) + "px")
     }
     const hideTooltip = function (d) {
         tooltip
@@ -49,7 +52,7 @@ async function squad_age_bar() {
             .style("opacity", 0)
     }
 
-    const margin = { top: 50, right: 20, bottom: 50, left: 20 };
+    const margin = { top: 25, right: 20, bottom: 25, left: 20 };
 
     const barAreaWidth = width - margin.left - margin.right
     const barAreaHeight = height - margin.top - margin.bottom
@@ -66,7 +69,13 @@ async function squad_age_bar() {
     const request = new Request("./dummy_data2.json");
 
     const response = await fetch(request);
-    const data = await response.json();
+    
+    const totalData = await response.json();
+    
+    let dataList = []
+    totalData.map(function (dataObj) {if (dataObj["season"] === seasonId) dataList.push(dataObj["data"])});
+    let data = dataList[0]
+    
 
     // Ideally I'd add some kind of type-checking to the data, because this type of JSON should only ever have a length of three (pre-peak, peak, and post-peak)
 
@@ -75,60 +84,71 @@ async function squad_age_bar() {
     // I'm definitely going to have to change the bars coordinates, because I'm going to want to leave room around the outside of the bar itself for the text to hover?
 
     const highlightRects = function (selection) {
-        if (selection.classed("age-rect")) {
+        console.log(selection);
+        // let selectedObj = selection._groups[0];
+        // console.log(selectedObj.parentNode.name);
+        if (selection.classed("age-group")) {
             selection.attr("class", "highlighted");
         } else {
-            selection.attr("class", "age-rect");
+            selection.attr("class", "age-group");
         }
 
         let highlightedNumber = svg.selectAll(".highlighted").size();
 
         if (highlightedNumber === 0) {
-            svg.selectAll(".age-rect").style("opacity", 1);
+            svg.selectAll(".age-group").style("opacity", 1);
         } else {
-            svg.selectAll(".age-rect").style("opacity", 0.5);
+            svg.selectAll(".age-group").style("opacity", 0.5);
 
             svg.selectAll(".highlighted").style("opacity", 1);
         }
     };
 
     const barHoverText = function (d) {
-        // What do I want this to do?
-
         // Order players by minutes played
+        console.log(d);
         const playersObj = d["players"].sort((a, b) => parseFloat(b.minutes) - parseFloat(a.minutes));
 
-        let playersString = "";
+        let playersString = "<ul>";
+        let bitPartPlayers = 0;
 
         // Need to make this only for players over X minutes, then count the players with fewer than that and add a "+ Y players on <X mins"
         for (let i = 0; i < playersObj.length; i++) {
-            let tempString = `<b>${playersObj[i].name} (${playersObj[i].age})</b> - ${playersObj[i].minutes} mins`
-            console.log(tempString);
-
-            playersString += "<p>" + tempString + "</p>"
+            if (playersObj[i].minutes < 900) {
+                bitPartPlayers += 1
+            } else {
+                let tempString = `<b>${playersObj[i].name} (${playersObj[i].age})</b> - ${playersObj[i].minutes} mins`
+            
+                playersString += `<li>${tempString}</li>`}
         }
 
-        // (Is that the best way of formatting this? How many players are you going to be able to list at a reasonable text size?)
-
-        // Maybe I can write the top 5 players out and then combine the rest into a "+ X others, YYYY minutes"
+        playersString += "</ul>"
+        
+        if (bitPartPlayers > 0) {playersString += `(Plus ${bitPartPlayers} on < 900 mins)`}
 
         return playersString
 
     };
 
     let rectStarts = [0];
+    let rectWidths = [];
 
     // Want to add a number that sits in the middle of each bar with the percentage
 
-    barArea.selectAll('rect')
+    let barGroups = barArea.selectAll('g')
         .data(data)
         .enter()
+        .append('g')
+        .attr('class', 'age-group');
+
+    barGroups
         .append('rect')
-        .attr('class', 'age-rect')
+        // .attr('class', 'age-rect')
         // Remember, x and y being 0 is relative to `barArea`, not `svg`
         .attr('x', function (d, i) {
-            rectStarts.push((d["percentage"] * barAreaWidth) + rectStarts[i]);
-
+            let rectWidth = (d["percentage"] * barAreaWidth);
+            rectStarts.push(rectWidth + rectStarts[i]);
+            rectWidths.push(rectWidth);
             return rectStarts[i]
         })
         .attr('y', 0)
@@ -138,21 +158,57 @@ async function squad_age_bar() {
         .attr('fill', (d, i) => ageColours[i])
         .attr('stroke', 'black')
         .on("mouseover", function (event, d) {
-            d3.select(this).call(highlightRects);
+            d3.select(this.parentNode).call(highlightRects);
 
-            let pointerEvent = d3.pointer(event);
-            showTooltip(pointerEvent, d);
+            let pointerX = event.pageX
+            let pointerY = event.pageY;
+            showTooltip(pointerX, pointerY, d);
         })
         .on("mousemove", function (event, d) {
-            let pointerEvent = d3.pointer(event);
-            moveTooltip(pointerEvent);
+            let pointerX = event.pageX
+            let pointerY = event.pageY;
+            moveTooltip(pointerX, pointerY);
         })
         .on('mouseleave', function () {
-            d3.select(this).call(highlightRects);
+            d3.select(this.parentNode).call(highlightRects);
 
             hideTooltip();
         });
 
+    barGroups
+        .append('text')
+        .attr('x', (d, i) => (rectWidths[i] / 2) + rectStarts[i])
+        .attr('y', barAreaHeight / 2)
+        .attr('font-weight', 700)
+        .attr('font-family', 'arial')
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'middle')
+        .attr('dy', '.1em')
+        .style("stroke", "black")
+        .style('fill', 'white')
+        .style('stroke-width', 1.5)
+        .style('font-size', '40px')
+        .text((d) => `${Math.round(d["percentage"] * 100)}%`)
+        .on("mouseover", function (event, d) {
+            d3.select(this.parentNode).call(highlightRects);
+
+            let pointerX = event.pageX
+            let pointerY = event.pageY;
+            showTooltip(pointerX, pointerY, d);
+        })
+        .on("mousemove", function (event, d) {
+            let pointerX = event.pageX
+            let pointerY = event.pageY;
+            moveTooltip(pointerX, pointerY);
+        })
+        .on('mouseleave', function () {
+            d3.select(this.parentNode).call(highlightRects);
+
+            hideTooltip();
+        });
+    
+
 }
 
-squad_age_bar();
+squad_age_bar("graph-2021", 2021);
+squad_age_bar("graph-2019", 2019);
