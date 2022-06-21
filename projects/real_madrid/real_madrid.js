@@ -14,7 +14,9 @@ async function squad_age_bar(graphId, seasonId) {
         .append(`svg`)
         .attr(`class`, `graph-svg`)
         .attr(`width`, width)
-        .attr(`height`, height);
+        .attr(`height`, height)
+        .style('display', 'block')
+        .style('margin', 'auto');
 
     let tooltip = d3.select(`#${graphId}`)
         .append("div")
@@ -22,7 +24,7 @@ async function squad_age_bar(graphId, seasonId) {
         .attr("class", "tooltip")
         .style("background-color", "white")
         .style("border-radius", "5px")
-        .style("padding", "10px")
+        .style("padding", "0px")
         .style("color", "black");
 
     const showTooltip = function (pointerX, pointerY, d) {
@@ -38,6 +40,7 @@ async function squad_age_bar(graphId, seasonId) {
             .style('position', 'absolute')
             .style("left", (pointerX + 20) + "px")
             .style("top", (pointerY - 40) + "px")
+            .style("padding", "10px")
     }
     const moveTooltip = function (pointerX, pointerY) {
         tooltip
@@ -50,6 +53,7 @@ async function squad_age_bar(graphId, seasonId) {
             .transition()
             .duration(200)
             .style("opacity", 0)
+            .style("padding", "0px")
     }
 
     const margin = { top: 25, right: 20, bottom: 25, left: 20 };
@@ -157,6 +161,7 @@ async function squad_age_bar(graphId, seasonId) {
         // The fill should change according to the type - the easiest way of doing this might be to create a list and then cycle through that using the index of the piece of data
         .attr('fill', (d, i) => ageColours[i])
         .attr('stroke', 'black')
+        .attr('stroke-width', 1.5)
         .on("mouseover", function (event, d) {
             d3.select(this.parentNode).call(highlightRects);
 
