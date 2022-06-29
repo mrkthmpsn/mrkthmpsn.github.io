@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Roger Moore",
+    "seasons": [
+      { "age": 28, "mins": 3000, "season": 2018, "end_data": false },
+      { "age": 29, "mins": 2975, "season": 2019, "end_data": false },
+      { "age": 30, "mins": 3120, "season": 2020, "end_date": false },
+      { "age": 31, "mins": 2650, "season": 2021, "end_data": true }
+    ]
+  },
+  {
+    "name": "Rabbit McGee",
+    "seasons": [
+      { "age": 26, "mins": 1456, "season": 2017, "end_data": false },
+      { "age": 27, "mins": 2957, "season": 2018, "end_data": false },
+      { "age": 28, "mins": 2941, "season": 2019, "end_date": false },
+      { "age": 29, "mins": 2185, "season": 2020, "end_data": false },
+      { "age": 30, "mins": 2010, "season": 2021, "end_data": true }
+    ]
+  }
+]
