@@ -8,7 +8,7 @@
 async function squad_age_bar(graphId, seasonId) {
     const width = 600;
     const height = 100;
-    console.log(`#${graphId}`);
+    
     let svg = d3
         .select(`#${graphId}`)
         .append(`svg`)
@@ -37,6 +37,7 @@ async function squad_age_bar(graphId, seasonId) {
         tooltip
             .style("opacity", 1)
             .html(barHoverText(d))
+            .style("font-family", "Barlow")
             .style('position', 'absolute')
             .style("left", (pointerX + 20) + "px")
             .style("top", (pointerY - 40) + "px")
@@ -184,16 +185,16 @@ async function squad_age_bar(graphId, seasonId) {
         .append('text')
         .attr('x', (d, i) => (rectWidths[i] / 2) + rectStarts[i])
         .attr('y', barAreaHeight / 2)
-        .attr('font-weight', 700)
-        .attr('font-family', 'arial')
         .attr('text-anchor', 'middle')
         .attr('dominant-baseline', 'middle')
         .attr('dy', '.1em')
-        .style("stroke", "black")
+        .style("font-family", "Barlow")
+        // Not quite sure why I can't get font-weight to work but oh well
         .style('fill', 'white')
-        .style('stroke-width', 1.5)
+        .style("stroke", "black")
+        .style('stroke-width', 0.7)
+        .html((d) => `${Math.round(d["percentage"] * 100)}%`)
         .style('font-size', '40px')
-        .text((d) => `${Math.round(d["percentage"] * 100)}%`)
         .on("mouseover", function (event, d) {
             d3.select(this.parentNode).call(highlightRects);
 
@@ -214,6 +215,8 @@ async function squad_age_bar(graphId, seasonId) {
     
 
 }
+
+
 
 squad_age_bar("graph-2021", 2021);
 squad_age_bar("graph-2019", 2019);

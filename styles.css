@@ -6,6 +6,22 @@ ul {
 body {
     max-width: 640px;
     margin: auto;
+    
+}
+
+p {
+    max-width: 540px;
+    font-family: 'Barlow';
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    font-weight: 200;
+    letter-spacing: 0.5pt;
+    
+}
+
+h1 {
+    font-family: 'Changa', sans-serif;
 }
 
 /* .article {
