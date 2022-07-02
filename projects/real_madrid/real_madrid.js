@@ -17,3 +17,4 @@ squad_age_bar("graph-2017", 2017, dataPathSquad, coloursDict, fontsDict);
 
 playerAgeMinutes("mins-graph", ["Luka Modrić", "Karim Benzema", "Sergio Ramos", "Marcelo", "Gareth Bale"], dataPathAgeMins, coloursDict, fontsDict);
 playerAgeMinutes("mins-graph-midfield", ["Luka Modrić", "Toni Kroos", "Casemiro"], dataPathAgeMins, coloursDict, fontsDict);
+playerAgeMinutes("mins-graph-asensio", ["Marco Asensio"], dataPathAgeMins, coloursDict, fontsDict);
