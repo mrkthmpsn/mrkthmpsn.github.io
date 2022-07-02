@@ -21,6 +21,7 @@ for player in player_list:
     for i, row in temp_df.iterrows():
         player_seasons.append(
             {
+                "name": row["Player"],
                 "age": row["Age"],
                 "mins": row["Min"],
                 "season": row["Season"],
