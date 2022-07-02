@@ -14,11 +14,13 @@ class positionsEnum(Enum):
         obj.peak_end = peak_end
         return obj
 
-    GOALKEEPER = "GK", 25, 29
-    LEFT_BACK = "LB", 24, 28
+    # Ages based on basic range of 24-28, adjusted for particularly explosive/
+    # not explosive positional groups
+    GOALKEEPER = "GK", 26, 30
+    LEFT_BACK = "LB", 23, 27
     CENTRE_BACK = "CB", 25, 29
-    RIGHT_BACK = "RB", 25, 29
-    DEFENSIVE_MIDFIELDER = "DM", 25, 29
+    RIGHT_BACK = "RB", 23, 27
+    DEFENSIVE_MIDFIELDER = "DM", 24, 28
     CENTRAL_MIDFIELDER = "CM", 24, 28
     ATTACKING_MIDFIELDER = "AM", 24, 28
     WINGER = "W", 23, 27
@@ -74,6 +76,23 @@ positions_dict = {
     "James Rodríguez": positionsEnum.ATTACKING_MIDFIELDER,
     "Brahim Díaz": positionsEnum.CENTRAL_MIDFIELDER,
     "Keylor Navas": positionsEnum.GOALKEEPER,
+    "Sergio Reguilón": positionsEnum.LEFT_BACK,
+    "Marcos Llorente": positionsEnum.CENTRAL_MIDFIELDER,
+    "Javi Sánchez": positionsEnum.CENTRE_BACK,
+    "Luca Zidane": positionsEnum.GOALKEEPER,
+    "Cristo González": positionsEnum.STRIKER,
+    "Francisco Garcia": positionsEnum.LEFT_BACK,
+    "Álvaro Fidalgo": positionsEnum.ATTACKING_MIDFIELDER,
+    "Cristiano Ronaldo": positionsEnum.STRIKER,
+    "Mateo Kovačić": positionsEnum.CENTRAL_MIDFIELDER,
+    "Theo Hernández": positionsEnum.LEFT_BACK,
+    "Kiko Casilla": positionsEnum.GOALKEEPER,
+    "Achraf Hakimi": positionsEnum.RIGHT_BACK,
+    "Álvaro Tejero": positionsEnum.RIGHT_BACK,
+    "Óscar Rodríguez Arnaiz": positionsEnum.ATTACKING_MIDFIELDER,
+    "Franchu Feuillassier": positionsEnum.WINGER,
+    "Luismi Quezada": positionsEnum.LEFT_BACK,
+    "Jaime Seoane": positionsEnum.CENTRAL_MIDFIELDER,
 }
 
 foo = pd.read_csv(
@@ -83,6 +102,8 @@ foo = pd.read_csv(
 foo["Player"] = [i.split("\\")[0] for i in foo["Player"]]
 foo = foo[foo["MP"] > 0]
 
+# {i: "" for i in foo["Player"].unique() if i not in positions_dict.keys()}
+
 foo["position_detail"] = [positions_dict[i].value for i in foo["Player"]]
 
 peak_status = []
@@ -91,7 +112,7 @@ for _, row in foo.iterrows():
 
     if row["Age"] < position_enum.peak_start:
         peak_status.append("pre-peak")
-    elif row["Age"] < position_enum.peak_end:
+    elif row["Age"] <= position_enum.peak_end:
         peak_status.append("peak-age")
     else:
         peak_status.append("post-peak")
@@ -163,6 +184,3 @@ for season in foo["Season"].unique():
     ]
 
     empty_list.append({"season": season, "data": season_json})
-
-
-# {i: "" for i in foo["Player"].unique()}

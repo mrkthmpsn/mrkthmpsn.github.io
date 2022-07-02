@@ -2,6 +2,7 @@
   {
     "name": "Thibaut Courtois",
     "seasons": [
+      { "age": 26, "mins": 2970.0, "season": 2018, "end_data": false },
       { "age": 27, "mins": 3855.0, "season": 2019, "end_data": false },
       { "age": 28, "mins": 4590.0, "season": 2020, "end_data": false },
       { "age": 29, "mins": 4770.0, "season": 2021, "end_data": true }
@@ -18,6 +19,7 @@
   {
     "name": "Vinicius Júnior",
     "seasons": [
+      { "age": 18, "mins": 1735.0, "season": 2018, "end_data": false },
       { "age": 19, "mins": 1828.0, "season": 2019, "end_data": false },
       { "age": 20, "mins": 2717.0, "season": 2020, "end_data": false },
       { "age": 21, "mins": 4253.0, "season": 2021, "end_data": true }
@@ -30,6 +32,8 @@
   {
     "name": "Casemiro",
     "seasons": [
+      { "age": 25, "mins": 3763.0, "season": 2017, "end_data": false },
+      { "age": 26, "mins": 3230.0, "season": 2018, "end_data": false },
       { "age": 27, "mins": 4077.0, "season": 2019, "end_data": false },
       { "age": 28, "mins": 3939.0, "season": 2020, "end_data": false },
       { "age": 29, "mins": 3918.0, "season": 2021, "end_data": true }
@@ -38,6 +42,8 @@
   {
     "name": "Karim Benzema",
     "seasons": [
+      { "age": 29, "mins": 3069.0, "season": 2017, "end_data": false },
+      { "age": 30, "mins": 4109.0, "season": 2018, "end_data": false },
       { "age": 31, "mins": 3967.0, "season": 2019, "end_data": false },
       { "age": 32, "mins": 3875.0, "season": 2020, "end_data": false },
       { "age": 33, "mins": 3905.0, "season": 2021, "end_data": true }
@@ -46,6 +52,8 @@
   {
     "name": "Luka Modrić",
     "seasons": [
+      { "age": 31, "mins": 3154.0, "season": 2017, "end_data": false },
+      { "age": 32, "mins": 3380.0, "season": 2018, "end_data": false },
       { "age": 33, "mins": 2628.0, "season": 2019, "end_data": false },
       { "age": 34, "mins": 3711.0, "season": 2020, "end_data": false },
       { "age": 35, "mins": 3416.0, "season": 2021, "end_data": true }
@@ -54,6 +62,8 @@
   {
     "name": "Toni Kroos",
     "seasons": [
+      { "age": 27, "mins": 3472.0, "season": 2017, "end_data": false },
+      { "age": 28, "mins": 3265.0, "season": 2018, "end_data": false },
       { "age": 29, "mins": 3564.0, "season": 2019, "end_data": false },
       { "age": 30, "mins": 3189.0, "season": 2020, "end_data": false },
       { "age": 31, "mins": 3388.0, "season": 2021, "end_data": true }
@@ -62,6 +72,7 @@
   {
     "name": "Federico Valverde",
     "seasons": [
+      { "age": 20, "mins": 1129.0, "season": 2018, "end_data": false },
       { "age": 21, "mins": 2714.0, "season": 2019, "end_data": false },
       { "age": 22, "mins": 1964.0, "season": 2020, "end_data": false },
       { "age": 23, "mins": 2864.0, "season": 2021, "end_data": true }
@@ -78,6 +89,8 @@
   {
     "name": "Dani Carvajal",
     "seasons": [
+      { "age": 25, "mins": 3384.0, "season": 2017, "end_data": false },
+      { "age": 26, "mins": 2961.0, "season": 2018, "end_data": false },
       { "age": 27, "mins": 3750.0, "season": 2019, "end_data": false },
       { "age": 28, "mins": 1116.0, "season": 2020, "end_data": false },
       { "age": 29, "mins": 2596.0, "season": 2021, "end_data": true }
@@ -86,6 +99,8 @@
   {
     "name": "Nacho",
     "seasons": [
+      { "age": 27, "mins": 3195.0, "season": 2017, "end_data": false },
+      { "age": 28, "mins": 2490.0, "season": 2018, "end_data": false },
       { "age": 29, "mins": 687.0, "season": 2019, "end_data": false },
       { "age": 30, "mins": 2765.0, "season": 2020, "end_data": false },
       { "age": 31, "mins": 2551.0, "season": 2021, "end_data": true }
@@ -94,6 +109,8 @@
   {
     "name": "Lucas Vázquez",
     "seasons": [
+      { "age": 26, "mins": 2789.0, "season": 2017, "end_data": false },
+      { "age": 27, "mins": 2508.0, "season": 2018, "end_data": false },
       { "age": 28, "mins": 1040.0, "season": 2019, "end_data": false },
       { "age": 29, "mins": 2778.0, "season": 2020, "end_data": false },
       { "age": 30, "mins": 2515.0, "season": 2021, "end_data": true }
@@ -110,6 +127,8 @@
   {
     "name": "Marco Asensio",
     "seasons": [
+      { "age": 21, "mins": 2846.0, "season": 2017, "end_data": false },
+      { "age": 22, "mins": 2363.0, "season": 2018, "end_data": false },
       { "age": 23, "mins": 366.0, "season": 2019, "end_data": false },
       { "age": 24, "mins": 2608.0, "season": 2020, "end_data": false },
       { "age": 25, "mins": 2140.0, "season": 2021, "end_data": true }
@@ -130,6 +149,8 @@
   {
     "name": "Marcelo",
     "seasons": [
+      { "age": 29, "mins": 3488.0, "season": 2017, "end_data": false },
+      { "age": 30, "mins": 2676.0, "season": 2018, "end_data": false },
       { "age": 31, "mins": 1852.0, "season": 2019, "end_data": false },
       { "age": 32, "mins": 1336.0, "season": 2020, "end_data": false },
       { "age": 33, "mins": 734.0, "season": 2021, "end_data": true }
@@ -146,6 +167,7 @@
   {
     "name": "Mariano",
     "seasons": [
+      { "age": 24, "mins": 615.0, "season": 2018, "end_data": false },
       { "age": 25, "mins": 91.0, "season": 2019, "end_data": false },
       { "age": 26, "mins": 690.0, "season": 2020, "end_data": false },
       { "age": 27, "mins": 402.0, "season": 2021, "end_data": true }
@@ -160,11 +182,17 @@
   },
   {
     "name": "Jesús Vallejo",
-    "seasons": [{ "age": 24, "mins": 355.0, "season": 2021, "end_data": true }]
+    "seasons": [
+      { "age": 20, "mins": 1002.0, "season": 2017, "end_data": false },
+      { "age": 21, "mins": 491.0, "season": 2018, "end_data": false },
+      { "age": 24, "mins": 355.0, "season": 2021, "end_data": true }
+    ]
   },
   {
     "name": "Isco",
     "seasons": [
+      { "age": 25, "mins": 2812.0, "season": 2017, "end_data": false },
+      { "age": 26, "mins": 1723.0, "season": 2018, "end_data": false },
       { "age": 27, "mins": 1611.0, "season": 2019, "end_data": false },
       { "age": 28, "mins": 1103.0, "season": 2020, "end_data": false },
       { "age": 29, "mins": 353.0, "season": 2021, "end_data": true }
@@ -172,7 +200,11 @@
   },
   {
     "name": "Dani Ceballos",
-    "seasons": [{ "age": 24, "mins": 352.0, "season": 2021, "end_data": true }]
+    "seasons": [
+      { "age": 20, "mins": 903.0, "season": 2017, "end_data": false },
+      { "age": 21, "mins": 1908.0, "season": 2018, "end_data": false },
+      { "age": 24, "mins": 352.0, "season": 2021, "end_data": true }
+    ]
   },
   {
     "name": "Miguel Gutiérrez",
@@ -184,6 +216,8 @@
   {
     "name": "Gareth Bale",
     "seasons": [
+      { "age": 28, "mins": 2338.0, "season": 2017, "end_data": false },
+      { "age": 29, "mins": 2466.0, "season": 2018, "end_data": false },
       { "age": 30, "mins": 1257.0, "season": 2019, "end_data": false },
       { "age": 32, "mins": 289.0, "season": 2021, "end_data": true }
     ]
@@ -214,6 +248,8 @@
   {
     "name": "Raphaël Varane",
     "seasons": [
+      { "age": 24, "mins": 3620.0, "season": 2017, "end_data": false },
+      { "age": 25, "mins": 3594.0, "season": 2018, "end_data": false },
       { "age": 26, "mins": 3842.0, "season": 2019, "end_data": false },
       { "age": 27, "mins": 3570.0, "season": 2020, "end_data": true }
     ]
@@ -221,6 +257,8 @@
   {
     "name": "Sergio Ramos",
     "seasons": [
+      { "age": 31, "mins": 3639.0, "season": 2017, "end_data": false },
+      { "age": 32, "mins": 3479.0, "season": 2018, "end_data": false },
       { "age": 33, "mins": 3825.0, "season": 2019, "end_data": false },
       { "age": 34, "mins": 1788.0, "season": 2020, "end_data": true }
     ]
@@ -228,6 +266,7 @@
   {
     "name": "Álvaro Odriozola",
     "seasons": [
+      { "age": 22, "mins": 1856.0, "season": 2018, "end_data": false },
       { "age": 23, "mins": 433.0, "season": 2019, "end_data": false },
       { "age": 24, "mins": 959.0, "season": 2020, "end_data": true }
     ]
@@ -254,7 +293,11 @@
   },
   {
     "name": "Borja Mayoral",
-    "seasons": [{ "age": 23, "mins": 23.0, "season": 2020, "end_data": true }]
+    "seasons": [
+      { "age": 20, "mins": 936.0, "season": 2017, "end_data": false },
+      { "age": 21, "mins": 19.0, "season": 2018, "end_data": false },
+      { "age": 23, "mins": 23.0, "season": 2020, "end_data": true }
+    ]
   },
   {
     "name": "Alphonse Areola",
@@ -266,6 +309,90 @@
   },
   {
     "name": "Brahim Díaz",
-    "seasons": [{ "age": 19, "mins": 214.0, "season": 2019, "end_data": true }]
+    "seasons": [
+      { "age": 18, "mins": 394.0, "season": 2018, "end_data": false },
+      { "age": 19, "mins": 214.0, "season": 2019, "end_data": true }
+    ]
+  },
+  {
+    "name": "Keylor Navas",
+    "seasons": [
+      { "age": 30, "mins": 3780.0, "season": 2017, "end_data": false },
+      { "age": 31, "mins": 1920.0, "season": 2018, "end_data": true }
+    ]
+  },
+  {
+    "name": "Sergio Reguilón",
+    "seasons": [{ "age": 21, "mins": 1794.0, "season": 2018, "end_data": true }]
+  },
+  {
+    "name": "Marcos Llorente",
+    "seasons": [
+      { "age": 22, "mins": 1067.0, "season": 2017, "end_data": false },
+      { "age": 23, "mins": 1006.0, "season": 2018, "end_data": true }
+    ]
+  },
+  {
+    "name": "Javi Sánchez",
+    "seasons": [{ "age": 21, "mins": 348.0, "season": 2018, "end_data": true }]
+  },
+  {
+    "name": "Luca Zidane",
+    "seasons": [
+      { "age": 19, "mins": 90.0, "season": 2017, "end_data": false },
+      { "age": 20, "mins": 90.0, "season": 2018, "end_data": true }
+    ]
+  },
+  {
+    "name": "Cristo González",
+    "seasons": [{ "age": 20, "mins": 84.0, "season": 2018, "end_data": true }]
+  },
+  {
+    "name": "Francisco Garcia",
+    "seasons": [{ "age": 18, "mins": 45.0, "season": 2018, "end_data": true }]
+  },
+  {
+    "name": "Álvaro Fidalgo",
+    "seasons": [{ "age": 21, "mins": 13.0, "season": 2018, "end_data": true }]
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "seasons": [{ "age": 32, "mins": 3487.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Mateo Kovačić",
+    "seasons": [{ "age": 23, "mins": 1757.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Theo Hernández",
+    "seasons": [{ "age": 19, "mins": 1650.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Kiko Casilla",
+    "seasons": [{ "age": 30, "mins": 1530.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Achraf Hakimi",
+    "seasons": [{ "age": 18, "mins": 1225.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Álvaro Tejero",
+    "seasons": [{ "age": 21, "mins": 180.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Óscar Rodríguez Arnaiz",
+    "seasons": [{ "age": 19, "mins": 74.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Franchu Feuillassier",
+    "seasons": [{ "age": 19, "mins": 71.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Luismi Quezada",
+    "seasons": [{ "age": 21, "mins": 16.0, "season": 2017, "end_data": true }]
+  },
+  {
+    "name": "Jaime Seoane",
+    "seasons": [{ "age": 20, "mins": 10.0, "season": 2017, "end_data": true }]
   }
 ]
