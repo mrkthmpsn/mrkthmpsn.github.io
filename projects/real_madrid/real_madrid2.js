@@ -296,4 +296,5 @@ svg
   }
 }
 
-playerAgeMinutes("mins-graph", ["Luka Modrić", "Casemiro", "Toni Kroos", "Karim Benzema"]);
+playerAgeMinutes("mins-graph", ["Luka Modrić", "Karim Benzema", "Sergio Ramos", "Marcelo", "Gareth Bale"]);
+playerAgeMinutes("mins-graph-midfield", ["Luka Modrić", "Toni Kroos", "Casemiro"]);

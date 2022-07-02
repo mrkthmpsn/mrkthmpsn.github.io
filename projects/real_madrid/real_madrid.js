@@ -219,4 +219,8 @@ async function squad_age_bar(graphId, seasonId) {
 
 
 squad_age_bar("graph-2021", 2021);
+squad_age_bar("graph-2021-repeat", 2021);
+squad_age_bar("graph-2020", 2020);
 squad_age_bar("graph-2019", 2019);
+squad_age_bar("graph-2018", 2018);
+squad_age_bar("graph-2017", 2017);
