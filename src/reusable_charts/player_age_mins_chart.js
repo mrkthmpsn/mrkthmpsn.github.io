@@ -22,10 +22,10 @@ export async function playerAgeMinutes(
 
   const selectData = totalData.filter((d) => playersList.includes(d["name"]));
 
-  const width = 500;
+  const width = 600;
   const height = 350;
 
-  const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+//   const margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
   let svg = d3
     .select(`#${graphId}`)
@@ -35,6 +35,50 @@ export async function playerAgeMinutes(
     .attr(`height`, height)
     .style("display", "block")
     .style("margin", "auto");
+
+    svg
+    .append("text")
+    .attr("x", 5)
+    .attr("y", 15)
+    .style("font-family", fontsDict["header"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "16pt")
+    .attr("text-anchor", "start")
+    .text("Player ages vs minutes played, 2017/18-present")
+
+    svg
+    .append("text")
+    .attr("x", 7)
+    .attr("y", 32)
+    .attr("text-anchor", "start")
+    .style("font-family", fontsDict["body"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "11pt")
+    .text("Hover over circles for more information")
+    
+    svg
+    .append("text")
+    .attr("x", width-5)
+    .attr("y", height-2)
+    .attr("text-anchor", "end")
+    .style("font-family", fontsDict["body"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "8pt")
+    .style("font-style", "italic")
+    .text("Data from FBref.com")
+
+    const margin = { top: 40, right: 50, bottom: 15, left: 50 };
+
+    const chartAreaWidth = width - margin.left - margin.right;
+    const chartAreaHeight = height - margin.top - margin.bottom;
+    
+    let chartArea = svg
+    .append("svg")
+    .attr("class", "bar-area-svg")
+    .attr("x", margin.left)
+    .attr("y", margin.top)
+    .attr("width", chartAreaWidth)
+    .attr("height", chartAreaHeight);
 
   let tooltip = d3
     .select(`#${graphId}`)
@@ -73,7 +117,7 @@ export async function playerAgeMinutes(
   };
 
   const tooltipText = function (d) {
-    return `<style='font-family:${fontsDict["body"]}'>${d["season"]}<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}</p>`;
+    return `<style='font-family:${fontsDict["body"]}'>${d["name"]} (${d["season"]})<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}`;
   };
 
   // For X in list...
@@ -175,46 +219,50 @@ export async function playerAgeMinutes(
 
   // Compute values.
   // Construct scales and axes.
+  const chartMargin = { top: 20, right: 20, bottom: 20, left: 20 };
+
   const yScale = d3
     .scaleLinear()
     .domain([18, 36])
-    .range([height - margin.bottom, 0 + margin.top]);
+    .range([chartAreaHeight - chartMargin.bottom, 0 + chartMargin.top]);
+    // .range([chartAreaHeight, 0]);
 
   const xScale = d3
     .scaleLinear()
     .domain([900, 4800])
-    .range([0 + margin.left, width - margin.right]);
+    .range([0 + chartMargin.left, chartAreaWidth - chartMargin.right]);
+    // .range([0 + margin.left, chartAreaWidth - margin.right]);
 
   const xAxis = d3
     .axisBottom(xScale)
-    .ticks(width / 80)
+    .ticks(chartAreaWidth / 80)
     .tickSizeOuter(0);
-  const yAxis = d3.axisLeft(yScale).ticks(height / 40);
+  const yAxis = d3.axisLeft(yScale).ticks(chartAreaHeight / 40);
 
   // Tick marks
-  svg
+  chartArea
     .append("g")
     .style("font-family", fontsDict["header"])
-    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .attr("transform", `translate(0,${chartAreaHeight - chartMargin.bottom})`)
     .call(xAxis);
 
-  svg
+  chartArea
     .append("g")
     .style("font-family", fontsDict["header"])
-    .attr("transform", `translate(${margin.left},0)`)
+    .attr("transform", `translate(${chartMargin.left},0)`)
     .call(yAxis)
     .call((g) => g.select(".domain").remove())
     .call((g) =>
       g
         .selectAll(".tick line")
         .clone()
-        .attr("x2", width - margin.left - margin.right)
+        .attr("x2", chartAreaWidth - chartMargin.left - chartMargin.right)
         .attr("stroke-opacity", 0.1)
     )
     .call((g) =>
       g
         .append("text")
-        .attr("x", -margin.left)
+        .attr("x", -chartMargin.left)
         .attr("y", 10)
         .attr("fill", "currentColor")
         .attr("text-anchor", "start")
@@ -236,7 +284,7 @@ export async function playerAgeMinutes(
       .x((i) => xScale(X[i]))
       .y((i) => yScale(Y[i]));
 
-    let playerGroup = svg
+    let playerGroup = chartArea
       .append("g")
       .attr("class", "player-group")
       .attr("id", `group-${playerIndex}`);

@@ -26,6 +26,39 @@ export async function squad_age_bar(
     .style("display", "block")
     .style("margin", "auto");
 
+    // Add title and footer?
+    svg
+    .append("text")
+    .attr("x", 5)
+    .attr("y", 15)
+    .style("font-family", fontsDict["header"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "16pt")
+    .attr("text-anchor", "start")
+    .text(`${seasonId}/${seasonId+1}`)
+
+    svg
+    .append("text")
+    .attr("x", 7)
+    .attr("y", 32)
+    .attr("text-anchor", "start")
+    .style("font-family", fontsDict["body"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "11pt")
+    .text("Hover over sections for more information")
+    
+    svg
+    .append("text")
+    .attr("x", width-5)
+    .attr("y", height-2)
+    .attr("text-anchor", "end")
+    .style("font-family", fontsDict["body"])
+    .style("color", coloursDict["text_axes"])
+    .style("font-size", "8pt")
+    .style("font-style", "italic")
+    .text("Data from FBref.com")
+
+
   let tooltip = d3
     .select(`#${graphId}`)
     .append("div")
@@ -62,7 +95,7 @@ export async function squad_age_bar(
       .style("padding", "0px");
   };
 
-  const margin = { top: 25, right: 20, bottom: 25, left: 20 };
+  const margin = { top: 40, right: 20, bottom: 15, left: 20 };
 
   const barAreaWidth = width - margin.left - margin.right;
   const barAreaHeight = height - margin.top - margin.bottom;
