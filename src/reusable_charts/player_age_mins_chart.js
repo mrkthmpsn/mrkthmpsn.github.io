@@ -1,8 +1,22 @@
-async function playerAgeMinutes(graphId, playersList) {
+// DESCRIBE WHAT THE CHART IS HERE
+
+// graphId should be the id of the div the chart will be put in
+// playersList a list of player names to be taken from the data and plotted
+// dataPath will point to the data file
+// coloursDict
+// fontsDict
+
+export async function playerAgeMinutes(
+  graphId,
+  playersList,
+  dataPath,
+  coloursDict,
+  fontsDict
+) {
   // initially draws a lot on https://observablehq.com/@d3/line-chart?collection=@d3/charts
 
   // get the data
-  const request = new Request("./dummy_json_new2.json");
+  const request = new Request(dataPath);
   const response = await fetch(request);
   const totalData = await response.json();
 
@@ -30,7 +44,7 @@ async function playerAgeMinutes(graphId, playersList) {
     .style("background-color", "white")
     .style("border-radius", "5px")
     .style("padding", "0px")
-    .style("color", "black");
+    .style("color", coloursDict["text_axes"]);
 
   const showTooltip = function (pointerX, pointerY, d) {
     // console.log(pointerEvent);
@@ -38,7 +52,7 @@ async function playerAgeMinutes(graphId, playersList) {
     tooltip
       .style("opacity", 1)
       .html(tooltipText(d))
-      .style("font-family", "Barlow")
+      .style("font-family", fontsDict["body"])
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
       .style("top", pointerY - 40 + "px")
@@ -59,7 +73,7 @@ async function playerAgeMinutes(graphId, playersList) {
   };
 
   const tooltipText = function (d) {
-    return `<style='font-family:Barlow'>${d["season"]}<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}</p>`;
+    return `<style='font-family:${fontsDict["body"]}'>${d["season"]}<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}</p>`;
   };
 
   // For X in list...
@@ -69,9 +83,9 @@ async function playerAgeMinutes(graphId, playersList) {
 
   const highlightCircles = function (selection) {
     // let parentGroup = selection._groups[0][0].parentNode;
-    
+
     // console.log(i);
-    
+
     if (selection.classed("season-circle")) {
       selection.attr("class", "highlighted");
     } else {
@@ -104,63 +118,60 @@ async function playerAgeMinutes(graphId, playersList) {
       svg
         .selectAll(".highlighted[id='end-data']")
         .attr("r", 6)
-        .attr("stroke", "black")
+        .attr("stroke", coloursDict["text_axes"])
         .attr("stroke-width", 1);
 
       svg
         .selectAll(".highlighted[id='data']")
         .attr("r", 4)
-        .attr("stroke", "black")
+        .attr("stroke", coloursDict["text_axes"])
         .attr("stroke-width", 1);
     }
   };
 
   const highlightGroups = function (selection) {
     let parentGroup = selection._groups[0][0].parentNode;
-    
+
     if (parentGroup.classList.contains("player-group")) {
-        // parentGroup.className = "highlight-group";
-        // parentGroup.attr("class", "highlight-group");
-        parentGroup.setAttribute("class", "highlight-group");
-      } else {
-        // parentGroup.className = "player-group";
-        parentGroup.setAttribute("class", "player-group");
-      }
-    
+      parentGroup.setAttribute("class", "highlight-group");
+    } else {
+      parentGroup.setAttribute("class", "player-group");
+    }
+
     let highlightedNumber = svg.selectAll(".highlight-group").size();
 
     if (highlightedNumber === 0) {
-        svg
-          .selectAll(".player-group")
-          .select("path")
-          .attr("stroke", "#8e8e8e");
-        
-        svg
-          .selectAll(".player-group")
-          .selectAll("circle")
-          .attr("fill", "#8e8e8e");
-      } else {
-        svg
-          .selectAll(".highlight-group")
-          .select("path")
-          .attr("stroke", "#eb4755");
-        
-        svg
-          .selectAll(".highlight-group")
-          .selectAll("circle")
-          .attr("fill", "#eb4755");
-        
-        svg
-          .selectAll(".player-group")
-          .select("path")
-          .attr("stroke", "#8e8e8e");
-        
-        svg
-          .selectAll(".player-group")
-          .selectAll("circle")
-          .attr("fill", "#8e8e8e");
-      }
-}
+      svg
+        .selectAll(".player-group")
+        .select("path")
+        .attr("stroke", coloursDict["muted_text"]);
+
+      svg
+        .selectAll(".player-group")
+        .selectAll("circle")
+        .attr("fill", coloursDict["muted_text"]);
+    } else {
+      svg
+        .selectAll(".highlight-group")
+        .select("path")
+        .attr("stroke", coloursDict["highlight"]);
+
+      svg
+        .selectAll(".highlight-group")
+        .selectAll("circle")
+        .attr("fill", coloursDict["highlight"]);
+
+      svg
+        .selectAll(".player-group")
+        .select("path")
+        .attr("stroke", coloursDict["muted_text"]);
+
+      svg
+        .selectAll(".player-group")
+        .selectAll("circle")
+        .attr("fill", coloursDict["muted_text"]);
+    }
+  };
 
   // Compute values.
   // Construct scales and axes.
@@ -182,33 +193,33 @@ async function playerAgeMinutes(graphId, playersList) {
 
   // Tick marks
   svg
-  .append("g")
-  .style("font-family", "Changa")
-  .attr("transform", `translate(0,${height - margin.bottom})`)
-  .call(xAxis);
+    .append("g")
+    .style("font-family", fontsDict["header"])
+    .attr("transform", `translate(0,${height - margin.bottom})`)
+    .call(xAxis);
 
-svg
-  .append("g")
-  .style("font-family", "Changa")
-  .attr("transform", `translate(${margin.left},0)`)
-  .call(yAxis)
-  .call((g) => g.select(".domain").remove())
-  .call((g) =>
-    g
-      .selectAll(".tick line")
-      .clone()
-      .attr("x2", width - margin.left - margin.right)
-      .attr("stroke-opacity", 0.1)
-  )
-  .call((g) =>
-    g
-      .append("text")
-      .attr("x", -margin.left)
-      .attr("y", 10)
-      .attr("fill", "currentColor")
-      .attr("text-anchor", "start")
-  );
-//   .text(yLabel));
+  svg
+    .append("g")
+    .style("font-family", fontsDict["header"])
+    .attr("transform", `translate(${margin.left},0)`)
+    .call(yAxis)
+    .call((g) => g.select(".domain").remove())
+    .call((g) =>
+      g
+        .selectAll(".tick line")
+        .clone()
+        .attr("x2", width - margin.left - margin.right)
+        .attr("stroke-opacity", 0.1)
+    )
+    .call((g) =>
+      g
+        .append("text")
+        .attr("x", -margin.left)
+        .attr("y", 10)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "start")
+    );
+  //   .text(yLabel));
 
   for (let playerIndex of d3.range(selectData.length)) {
     // console.log(playerData);
@@ -226,36 +237,33 @@ svg
       .y((i) => yScale(Y[i]));
 
     let playerGroup = svg
-        .append("g")
-        .attr("class", "player-group")
-        .attr("id", `group-${playerIndex}`)
+      .append("g")
+      .attr("class", "player-group")
+      .attr("id", `group-${playerIndex}`);
 
     playerGroup
-        .append('text')
-        .attr('x', xScale(seasonsData[X.length - 1]["mins"]))
-        .attr('y', yScale(seasonsData[X.length - 1]["age"]))
-        .style("font-family", "Changa")
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'middle')
-        .style('opacity', 0.3)
-        .attr('color', 'black')
-        .text(selectData[playerIndex]["name"]);
-    
+      .append("text")
+      .attr("x", xScale(seasonsData[X.length - 1]["mins"]))
+      .attr("y", yScale(seasonsData[X.length - 1]["age"]))
+      .style("font-family", fontsDict["header"])
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .style("opacity", 0.3)
+      .attr("color", coloursDict["text_axes"])
+      .text(selectData[playerIndex]["name"]);
+
     playerGroup
       .append("path")
       .attr("fill", "none")
-      .attr("stroke", "#8e8e8e")
+      .attr("stroke", coloursDict["muted_text"])
       .attr("stroke-width", 2)
-      // .attr("stroke-linecap", strokeLinecap)
-      // .attr("stroke-linejoin", strokeLinejoin)
-      // .attr("stroke-opacity", strokeOpacity)
       .attr("d", lineGenerator(I))
-      .on('mouseover', function(event, i) {
+      .on("mouseover", function (event, i) {
         d3.select(this).call(highlightGroups);
-    })
-      .on('mouseleave', function(event, i) {
+      })
+      .on("mouseleave", function (event, i) {
         d3.select(this).call(highlightGroups);
-    });
+      });
 
     playerGroup
       .selectAll(`circle-${playerIndex}`)
@@ -267,11 +275,10 @@ svg
       .attr("cx", (i) => xScale(seasonsData[i]["mins"]))
       .attr("cy", (i) => yScale(seasonsData[i]["age"]))
       .attr("r", (i) => (i === X.length - 1 ? 5 : 3))
-      .attr("fill", "#8e8e8e")
+      .attr("fill", coloursDict["muted_text"])
       .on("mouseover", function (event, i) {
         d3.select(this).call(highlightCircles);
         d3.select(this).call(highlightGroups);
-        // highlightCircles(d3.select(this), playerIndex, i);
 
         let pointerX = event.pageX;
         let pointerY = event.pageY;
@@ -285,16 +292,10 @@ svg
       .on("mouseleave", function (event, i) {
         d3.select(this).call(highlightCircles);
         d3.select(this).call(highlightGroups);
-        // highlightCircles(d3.select(this), playerIndex, i);
 
         hideTooltip();
       })
       .exit()
       .remove();
-    
-    
   }
 }
-
-playerAgeMinutes("mins-graph", ["Luka Modrić", "Karim Benzema", "Sergio Ramos", "Marcelo", "Gareth Bale"]);
-playerAgeMinutes("mins-graph-midfield", ["Luka Modrić", "Toni Kroos", "Casemiro"]);
