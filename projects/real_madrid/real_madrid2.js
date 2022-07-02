@@ -180,6 +180,36 @@ async function playerAgeMinutes(graphId, playersList) {
     .tickSizeOuter(0);
   const yAxis = d3.axisLeft(yScale).ticks(height / 40);
 
+  // Tick marks
+  svg
+  .append("g")
+  .style("font-family", "Changa")
+  .attr("transform", `translate(0,${height - margin.bottom})`)
+  .call(xAxis);
+
+svg
+  .append("g")
+  .style("font-family", "Changa")
+  .attr("transform", `translate(${margin.left},0)`)
+  .call(yAxis)
+  .call((g) => g.select(".domain").remove())
+  .call((g) =>
+    g
+      .selectAll(".tick line")
+      .clone()
+      .attr("x2", width - margin.left - margin.right)
+      .attr("stroke-opacity", 0.1)
+  )
+  .call((g) =>
+    g
+      .append("text")
+      .attr("x", -margin.left)
+      .attr("y", 10)
+      .attr("fill", "currentColor")
+      .attr("text-anchor", "start")
+  );
+//   .text(yLabel));
+
   for (let playerIndex of d3.range(selectData.length)) {
     // console.log(playerData);
     let seasonsData = selectData[playerIndex]["seasons"];
@@ -187,36 +217,6 @@ async function playerAgeMinutes(graphId, playersList) {
     let X = d3.map(seasonsData, (d) => d["mins"]);
     let Y = d3.map(seasonsData, (d) => d["age"]);
     let I = d3.range(X.length);
-
-    // Tick marks
-    svg
-      .append("g")
-      .style("font-family", "Changa")
-      .attr("transform", `translate(0,${height - margin.bottom})`)
-      .call(xAxis);
-
-    svg
-      .append("g")
-      .style("font-family", "Changa")
-      .attr("transform", `translate(${margin.left},0)`)
-      .call(yAxis)
-      .call((g) => g.select(".domain").remove())
-      .call((g) =>
-        g
-          .selectAll(".tick line")
-          .clone()
-          .attr("x2", width - margin.left - margin.right)
-          .attr("stroke-opacity", 0.1)
-      )
-      .call((g) =>
-        g
-          .append("text")
-          .attr("x", -margin.left)
-          .attr("y", 10)
-          .attr("fill", "currentColor")
-          .attr("text-anchor", "start")
-      );
-    //   .text(yLabel));
 
     // Line generator and line
     const lineGenerator = d3
