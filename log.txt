@@ -1,0 +1,15 @@
+## 02 July 2022
+### Done
+- Start of log
+- Generalised files
+- Started using Real Madrid colours
+- More writing of the article
+
+### Next up
+- Want to formalise how `coloursDict` and `fontsDict` should look
+- Make title and subtitle text (and footer? less needed) customisable
+- Should add something to Python to help with analysis so that I'm not having to use the charts for it. Better to do analysis and set up the charts I need rather than do it the other way around?
+- Need to set this up back on Github again
+- Sort out the Github homepage
+- Finesse simple header for the Github site?
+- Test on mobile
