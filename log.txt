@@ -1,15 +1,30 @@
+## 03 July 2022
+### Done
+- Some work on the navbar. Don't really understand it but it is now not awful
+- Decided not to bother trying to minify all the js
+- Worked on the homepage
+- Made charts into `viewBox`es to make more mobile-friendly
+- (Seemed to have) fixed the tooltip overlap not-hidden issue
+
 ## 02 July 2022
 ### Done
 - Start of log
 - Generalised files
 - Started using Real Madrid colours
 - More writing of the article
+- Tested online and on mobile (github page has root of my username and then the repo name, which is different to working locally - want to address that and somehow make it more similar experience so I don't have to continually change file names to test things locally)
+- Fixed the above issue
 
 ### Next up
+(NBR = Necessary Before Release)
 - Want to formalise how `coloursDict` and `fontsDict` should look
 - Make title and subtitle text (and footer? less needed) customisable
 - Should add something to Python to help with analysis so that I'm not having to use the charts for it. Better to do analysis and set up the charts I need rather than do it the other way around?
-- Need to set this up back on Github again
-- Sort out the Github homepage
-- Finesse simple header for the Github site?
-- Test on mobile
+- Sort out the Github homepage (NBR) [X]
+- Finesse simple header for the Github site? (NBR) [X]
+- Improve mobile experience of charts (currently ok but a little small, especially if wanting to interact with the player age+minutes one), also text column is a little narrow on mobile (NBR) [X]
+- Set up the Github pages as a private repo, requiring signing up to the Github paid thingy? (Not strictly necessary, but I just don't like the idea of the code being out there and people being able to go through repos that aren't designed to be public.) (NBR)
+- Set up a dev branch and a main branch
+- Probably add this log to the gitignore? Look into what that would effect - I don't want to have to be too concerned by version control of the log I think? Or do I...?
+- Minify tooltips when they aren't visible, this seems to be causing some problems when hovering over some circles in the age+minutes charts particularly (maybe set this up as an issue in the Github repo rather than keeping it here, like a bug issue to fix at a later date) [X]
+- Look into ways to protect the code and underlying data a little bit. At the moment you can find the article's js file easily, and from there get the data. Not that it _matters_, but feels like making it more secure wouldn't be a bad thing. (found the analyst's source js, for at least one of their pages, here: https://dataviz.theanalyst.com/season-reviews-2021/static/js/main.8e77355a.js - it's findable but not in an obvious place, not with an obvious name, and has been 'tinyfied'(??)). Ah, it's uglifying that I want to be looking at (https://kinsta.com/blog/minify-javascript/#what-is-code-minification) 
