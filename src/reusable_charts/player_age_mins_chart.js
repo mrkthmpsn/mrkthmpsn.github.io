@@ -55,7 +55,7 @@ export async function playerAgeMinutes(
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "11pt")
-    .text("Hover over circles for more information");
+    .text("Hover over/tap on circles for more information");
 
   svg
     .append("text")
@@ -121,7 +121,7 @@ export async function playerAgeMinutes(
   };
 
   const tooltipText = function (d) {
-    return `<style='font-family:${fontsDict["body"]}'>${d["name"]} (${d["season"]})<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}`;
+    return `<style='font-family:${fontsDict["body"]}'>${d["name"]}<br>(${d["season"]}/${d["season"]+1})<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${d["mins"]}`;
   };
 
   // For X in list...

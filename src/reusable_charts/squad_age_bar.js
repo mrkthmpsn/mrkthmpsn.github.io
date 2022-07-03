@@ -46,7 +46,7 @@ export async function squad_age_bar(
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "11pt")
-    .text("Hover over sections for more information");
+    .text("Hover over/tap on sections for more information");
 
   svg
     .append("text")
