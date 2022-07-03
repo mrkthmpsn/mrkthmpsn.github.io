@@ -1,33 +1,37 @@
 ul {
-    margin: 0 0 0 1em;
-    padding: 0;
-    font-family: 'Barlow';
+  margin: 0 0 0 1em;
+  padding: 0;
+  font-family: "Barlow";
 }
 
 .article {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5em;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+}
+
+.homepage-link {
+  font-family: "Changa";
+  font-size: 16pt;
 }
 
 p {
-    max-width: 540px;
-    font-family: 'Barlow';
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.5;
-    font-weight: 200;
-    letter-spacing: 0.5pt;
-    
+  max-width: 540px;
+  font-family: "Barlow";
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  letter-spacing: 0.5pt;
 }
 
-h1, h2 {
-    font-family: 'Changa', sans-serif;
+h1,
+h2 {
+  font-family: "Changa", sans-serif;
 }
 
 header {
-    font-family: 'Changa', sans-serif;
+  font-family: "Changa", sans-serif;
 }
 
 /* .article {
