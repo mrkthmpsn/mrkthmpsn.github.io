@@ -27,8 +27,8 @@ export async function squad_age_bar(
     .style("display", "block")
     .style("margin", "auto");
 
-    // Add title and footer?
-    svg
+  // Add title and footer?
+  svg
     .append("text")
     .attr("x", 5)
     .attr("y", 15)
@@ -36,9 +36,9 @@ export async function squad_age_bar(
     .style("color", coloursDict["text_axes"])
     .style("font-size", "16pt")
     .attr("text-anchor", "start")
-    .text(`${seasonId}/${seasonId+1}`)
+    .text(`${seasonId}/${seasonId + 1}`);
 
-    svg
+  svg
     .append("text")
     .attr("x", 7)
     .attr("y", 32)
@@ -46,19 +46,18 @@ export async function squad_age_bar(
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "11pt")
-    .text("Hover over sections for more information")
-    
-    svg
+    .text("Hover over sections for more information");
+
+  svg
     .append("text")
-    .attr("x", width-5)
-    .attr("y", height-2)
+    .attr("x", width - 5)
+    .attr("y", height - 2)
     .attr("text-anchor", "end")
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "8pt")
     .style("font-style", "italic")
-    .text("Data from FBref.com")
-
+    .text("Data from FBref.com");
 
   let tooltip = d3
     .select(`#${graphId}`)
@@ -80,20 +79,23 @@ export async function squad_age_bar(
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
       .style("top", pointerY - 40 + "px")
-      .style("padding", "10px");
+      .style("padding", "10px")
+      .style("visibility", "visible");
   };
   const moveTooltip = function (pointerX, pointerY) {
     tooltip
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
-      .style("top", pointerY - 40 + "px");
+      .style("top", pointerY - 40 + "px")
+      .style("visibility", "visible");
   };
   const hideTooltip = function (d) {
     tooltip
       .transition()
       .duration(200)
       .style("opacity", 0)
-      .style("padding", "0px");
+      .style("padding", "0px")
+      .style("visibility", "hidden");
   };
 
   const margin = { top: 40, right: 20, bottom: 15, left: 20 };
@@ -149,7 +151,7 @@ export async function squad_age_bar(
 
   const barHoverText = function (d) {
     // Order players by minutes played
-    console.log(d);
+    // console.log(d);
     const playersObj = d["players"].sort(
       (a, b) => parseFloat(b.minutes) - parseFloat(a.minutes)
     );

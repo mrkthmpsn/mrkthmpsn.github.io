@@ -25,7 +25,7 @@ export async function playerAgeMinutes(
   const width = 600;
   const height = 350;
 
-//   const margin = { top: 20, right: 20, bottom: 20, left: 20 };
+  //   const margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
   let svg = d3
     .select(`#${graphId}`)
@@ -37,7 +37,7 @@ export async function playerAgeMinutes(
     .style("display", "block")
     .style("margin", "auto");
 
-    svg
+  svg
     .append("text")
     .attr("x", 5)
     .attr("y", 15)
@@ -45,9 +45,9 @@ export async function playerAgeMinutes(
     .style("color", coloursDict["text_axes"])
     .style("font-size", "16pt")
     .attr("text-anchor", "start")
-    .text("Player ages vs minutes played, 2017/18-present")
+    .text("Player ages vs minutes played, 2017/18-present");
 
-    svg
+  svg
     .append("text")
     .attr("x", 7)
     .attr("y", 32)
@@ -55,25 +55,25 @@ export async function playerAgeMinutes(
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "11pt")
-    .text("Hover over circles for more information")
-    
-    svg
+    .text("Hover over circles for more information");
+
+  svg
     .append("text")
-    .attr("x", width-5)
-    .attr("y", height-2)
+    .attr("x", width - 5)
+    .attr("y", height - 2)
     .attr("text-anchor", "end")
     .style("font-family", fontsDict["body"])
     .style("color", coloursDict["text_axes"])
     .style("font-size", "8pt")
     .style("font-style", "italic")
-    .text("Data from FBref.com")
+    .text("Data from FBref.com");
 
-    const margin = { top: 40, right: 50, bottom: 15, left: 50 };
+  const margin = { top: 40, right: 50, bottom: 15, left: 50 };
 
-    const chartAreaWidth = width - margin.left - margin.right;
-    const chartAreaHeight = height - margin.top - margin.bottom;
-    
-    let chartArea = svg
+  const chartAreaWidth = width - margin.left - margin.right;
+  const chartAreaHeight = height - margin.top - margin.bottom;
+
+  let chartArea = svg
     .append("svg")
     .attr("class", "bar-area-svg")
     .attr("x", margin.left)
@@ -101,20 +101,23 @@ export async function playerAgeMinutes(
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
       .style("top", pointerY - 40 + "px")
-      .style("padding", "10px");
+      .style("padding", "10px")
+      .style("visibility", "visible");
   };
   const moveTooltip = function (pointerX, pointerY) {
     tooltip
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
-      .style("top", pointerY - 40 + "px");
+      .style("top", pointerY - 40 + "px")
+      .style("visibility", "visible");
   };
   const hideTooltip = function (d) {
     tooltip
       .transition()
       .duration(200)
       .style("opacity", 0)
-      .style("padding", "0px");
+      .style("padding", "0px")
+      .style("visibility", "hidden");
   };
 
   const tooltipText = function (d) {
@@ -226,13 +229,13 @@ export async function playerAgeMinutes(
     .scaleLinear()
     .domain([18, 36])
     .range([chartAreaHeight - chartMargin.bottom, 0 + chartMargin.top]);
-    // .range([chartAreaHeight, 0]);
+  // .range([chartAreaHeight, 0]);
 
   const xScale = d3
     .scaleLinear()
     .domain([900, 4800])
     .range([0 + chartMargin.left, chartAreaWidth - chartMargin.right]);
-    // .range([0 + margin.left, chartAreaWidth - margin.right]);
+  // .range([0 + margin.left, chartAreaWidth - margin.right]);
 
   const xAxis = d3
     .axisBottom(xScale)
