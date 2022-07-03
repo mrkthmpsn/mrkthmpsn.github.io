@@ -21,8 +21,9 @@ export async function squad_age_bar(
     .select(`#${graphId}`)
     .append(`svg`)
     .attr(`class`, `graph-svg`)
-    .attr(`width`, width)
-    .attr(`height`, height)
+    // .attr(`width`, width)
+    // .attr(`height`, height)
+    .attr("viewBox", `0 0 ${width} ${height}`)
     .style("display", "block")
     .style("margin", "auto");
 
