@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa&display=swap");
+
+main {
+  max-width: 740px;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul,
+ol {
+  font-family: "Barlow";
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul .in-vis {
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+
+.navbar-title {
+  font-family: "Barlow";
+  font-size: 18pt;
+  margin-left: 3vw;
+}
+
+.article {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  padding-top: 20px;
+}
+
+.homepage-link {
+  font-family: "Changa";
+  font-size: 16pt;
+}
+
+p {
+  max-width: 540px;
+  font-family: "Barlow";
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  letter-spacing: 0.5pt;
+}
+
+p.byline {
+  max-width: 720px;
+  font-family: "Changa";
+  font-size: 14px;
+  line-height: 0.3;
+}
+
+h1,
+h2 {
+  font-family: "Changa", sans-serif;
+}
+h3 {
+  padding: 20px;
+  font-family: "Barlow";
+}
+
+header {
+  font-family: "Changa", sans-serif;
+}
+
+.has-dropcap::first-letter {
+  font-family: "Changa";
+  float: left;
+  font-size: 4rem;
+  line-height: 0.55;
+  margin: 0.1em 0.1em 0.1em 0;
+  /* background-color: #ffe66b; */
+}
+
+/* Layout */
+#reading-progress {
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+#reading-progress-fill {
+  height: 5px;
+  width: 0;
+}
+
+/* Theme */
+#reading-progress-fill {
+  -webkit-transition: width 100ms ease;
+  -o-transition: width 100ms ease;
+  transition: width 100ms ease;
+  background-color: #6e6e6e;
+}
+
+hr.centre-ball {
+  border: 0;
+  height: 1px;
+  width: 10%;
+  position: relative;
+  margin: 30px auto;
+  background: #6e6e6e;
+}
+
+hr.centre-ball::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  display: inline-block;
+  border: 1px solid #6e6e6e;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  margin: 0 0 0 -3px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: stretch;
+}
+
+img.header-image {
+  margin-left: 10%;
+  margin-right: 3%;
+  display: inline-block;
+  width: 60%;
+}
+
+p.header-byline {
+  text-align: right;
+  font-family: var(--font-changa);
+  font-size: 14px;
+  line-height: 0.8;
+}
+
+img.splash-image {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  display: block;
+  width: 100%;
+}
+
+@keyframes candles-highlight {
+  0% {
+    background-color: #fff9e2;
+  }
+  100% {
+    background-color: #fff4df;
+  }
+}
+
+div.candles-highlight {
+  animation-name: candles-highlight;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}

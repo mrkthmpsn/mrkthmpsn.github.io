@@ -1,0 +1,864 @@
+[
+  {
+    "season": 2021,
+    "data": [
+      {
+        "type": "pre-peak",
+        "percentage": 0.30746622758095643,
+        "players": [
+          {
+            "name": "Éder Militão",
+            "age": 23,
+            "position": "CB",
+            "minutes": 4491.0
+          },
+          {
+            "name": "Vinicius Júnior",
+            "age": 21,
+            "position": "W",
+            "minutes": 4253.0
+          },
+          {
+            "name": "Federico Valverde",
+            "age": 23,
+            "position": "AM",
+            "minutes": 2864.0
+          },
+          { "name": "Rodrygo", "age": 20, "position": "W", "minutes": 2347.0 },
+          {
+            "name": "Eduardo Camavinga",
+            "age": 18,
+            "position": "CM",
+            "minutes": 1670.0
+          },
+          {
+            "name": "Luka Jović",
+            "age": 23,
+            "position": "ST",
+            "minutes": 561.0
+          },
+          {
+            "name": "Andriy Lunin",
+            "age": 22,
+            "position": "GK",
+            "minutes": 390.0
+          },
+          {
+            "name": "Jesús Vallejo",
+            "age": 24,
+            "position": "CB",
+            "minutes": 355.0
+          },
+          {
+            "name": "Miguel Gutiérrez",
+            "age": 20,
+            "position": "LB",
+            "minutes": 325.0
+          },
+          { "name": "Blanco", "age": 21, "position": "DM", "minutes": 38.0 },
+          {
+            "name": "Peter González",
+            "age": 19,
+            "position": "W",
+            "minutes": 27.0
+          },
+          {
+            "name": "Mario Gila",
+            "age": 20,
+            "position": "CB",
+            "minutes": 25.0
+          },
+          {
+            "name": "Sergio Santos",
+            "age": 20,
+            "position": "RB",
+            "minutes": 11.0
+          },
+          { "name": "Latasa", "age": 20, "position": "ST", "minutes": 9.0 }
+        ]
+      },
+      {
+        "type": "peak-age",
+        "percentage": 0.25744940776544323,
+        "players": [
+          {
+            "name": "Thibaut Courtois",
+            "age": 29,
+            "position": "GK",
+            "minutes": 4770.0
+          },
+          {
+            "name": "David Alaba",
+            "age": 29,
+            "position": "CB",
+            "minutes": 4066.0
+          },
+          {
+            "name": "Ferland Mendy",
+            "age": 26,
+            "position": "LB",
+            "minutes": 2811.0
+          },
+          {
+            "name": "Marco Asensio",
+            "age": 25,
+            "position": "AM",
+            "minutes": 2140.0
+          },
+          { "name": "Mariano", "age": 27, "position": "ST", "minutes": 402.0 },
+          {
+            "name": "Dani Ceballos",
+            "age": 24,
+            "position": "CM",
+            "minutes": 352.0
+          }
+        ]
+      },
+      {
+        "type": "post-peak",
+        "percentage": 0.43508436465360034,
+        "players": [
+          {
+            "name": "Casemiro",
+            "age": 29,
+            "position": "DM",
+            "minutes": 3918.0
+          },
+          {
+            "name": "Karim Benzema",
+            "age": 33,
+            "position": "ST",
+            "minutes": 3905.0
+          },
+          {
+            "name": "Luka Modrić",
+            "age": 35,
+            "position": "CM",
+            "minutes": 3416.0
+          },
+          {
+            "name": "Toni Kroos",
+            "age": 31,
+            "position": "CM",
+            "minutes": 3388.0
+          },
+          {
+            "name": "Dani Carvajal",
+            "age": 29,
+            "position": "RB",
+            "minutes": 2596.0
+          },
+          { "name": "Nacho", "age": 31, "position": "CB", "minutes": 2551.0 },
+          {
+            "name": "Lucas Vázquez",
+            "age": 30,
+            "position": "W",
+            "minutes": 2515.0
+          },
+          {
+            "name": "Eden Hazard",
+            "age": 30,
+            "position": "W",
+            "minutes": 909.0
+          },
+          { "name": "Marcelo", "age": 33, "position": "RB", "minutes": 734.0 },
+          { "name": "Isco", "age": 29, "position": "AM", "minutes": 353.0 },
+          {
+            "name": "Gareth Bale",
+            "age": 32,
+            "position": "W",
+            "minutes": 289.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "season": 2020,
+    "data": [
+      {
+        "type": "pre-peak",
+        "percentage": 0.18471977883890425,
+        "players": [
+          {
+            "name": "Vinicius Júnior",
+            "age": 20,
+            "position": "W",
+            "minutes": 2717.0
+          },
+          {
+            "name": "Federico Valverde",
+            "age": 22,
+            "position": "AM",
+            "minutes": 1964.0
+          },
+          {
+            "name": "Éder Militão",
+            "age": 22,
+            "position": "CB",
+            "minutes": 1730.0
+          },
+          { "name": "Rodrygo", "age": 19, "position": "W", "minutes": 1306.0 },
+          {
+            "name": "Martin Ødegaard",
+            "age": 21,
+            "position": "CM",
+            "minutes": 367.0
+          },
+          {
+            "name": "Miguel Gutiérrez",
+            "age": 19,
+            "position": "LB",
+            "minutes": 316.0
+          },
+          { "name": "Blanco", "age": 20, "position": "DM", "minutes": 220.0 },
+          {
+            "name": "Víctor Chust",
+            "age": 20,
+            "position": "CB",
+            "minutes": 215.0
+          },
+          {
+            "name": "Luka Jović",
+            "age": 22,
+            "position": "ST",
+            "minutes": 207.0
+          },
+          {
+            "name": "Sergio Arribas",
+            "age": 18,
+            "position": "CM",
+            "minutes": 167.0
+          },
+          { "name": "Marvin", "age": 20, "position": "AM", "minutes": 133.0 },
+          {
+            "name": "Andriy Lunin",
+            "age": 21,
+            "position": "GK",
+            "minutes": 120.0
+          },
+          { "name": "Hugo Duro", "age": 20, "position": "ST", "minutes": 70.0 },
+          {
+            "name": "Borja Mayoral",
+            "age": 23,
+            "position": "ST",
+            "minutes": 23.0
+          }
+        ]
+      },
+      {
+        "type": "peak-age",
+        "percentage": 0.40054516983393584,
+        "players": [
+          {
+            "name": "Thibaut Courtois",
+            "age": 28,
+            "position": "GK",
+            "minutes": 4590.0
+          },
+          {
+            "name": "Casemiro",
+            "age": 28,
+            "position": "DM",
+            "minutes": 3939.0
+          },
+          {
+            "name": "Raphaël Varane",
+            "age": 27,
+            "position": "CB",
+            "minutes": 3570.0
+          },
+          {
+            "name": "Ferland Mendy",
+            "age": 25,
+            "position": "LB",
+            "minutes": 3260.0
+          },
+          {
+            "name": "Marco Asensio",
+            "age": 24,
+            "position": "AM",
+            "minutes": 2608.0
+          },
+          { "name": "Isco", "age": 28, "position": "AM", "minutes": 1103.0 },
+          {
+            "name": "Álvaro Odriozola",
+            "age": 24,
+            "position": "RB",
+            "minutes": 959.0
+          },
+          { "name": "Mariano", "age": 26, "position": "ST", "minutes": 690.0 }
+        ]
+      },
+      {
+        "type": "post-peak",
+        "percentage": 0.4147350513271599,
+        "players": [
+          {
+            "name": "Karim Benzema",
+            "age": 32,
+            "position": "ST",
+            "minutes": 3875.0
+          },
+          {
+            "name": "Luka Modrić",
+            "age": 34,
+            "position": "CM",
+            "minutes": 3711.0
+          },
+          {
+            "name": "Toni Kroos",
+            "age": 30,
+            "position": "CM",
+            "minutes": 3189.0
+          },
+          {
+            "name": "Lucas Vázquez",
+            "age": 29,
+            "position": "W",
+            "minutes": 2778.0
+          },
+          { "name": "Nacho", "age": 30, "position": "CB", "minutes": 2765.0 },
+          {
+            "name": "Sergio Ramos",
+            "age": 34,
+            "position": "CB",
+            "minutes": 1788.0
+          },
+          { "name": "Marcelo", "age": 32, "position": "RB", "minutes": 1336.0 },
+          {
+            "name": "Dani Carvajal",
+            "age": 28,
+            "position": "RB",
+            "minutes": 1116.0
+          },
+          {
+            "name": "Eden Hazard",
+            "age": 29,
+            "position": "W",
+            "minutes": 895.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "season": 2019,
+    "data": [
+      {
+        "type": "pre-peak",
+        "percentage": 0.17413494127847404,
+        "players": [
+          {
+            "name": "Federico Valverde",
+            "age": 21,
+            "position": "AM",
+            "minutes": 2714.0
+          },
+          {
+            "name": "Vinicius Júnior",
+            "age": 19,
+            "position": "W",
+            "minutes": 1828.0
+          },
+          {
+            "name": "Éder Militão",
+            "age": 21,
+            "position": "CB",
+            "minutes": 1472.0
+          },
+          { "name": "Rodrygo", "age": 18, "position": "W", "minutes": 1425.0 },
+          {
+            "name": "Luka Jović",
+            "age": 21,
+            "position": "ST",
+            "minutes": 818.0
+          },
+          {
+            "name": "Marco Asensio",
+            "age": 23,
+            "position": "AM",
+            "minutes": 366.0
+          },
+          {
+            "name": "Brahim Díaz",
+            "age": 19,
+            "position": "CM",
+            "minutes": 214.0
+          }
+        ]
+      },
+      {
+        "type": "peak-age",
+        "percentage": 0.4383818081500749,
+        "players": [
+          {
+            "name": "Casemiro",
+            "age": 27,
+            "position": "DM",
+            "minutes": 4077.0
+          },
+          {
+            "name": "Thibaut Courtois",
+            "age": 27,
+            "position": "GK",
+            "minutes": 3855.0
+          },
+          {
+            "name": "Raphaël Varane",
+            "age": 26,
+            "position": "CB",
+            "minutes": 3842.0
+          },
+          {
+            "name": "Dani Carvajal",
+            "age": 27,
+            "position": "RB",
+            "minutes": 3750.0
+          },
+          {
+            "name": "Ferland Mendy",
+            "age": 24,
+            "position": "LB",
+            "minutes": 2408.0
+          },
+          { "name": "Isco", "age": 27, "position": "AM", "minutes": 1611.0 },
+          {
+            "name": "Alphonse Areola",
+            "age": 26,
+            "position": "GK",
+            "minutes": 765.0
+          },
+          {
+            "name": "James Rodríguez",
+            "age": 28,
+            "position": "AM",
+            "minutes": 728.0
+          },
+          { "name": "Nacho", "age": 29, "position": "CB", "minutes": 687.0 },
+          {
+            "name": "Álvaro Odriozola",
+            "age": 23,
+            "position": "RB",
+            "minutes": 433.0
+          },
+          { "name": "Mariano", "age": 25, "position": "ST", "minutes": 91.0 }
+        ]
+      },
+      {
+        "type": "post-peak",
+        "percentage": 0.3874832505714511,
+        "players": [
+          {
+            "name": "Karim Benzema",
+            "age": 31,
+            "position": "ST",
+            "minutes": 3967.0
+          },
+          {
+            "name": "Sergio Ramos",
+            "age": 33,
+            "position": "CB",
+            "minutes": 3825.0
+          },
+          {
+            "name": "Toni Kroos",
+            "age": 29,
+            "position": "CM",
+            "minutes": 3564.0
+          },
+          {
+            "name": "Luka Modrić",
+            "age": 33,
+            "position": "CM",
+            "minutes": 2628.0
+          },
+          { "name": "Marcelo", "age": 31, "position": "RB", "minutes": 1852.0 },
+          {
+            "name": "Eden Hazard",
+            "age": 28,
+            "position": "W",
+            "minutes": 1531.0
+          },
+          {
+            "name": "Gareth Bale",
+            "age": 30,
+            "position": "W",
+            "minutes": 1257.0
+          },
+          {
+            "name": "Lucas Vázquez",
+            "age": 28,
+            "position": "W",
+            "minutes": 1040.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "season": 2018,
+    "data": [
+      {
+        "type": "pre-peak",
+        "percentage": 0.242860540421873,
+        "players": [
+          {
+            "name": "Marco Asensio",
+            "age": 22,
+            "position": "AM",
+            "minutes": 2363.0
+          },
+          {
+            "name": "Dani Ceballos",
+            "age": 21,
+            "position": "CM",
+            "minutes": 1908.0
+          },
+          {
+            "name": "Álvaro Odriozola",
+            "age": 22,
+            "position": "RB",
+            "minutes": 1856.0
+          },
+          {
+            "name": "Sergio Reguilón",
+            "age": 21,
+            "position": "LB",
+            "minutes": 1794.0
+          },
+          {
+            "name": "Vinicius Júnior",
+            "age": 18,
+            "position": "W",
+            "minutes": 1735.0
+          },
+          {
+            "name": "Federico Valverde",
+            "age": 20,
+            "position": "AM",
+            "minutes": 1129.0
+          },
+          {
+            "name": "Marcos Llorente",
+            "age": 23,
+            "position": "CM",
+            "minutes": 1006.0
+          },
+          {
+            "name": "Jesús Vallejo",
+            "age": 21,
+            "position": "CB",
+            "minutes": 491.0
+          },
+          {
+            "name": "Brahim Díaz",
+            "age": 18,
+            "position": "CM",
+            "minutes": 394.0
+          },
+          {
+            "name": "Javi Sánchez",
+            "age": 21,
+            "position": "CB",
+            "minutes": 348.0
+          },
+          {
+            "name": "Luca Zidane",
+            "age": 20,
+            "position": "GK",
+            "minutes": 90.0
+          },
+          {
+            "name": "Cristo González",
+            "age": 20,
+            "position": "ST",
+            "minutes": 84.0
+          },
+          {
+            "name": "Francisco Garcia",
+            "age": 18,
+            "position": "LB",
+            "minutes": 45.0
+          },
+          {
+            "name": "Borja Mayoral",
+            "age": 21,
+            "position": "ST",
+            "minutes": 19.0
+          },
+          {
+            "name": "Álvaro Fidalgo",
+            "age": 21,
+            "position": "AM",
+            "minutes": 13.0
+          }
+        ]
+      },
+      {
+        "type": "peak-age",
+        "percentage": 0.4272881945079673,
+        "players": [
+          {
+            "name": "Raphaël Varane",
+            "age": 25,
+            "position": "CB",
+            "minutes": 3594.0
+          },
+          {
+            "name": "Toni Kroos",
+            "age": 28,
+            "position": "CM",
+            "minutes": 3265.0
+          },
+          {
+            "name": "Casemiro",
+            "age": 26,
+            "position": "DM",
+            "minutes": 3230.0
+          },
+          {
+            "name": "Thibaut Courtois",
+            "age": 26,
+            "position": "GK",
+            "minutes": 2970.0
+          },
+          {
+            "name": "Dani Carvajal",
+            "age": 26,
+            "position": "RB",
+            "minutes": 2961.0
+          },
+          {
+            "name": "Lucas Vázquez",
+            "age": 27,
+            "position": "W",
+            "minutes": 2508.0
+          },
+          { "name": "Nacho", "age": 28, "position": "CB", "minutes": 2490.0 },
+          { "name": "Isco", "age": 26, "position": "AM", "minutes": 1723.0 },
+          { "name": "Mariano", "age": 24, "position": "ST", "minutes": 615.0 }
+        ]
+      },
+      {
+        "type": "post-peak",
+        "percentage": 0.3298512650701597,
+        "players": [
+          {
+            "name": "Karim Benzema",
+            "age": 30,
+            "position": "ST",
+            "minutes": 4109.0
+          },
+          {
+            "name": "Sergio Ramos",
+            "age": 32,
+            "position": "CB",
+            "minutes": 3479.0
+          },
+          {
+            "name": "Luka Modrić",
+            "age": 32,
+            "position": "CM",
+            "minutes": 3380.0
+          },
+          { "name": "Marcelo", "age": 30, "position": "RB", "minutes": 2676.0 },
+          {
+            "name": "Gareth Bale",
+            "age": 29,
+            "position": "W",
+            "minutes": 2466.0
+          },
+          {
+            "name": "Keylor Navas",
+            "age": 31,
+            "position": "GK",
+            "minutes": 1920.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "season": 2017,
+    "data": [
+      {
+        "type": "pre-peak",
+        "percentage": 0.26028274386236877,
+        "players": [
+          {
+            "name": "Raphaël Varane",
+            "age": 24,
+            "position": "CB",
+            "minutes": 3620.0
+          },
+          {
+            "name": "Marco Asensio",
+            "age": 21,
+            "position": "AM",
+            "minutes": 2846.0
+          },
+          {
+            "name": "Mateo Kovačić",
+            "age": 23,
+            "position": "CM",
+            "minutes": 1757.0
+          },
+          {
+            "name": "Theo Hernández",
+            "age": 19,
+            "position": "LB",
+            "minutes": 1650.0
+          },
+          {
+            "name": "Achraf Hakimi",
+            "age": 18,
+            "position": "RB",
+            "minutes": 1225.0
+          },
+          {
+            "name": "Marcos Llorente",
+            "age": 22,
+            "position": "CM",
+            "minutes": 1067.0
+          },
+          {
+            "name": "Jesús Vallejo",
+            "age": 20,
+            "position": "CB",
+            "minutes": 1002.0
+          },
+          {
+            "name": "Borja Mayoral",
+            "age": 20,
+            "position": "ST",
+            "minutes": 936.0
+          },
+          {
+            "name": "Dani Ceballos",
+            "age": 20,
+            "position": "CM",
+            "minutes": 903.0
+          },
+          {
+            "name": "Álvaro Tejero",
+            "age": 21,
+            "position": "RB",
+            "minutes": 180.0
+          },
+          {
+            "name": "Luca Zidane",
+            "age": 19,
+            "position": "GK",
+            "minutes": 90.0
+          },
+          {
+            "name": "Óscar Rodríguez Arnaiz",
+            "age": 19,
+            "position": "AM",
+            "minutes": 74.0
+          },
+          {
+            "name": "Franchu Feuillassier",
+            "age": 19,
+            "position": "W",
+            "minutes": 71.0
+          },
+          {
+            "name": "Luismi Quezada",
+            "age": 21,
+            "position": "LB",
+            "minutes": 16.0
+          },
+          {
+            "name": "Jaime Seoane",
+            "age": 20,
+            "position": "CM",
+            "minutes": 10.0
+          }
+        ]
+      },
+      {
+        "type": "peak-age",
+        "percentage": 0.4166175206834381,
+        "players": [
+          {
+            "name": "Keylor Navas",
+            "age": 30,
+            "position": "GK",
+            "minutes": 3780.0
+          },
+          {
+            "name": "Casemiro",
+            "age": 25,
+            "position": "DM",
+            "minutes": 3763.0
+          },
+          {
+            "name": "Toni Kroos",
+            "age": 27,
+            "position": "CM",
+            "minutes": 3472.0
+          },
+          {
+            "name": "Dani Carvajal",
+            "age": 25,
+            "position": "RB",
+            "minutes": 3384.0
+          },
+          { "name": "Nacho", "age": 27, "position": "CB", "minutes": 3195.0 },
+          { "name": "Isco", "age": 25, "position": "AM", "minutes": 2812.0 },
+          {
+            "name": "Lucas Vázquez",
+            "age": 26,
+            "position": "W",
+            "minutes": 2789.0
+          },
+          {
+            "name": "Kiko Casilla",
+            "age": 30,
+            "position": "GK",
+            "minutes": 1530.0
+          }
+        ]
+      },
+      {
+        "type": "post-peak",
+        "percentage": 0.3230997354541931,
+        "players": [
+          {
+            "name": "Sergio Ramos",
+            "age": 31,
+            "position": "CB",
+            "minutes": 3639.0
+          },
+          { "name": "Marcelo", "age": 29, "position": "RB", "minutes": 3488.0 },
+          {
+            "name": "Cristiano Ronaldo",
+            "age": 32,
+            "position": "ST",
+            "minutes": 3487.0
+          },
+          {
+            "name": "Luka Modrić",
+            "age": 31,
+            "position": "CM",
+            "minutes": 3154.0
+          },
+          {
+            "name": "Karim Benzema",
+            "age": 29,
+            "position": "ST",
+            "minutes": 3069.0
+          },
+          {
+            "name": "Gareth Bale",
+            "age": 28,
+            "position": "W",
+            "minutes": 2338.0
+          }
+        ]
+      }
+    ]
+  }
+]
