@@ -5,11 +5,10 @@ import Head from 'next/head';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import '/app/pages-styles.css';
-// import './real_madrid.js';
 import SquadAgeBarVis from '@/components/squadAgeBarVis.tsx';
 import PlayerAgeMinsChart from '@/components/playerAgeMinsChart.tsx';
 import dataAgeMins from './dummy_data2.json';
-import dataPlayerAgeMins from "/app/real-madrid/dummy_json_new2.json";
+import dataPlayerAgeMins from "./dummy_json_new2.json";
 
 const RealMadridArticlePage = () => {
   const coloursDict = {

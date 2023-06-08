@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -26,10 +28,13 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.0",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "eslint": "^8.42.0",
+    "gh-pages": "^5.0.0",
     "google-fonts-webpack-plugin": "^0.4.4",
     "typescript": "^5.1.3"
-  }
+  },
+  "homepage": "https://mrkthmpsn.github.io"
 }

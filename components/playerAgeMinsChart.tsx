@@ -4,7 +4,8 @@ import * as d3 from 'd3';
 type playerAgeMinsChartType = {
     graphId: string
     playersList: Array<string>
-    receivedData: JSON
+    // This shouldn't be any but I don't yet have my head around types that well
+    receivedData: any
     coloursDict: Record< string, string >
     fontsDict: Record< string, string >
 }
@@ -26,7 +27,7 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
     const height = 350;
     console.log('receivedata', receivedData);
 
-    const selectData = receivedData.filter((d) => playersList.includes(d["name"]));
+    const selectData = receivedData.filter((d: Record<string, any>) => playersList.includes(d["name"]));
 
     const svg = svgElement
     .append(`svg`)
@@ -91,7 +92,7 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
     .style("padding", "0px")
     .style("color", coloursDict["text_axes"]);
 
-  const showTooltip = function (pointerX, pointerY, d) {
+  const showTooltip = function (pointerX: number, pointerY: number, d: Record<string, any>) {
     // console.log(pointerEvent);
     tooltip.transition().duration(100);
     tooltip
@@ -104,14 +105,14 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
       .style("padding", "10px")
       .style("visibility", "visible");
   };
-  const moveTooltip = function (pointerX, pointerY) {
+  const moveTooltip = function (pointerX: number, pointerY: number) {
     tooltip
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
       .style("top", pointerY - 40 + "px")
       .style("visibility", "visible");
   };
-  const hideTooltip = function (d) {
+  const hideTooltip = function () {
     tooltip
       .transition()
       .duration(200)
@@ -120,7 +121,7 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
       .style("visibility", "hidden");
   };
 
-  const tooltipText = function (d) {
+  const tooltipText = function (d: Record<string, any>) {
     return `<style='font-family:${fontsDict["body"]}'>${d["name"]}<br>(${
       d["season"]
     }/${d["season"] + 1})<br><b>Age:</b> ${d["age"]}<br><b>Mins:</b> ${
@@ -133,7 +134,7 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
   // What should the behaviour be when something is selected?
   // Let's plot them each in grey to start with
 
-  const highlightCircles = function (selection) {
+  const highlightCircles = function (selection: any) {
     // let parentGroup = selection._groups[0][0].parentNode;
 
     // console.log(i);
@@ -181,7 +182,7 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
     }
   };
 
-  const highlightGroups = function (selection) {
+  const highlightGroups = function (selection: any) {
     const parentGroup = selection._groups[0][0].parentNode;
 
     if (parentGroup.classList.contains("player-group")) {
@@ -281,13 +282,13 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
     // console.log(playerData);
     const seasonsData = selectData[playerIndex]["seasons"];
 
-    const X = d3.map(seasonsData, (d) => d["mins"]);
-    const Y = d3.map(seasonsData, (d) => d["age"]);
-    const I = d3.range(X.length);
+    const X: number[] = d3.map(seasonsData, (d: Record<string, any>) => d["mins"]);
+    const Y: number[] = d3.map(seasonsData, (d: Record<string, any>) => d["age"]);
+    const I: number[] = d3.range(X.length);
 
     // Line generator and line
     const lineGenerator = d3
-      .line()
+      .line<number>()
       .curve(d3.curveLinear)
       .x((i) => xScale(X[i]))
       .y((i) => yScale(Y[i]));
@@ -314,10 +315,10 @@ const PlayerAgeMinsChart: React.FC<playerAgeMinsChartType> = ({
       .attr("stroke", coloursDict["muted_text"])
       .attr("stroke-width", 2)
       .attr("d", lineGenerator(I))
-      .on("mouseover", function (event, i) {
+      .on("mouseover", function () {
         d3.select(this).call(highlightGroups);
       })
-      .on("mouseleave", function (event, i) {
+      .on("mouseleave", function () {
         d3.select(this).call(highlightGroups);
       });
 

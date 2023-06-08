@@ -8,7 +8,7 @@ import xGTimelineThumb from '@/public/images/home_page_thumbs/xg_timeline_design
 import codingTutorialsThumb from '@/public/images/home_page_thumbs/coding_tutorials_thumb.png';
 import realMadridD3Thumb from '@/public/images/home_page_thumbs/real_madrid_d3_thumb.png';
 import getGoalsideThumb from '@/public/images/home_page_thumbs/get_goalside_thumb.png';
-import statsbombLabellingThumb from '@/public/images/home_page_thumbs/statsbomb_labelling_thumb.png';
+import statsbombLabellingThumb from "public/images/home_page_thumbs/statsbomb_labelling_thumb.png";
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
       
     <div>  
       <br />
-      <h3 style={{ textAlign: 'center', paddingBottom: '2px' }}>
+      <h3 style={{ textAlign: "center", paddingBottom: "2px" }}>
         <i>When your hands are busy holding an idea they can't type.</i>
       </h3>
       <p style={{ textAlign: 'right' }}>-- Seth Godin</p>

@@ -4,7 +4,8 @@ import * as d3 from 'd3';
 type SquadAgeBarVisType = {
     graphId: string
     seasonId: number
-    receivedData: [JSON]
+    // This shouldn't be any but I don't yet have my head around types that well
+    receivedData: any
     coloursDict: Record< string, string >
     fontsDict: Record< string, string >
 }
@@ -75,7 +76,7 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
     .style("padding", "0px")
     .style("color", "black");
 
-  const showTooltip = function (pointerX, pointerY, d) {
+  const showTooltip = function (pointerX: number, pointerY: number, d: Record<string, any>) {
     // console.log(pointerEvent);
     tooltip.transition().duration(100);
     tooltip
@@ -88,14 +89,14 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
       .style("padding", "10px")
       .style("visibility", "visible");
   };
-  const moveTooltip = function (pointerX, pointerY) {
+  const moveTooltip = function (pointerX: number, pointerY: number) {
     tooltip
       .style("position", "absolute")
       .style("left", pointerX + 20 + "px")
       .style("top", pointerY - 40 + "px")
       .style("visibility", "visible");
   };
-  const hideTooltip = function (d) {
+  const hideTooltip = function () {
     tooltip
       .transition()
       .duration(200)
@@ -119,8 +120,8 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
 
   const totalData = receivedData;
 //   console.log('it be the data', totalData);
-  const dataList = [];
-  totalData.map(function (dataObj) {
+  const dataList: any[] = [];
+  totalData.map(function (dataObj: Record<string, any>) {
     if (dataObj["season"] === seasonId) dataList.push(dataObj["data"]);
   });
   const data = dataList[0];
@@ -133,7 +134,7 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
     coloursDict["text_axes"],
   ];
 
-  const highlightRects = function (selection) {
+  const highlightRects = function (selection: any) {
     // console.log(selection);
     if (selection.classed("age-group")) {
       selection.attr("class", "highlighted");
@@ -152,11 +153,11 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
     }
   };
 
-  const barHoverText = function (d) {
+  const barHoverText = function (d: Record<string, any>) {
     // Order players by minutes played
     // console.log(d);
     const playersObj = d["players"].sort(
-      (a, b) => parseFloat(b.minutes) - parseFloat(a.minutes)
+      (a: any, b: any) => parseFloat(b.minutes) - parseFloat(a.minutes)
     );
 
     let playersString = "<ul class='in-vis'>";
@@ -183,7 +184,7 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
   };
 
   const rectStarts = [0];
-  const rectWidths = [];
+  const rectWidths: number[] = [];
 
   const barGroups = barArea
     .selectAll("g")
@@ -195,21 +196,21 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
   barGroups
     .append("rect")
     // Remember, x and y being 0 is relative to `barArea`, not `svg`
-    .attr("x", function (d, i) {
+    .attr("x", function (d: any, i) {
       const rectWidth = d["percentage"] * barAreaWidth;
       rectStarts.push(rectWidth + rectStarts[i]);
       rectWidths.push(rectWidth);
       return rectStarts[i];
     })
     .attr("y", 0)
-    .attr("width", (d) => d["percentage"] * barAreaWidth)
+    .attr("width", (d: any) => d["percentage"] * barAreaWidth)
     .attr("height", barAreaHeight)
     // The fill should change according to the type - the easiest way of doing this might be to create a list and then cycle through that using the index of the piece of data
     .attr("fill", (d, i) => ageColours[i])
     .attr("stroke", "black")
     .attr("stroke-width", 1.5)
-    .on("mouseover", function (event, d) {
-      d3.select(this.parentNode).call(highlightRects);
+    .on("mouseover", function (event: any, d: any) {
+      d3.select(event.target.parentNode).call(highlightRects);
 
       const pointerX = event.pageX;
       const pointerY = event.pageY;
@@ -220,8 +221,8 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
       const pointerY = event.pageY;
       moveTooltip(pointerX, pointerY);
     })
-    .on("mouseleave", function () {
-      d3.select(this.parentNode).call(highlightRects);
+    .on("mouseleave", function (event) {
+      d3.select(event.target.parentNode).call(highlightRects);
 
       hideTooltip();
     });
@@ -238,10 +239,10 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
     .style("fill", "white")
     .style("stroke", "black")
     .style("stroke-width", 0.7)
-    .html((d) => `${Math.round(d["percentage"] * 100)}%`)
+    .html((d: any) => `${Math.round(d["percentage"] * 100)}%`)
     .style("font-size", "40px")
-    .on("mouseover", function (event, d) {
-      d3.select(this.parentNode).call(highlightRects);
+    .on("mouseover", function (event: any, d: any) {
+      d3.select(event.target.parentNode).call(highlightRects);
 
       const pointerX = event.pageX;
       const pointerY = event.pageY;
@@ -252,8 +253,8 @@ const SquadAgeBarVis: React.FC<SquadAgeBarVisType> = ({
       const pointerY = event.pageY;
       moveTooltip(pointerX, pointerY);
     })
-    .on("mouseleave", function () {
-      d3.select(this.parentNode).call(highlightRects);
+    .on("mouseleave", function (event:any) {
+      d3.select(event.target.parentNode).call(highlightRects);
 
       hideTooltip();
     });

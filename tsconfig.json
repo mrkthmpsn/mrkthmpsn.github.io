@@ -9,6 +9,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "allowImportingTsExtensions": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/squadAgeBarVis.js", "components/playerAgeMinsChart.js"],
   "exclude": ["node_modules"]
 }
