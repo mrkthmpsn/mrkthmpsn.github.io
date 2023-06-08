@@ -27,12 +27,21 @@ ul .in-vis {
   margin-left: 3vw;
 }
 
+div.card,
 .article {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2em;
+}
+
+.article {
   padding-top: 20px;
+}
+
+div.card {
+  margin-bottom: 20px;
+  min-height: 165px;
 }
 
 .homepage-link {
@@ -54,6 +63,30 @@ p.byline {
   font-family: "Changa";
   font-size: 14px;
   line-height: 0.3;
+}
+
+div.card:hover {
+  border-width: 3px;
+  border-color: #f3ac5a;
+}
+
+div.card a {
+  font-style: normal;
+  color: black;
+  text-decoration-line: none;
+}
+
+div.card:hover div.homepage-link {
+  text-decoration-line: underline;
+  color: darkgrey;
+}
+
+.card-img {
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 h1,

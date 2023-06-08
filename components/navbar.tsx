@@ -1,8 +1,7 @@
 'use client'
 
 import React, {useEffect, useState} from "react";
-import Link from "next/link";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 const CustomNavbar = () => {
   
@@ -20,7 +19,8 @@ const CustomNavbar = () => {
   return (
     <>
     <Navbar bg="light" expand="lg">
-      <Navbar.Brand className='navbar-title' href="/">Home</Navbar.Brand>
+      <Container>
+      <Navbar.Brand className="navbar-title" href="/">Home</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -30,6 +30,11 @@ const CustomNavbar = () => {
           
         </Nav>
       </Navbar.Collapse>
+      <Navbar.Text>
+        💬<i>Data Scientist | Developer | Developing</i>
+      </Navbar.Text>
+      
+      </Container>
     </Navbar>
     </>
   );
