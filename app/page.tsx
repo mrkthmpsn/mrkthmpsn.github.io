@@ -31,7 +31,7 @@ const HomePage = () => {
       <p style={{ textAlign: 'right' }}>-- Seth Godin</p>
       <br />
       <p>
-        Hi, I'm Mark. Mark Thompson. I'm usually either making stuff, making sense of stuff, or making sense of it to others. 
+        Hi, I'm Mark. <b>Mark Thompson</b>. I'm usually either making stuff, making sense of stuff, or making sense of it to others. 
       </p>
       <p>
         At the moment that's mostly in the world of football, but Python, data science, and a good attitude transfer elsewhere pretty well. 
