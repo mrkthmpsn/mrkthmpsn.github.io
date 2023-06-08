@@ -21,7 +21,7 @@ const fontsDict = { body: "Barlow", header: "Changa" };
     return (
     <>
       <Head>
-        <title>Article title</title>
+        <title>D3 with Real Madrid</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"

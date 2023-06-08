@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './pages-styles.css';
+import Head from 'next/head';
 import CustomNavbar from '@/components/navbar';
 import HomePageCard from '@/components/homePageCard';
 import analyticsLibraryThumb from '@/public/images/home_page_thumbs/analytics_library_thumb.png';
@@ -13,6 +14,9 @@ import statsbombLabellingThumb from "public/images/home_page_thumbs/statsbomb_la
 const HomePage = () => {
   return (
   <>
+  <Head>
+    <title>Mark Thompson.</title>
+  </Head>
 
   <div>
       <CustomNavbar />
