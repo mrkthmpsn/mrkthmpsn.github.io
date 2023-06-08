@@ -26,11 +26,15 @@ const HomePage = () => {
       </h3>
       <p style={{ textAlign: 'right' }}>-- Seth Godin</p>
       <br />
-      <p style={{ marginBottom: 0 }}>
-        Hi, I'm Mark.
+      <p>
+        Hi, I'm Mark. Mark Thompson. I'm usually either making stuff, making sense of stuff, or making sense of it to others. 
       </p>
-
-      <p>You can find some of my projects below</p>
+      <p>
+        At the moment that's mostly in the world of football, but Python, data science, and a good attitude transfer elsewhere pretty well. 
+      </p>
+      <p>  
+        You can find some of my projects below:
+      </p>
       
       {/* <p style={{ marginBottom: '20px' }}>
         📚 <a href="/analytics-library" className="homepage-link">
@@ -42,7 +46,7 @@ const HomePage = () => {
         </small>
       </p> */}
 
-      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal analytics library app' descriptionText='Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
+      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal football analytics library app' descriptionText='Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
 
       {/* <p style={{ marginBottom: '20px' }}>
         🎨 <a href="https://www.twenty3.sport/twenty3-introducing-our-xg-timelines-visualisations/" className="homepage-link" target="_blank">
@@ -85,9 +89,6 @@ const HomePage = () => {
         </small>
       </p> */}
 
-      <HomePageCard emoji='📊' linkUrl='/real-madrid' linkExternal={false} anchorText="Article: 'The renewal of Real Madrid' (experimenting with d3)" descriptionText="An article from July 2022 about the turnover of Real Madrid men's squad
-            featuring some interactive d3 visualisations." imageUrl={realMadridD3Thumb.src} />
-
       {/* <p style={{ marginBottom: '20px' }}>
         📰 <a href="https://www.getgoalsideanalytics.com/" className="homepage-link" target="_blank">
           The <i>Get Goalside</i> newsletter
@@ -111,6 +112,9 @@ const HomePage = () => {
       </p> */}
 
       <HomePageCard emoji='🏷️' linkUrl='https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/' linkExternal={true} anchorText="Creating labels from unlabelled data - football positions and Statsbomb 360" descriptionText="An edition of the 'Get Goalside' newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]" imageUrl={statsbombLabellingThumb.src} />
+
+      <HomePageCard emoji='📊' linkUrl='/real-madrid' linkExternal={false} anchorText="Article: 'The renewal of Real Madrid' (experimenting with d3)" descriptionText="An article from July 2022 about the turnover of Real Madrid men's squad
+            featuring some interactive d3 visualisations." imageUrl={realMadridD3Thumb.src} />
 
     </div>
     

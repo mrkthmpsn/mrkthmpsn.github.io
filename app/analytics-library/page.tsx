@@ -29,8 +29,8 @@ const AnalyticsLibraryPage = () => {
 </div>
 
     <Container fluid className="article">
-        <h1>A personal analytics library using React, Postgres, Django, and OneDrive</h1>
-        <img src={researchPaperScreenshot.src} alt="FILL THIS IN" />
+        <h1>A personal analytics library using React, Postgres, Django, and the cloud</h1>
+        <img src={researchPaperScreenshot.src} alt="Screen showing a PDF reader on the right-hand two thirds, a tree menu of categories on the left above a list of 'Listed Research' on the left" />
         <br />
         <p>
           It's a task in itself to keep on top of all of the work in the world of football analytics. 
@@ -46,25 +46,28 @@ const AnalyticsLibraryPage = () => {
           But the process was still a little cumbersome. So...
         </p>
         
-      <img src={chatGPTJokePrompt.src} alt="FILL THIS IN" />
+      <img src={chatGPTJokePrompt.src} alt="A screenshot of the ChatGPT 'new chat' screen, with the a phrase typed into the interface: 'Can you build me a React app for my analytics library?'" />
       <br />
       <p>
-        This interface was as much a ChatGPT project as a front-end/React development project: the experiment with the former enabled the experiment with the latter.
+        This interface was as much a ChatGPT project as a front-end/React development project, given that I was nearly completely new to front-end development: the experiment with the former enabled the experiment with the latter.
       </p>
       <p>
-        The 'library' is hooked up to the database, generating a categories menu and list of selected research papers; it's also connected to the cloud storage folder, so the PDFs can be pulled through in the PDF viewer.
+        The 'library' is hooked up to the database, generating a categories menu and then a list of research papers tagged with the selected categories; it's also connected to the cloud storage folder, so the PDFs can be pulled through in the PDF viewer.
       </p>
       <p>
         There's also a notes section, which can be updated and pulls from the database each time the paper is loaded.
       </p>
 
-      <img src={researchPaperNotesScreenshot.src} alt="FILL THIS IN" />
+      <img src={researchPaperNotesScreenshot.src} alt="A version of the first library screenshot but with a text input below a reduced-height PDF reader" />
       <br />
       <p>
         However, the ball of analytics keeps rolling, so there's also an upload element, which saves a new PDF to both the database and the cloud storage folder.
       </p>
 
-      <img src={newPaperEntryScreenshot.src} alt="FILL THIS IN" />
+      <img src={newPaperEntryScreenshot.src} alt="Screenshot of the library application: The PDF reader displays a new PDF, and the left-hand interface is scrolled down to display the PDF uploader input and the start of a form to add details of the research" />
+      <p>
+        It was a fascinating experiment with ChatGPT as a coding aid too, and altogether a very useful - if at times very difficult - project.
+      </p>
       <br />
     </Container>
     
