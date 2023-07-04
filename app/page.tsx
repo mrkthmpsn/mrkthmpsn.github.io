@@ -40,82 +40,18 @@ const HomePage = () => {
         You can find some of my projects below:
       </p>
       
-      {/* <p style={{ marginBottom: '20px' }}>
-        📚 <a href="/analytics-library" className="homepage-link">
-          Creating a personal analytics library app
-        </a>
-        <br />
-        <small>
-          <i>Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.</i>
-        </small>
-      </p> */}
-
-      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal football analytics library app' descriptionText='Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
-
-      {/* <p style={{ marginBottom: '20px' }}>
-        🎨 <a href="https://www.twenty3.sport/twenty3-introducing-our-xg-timelines-visualisations/" className="homepage-link" target="_blank">
-          Article: Designing a data visualisation for media and professional 
-          football use
-        </a>
-        <br />
-        <small>
-          <i>An article from 2021 on the release of Twenty3's take on an xG 
-            timeline visualisation, giving a bit of thought into the design 
-            thinking. [External link]</i>
-        </small>
-      </p> */}
-
       <HomePageCard emoji='🎨' linkUrl='https://www.twenty3.sport/twenty3-introducing-our-xg-timelines-visualisations/' linkExternal={true} anchorText='Article: Designing a data visualisation for media and professional 
           football use' descriptionText="An article from 2021 on the release of Twenty3's take on an xG 
             timeline visualisation, giving a bit of thought into the design 
             thinking. [External link]" imageUrl={xGTimelineThumb.src} />
 
-      {/* <p style={{ marginBottom: '20px' }}>
-        👨‍‍🏫 <a href="https://mrkthmpsn-streamlit-coding-tutorial-home-wk3wn4.streamlit.app/" className="homepage-link" target="_blank">
-          Learn-to-code with football data tutorials, using Streamlit
-        </a>
-        <br />
-        <small>
-          <i>A mini-site of tutorials to help people learn to code using football data (from the website FBref), using the Python framework Streamlit. [External link]</i>
-        </small>
-      </p> */}
+      <HomePageCard emoji='🏷️' linkUrl='https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/' linkExternal={true} anchorText="Creating labels from unlabelled data - football positions and Statsbomb 360" descriptionText="An edition of the 'Get Goalside' newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]" imageUrl={statsbombLabellingThumb.src} />
+
+      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal football analytics library app' descriptionText='Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
 
       <HomePageCard emoji='👨‍‍🏫' linkUrl='https://mrkthmpsn-streamlit-coding-tutorial-home-wk3wn4.streamlit.app/' linkExternal={true} anchorText='Learn-to-code with football data tutorials, using Streamlit' descriptionText="A mini-site of tutorials to help people learn to code using football data (from the website FBref), using the Python framework Streamlit. [External link]" imageUrl={codingTutorialsThumb.src} />
       
-      {/* <p style={{ marginBottom: '20px' }}>
-        📊 <a href="/real-madrid" className="homepage-link">
-          Article: 'The renewal of Real Madrid' (experimenting with d3)
-        </a>
-        <br />
-        <small>
-          <i>An article from July 2022 about the turnover of Real Madrid men's squad
-            featuring some interactive d3 visualisations.</i>
-        </small>
-      </p> */}
-
-      {/* <p style={{ marginBottom: '20px' }}>
-        📰 <a href="https://www.getgoalsideanalytics.com/" className="homepage-link" target="_blank">
-          The <i>Get Goalside</i> newsletter
-        </a>
-        <br />
-        <small>
-          <i>A newsletter about football analytics. [External link]</i>
-        </small>
-      </p> */}
-
-      <HomePageCard emoji='📰' linkUrl='https://www.getgoalsideanalytics.com/' linkExternal={true} anchorText="The 'Get Goalside' newsletter" descriptionText="A newsletter about football analytics. [External link]" imageUrl={getGoalsideThumb.src} />
-
-      {/* <p style={{ marginBottom: '20px' }}>
-        🏷️ <a href="https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/" className="homepage-link" target="_blank">
-          Creating labels from unlabelled data - football positions and Statsbomb 360
-        </a>
-        <br />
-        <small>
-          <i>An edition of the <b>Get Goalside</b> newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]</i>
-        </small>
-      </p> */}
-
-      <HomePageCard emoji='🏷️' linkUrl='https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/' linkExternal={true} anchorText="Creating labels from unlabelled data - football positions and Statsbomb 360" descriptionText="An edition of the 'Get Goalside' newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]" imageUrl={statsbombLabellingThumb.src} />
+      {/* <HomePageCard emoji='📰' linkUrl='https://www.getgoalsideanalytics.com/' linkExternal={true} anchorText="The 'Get Goalside' newsletter" descriptionText="A newsletter about football analytics. [External link]" imageUrl={getGoalsideThumb.src} /> */}
 
       <HomePageCard emoji='📊' linkUrl='/real-madrid' linkExternal={false} anchorText="Article: 'The renewal of Real Madrid' (experimenting with d3)" descriptionText="An article from July 2022 about the turnover of Real Madrid men's squad
             featuring some interactive d3 visualisations." imageUrl={realMadridD3Thumb.src} />
