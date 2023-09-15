@@ -40,7 +40,7 @@ const GoalkeeperTrackingArticlePage = () => {
             <li>Create new metrics (<a href='#metrics-section'>Jump to section</a>)</li>
         </ul>
         <p><i>An example of a 'heart attack' - pitch plotting with the help of mplsoccer Python package:</i></p>
-        <Image src={NeuerHeartAttack1.src} fluid/>
+        <Image src={NeuerHeartAttack1.src} fluid alt='Gif of a goalkeeper receiving a pass and, after a second or so, coming under heavy pressure from an opponent before the goalkeeper cleared the ball upfield.'/>
         <h3>A brief, patchy history of generating event data from tracking data</h3>
         <p>History is the oldest source of riveting tales and the idea of generating event data from tracking data is no different.</p>
         <p>One of the most recent pieces of work came from Ferran Vidal-Cordina of MIT and three FIFA researchers*, ‘<a href="https://arxiv.org/abs/2202.00804">Automatic event detection in football using tracking data</a>’ (2022). As they write, though, work predates them by a long time.</p>
@@ -63,7 +63,7 @@ const GoalkeeperTrackingArticlePage = () => {
         </ul>
         <p>This last bullet point was the final nail in the coffin. The starting point for the analysis in this project would be to look at whether players who were acting as ‘markers’ at the start of a long ball created the type of separation that Xavi talked about by the time the long ball was ending in a duel. The ‘frame scope’ limitation made that difficult, as these ‘markers’ were often not visible at the start of a long ball. And, equally importantly, the fun little side-project was no longer very fun.</p>
         <p><i>An example of a slightly odd ball-tracking trajectory, as well as the 'frame scope' issue:</i></p>
-        <Image src={OddBallTrajectory.src} fluid/>
+        <Image src={OddBallTrajectory.src} fluid alt='Gif of a long ball from a goalkeeper from the left side of the six-yard box to the right sideline; however, the early part of the long ball loops upwards, towards the left sideline, before diving back on its trajectory towards the right sideline.'/>
         <h3 id='process-data-section'>A change in direction</h3>
         <p>So, a crossroads. The long balls project was over. What now? How did I arrive at turning to goalkeepers and Manuel Neuer’s effect on heart rates?</p>
         <p>The work for that project had already resulted in ‘pre-processing’ and ‘post-processing’ processes (a distinction which may not be hugely meaningful, but was a line that helped to split the process up, first transforming the raw JSON files into an initial csv and then adding further metrics, whose definitions might change, on top).</p>
@@ -117,7 +117,7 @@ const GoalkeeperTrackingArticlePage = () => {
         <p>It’s worth noting that this tracking data was released three years ago, although some of its problems may still be present in some providers’ data. Skillcorner, for its part, now advertises predicted off-camera locations for players as part of its data (although I can’t speak for its accuracy), and, in my opinion, things like data smoothing and the velocity of objects should probably be expected as standard by now, in my opinion. (Partly, on the smoothing, so that no-one knows how janky your raw computer vision data actually is).</p>
         <p>Of course, the offering that tracking data providers put forward nowadays usually includes a whole suite of metrics too. They might even package up things as discrete, separate, events for you, as well as the tracking data and counting stats. Because, as I wrote in a piece 15 months ago that is now already a little dated, <a href='https://www.getgoalsideanalytics.com/everyone-hybrid-data/'>everyone has hybrid data now</a>. Yet unlike with event data, which at least had a healthy black market before <a href='https://github.com/statsbomb/open-data'>large open datasets</a> were available, not many people on the outside of the profession will be getting a proper taste of that.</p>
         <p><i>One last 'heart attack', this time from Alisson against Manchester City:</i></p>
-        <Image src={AlissonHeartAttack.src} fluid/>
+        <Image src={AlissonHeartAttack.src} fluid alt='Gif of a pass back to a goalkeeper who quite quickly comes under heavy pressure; the goalkeeper clears the ball out towards the right sideline, within about ten yards of a teammate but not close enough and the ball goes out of play.'/>
         <hr className="dotted" />
         <i>Thanks for reading.</i>
         </Container>
