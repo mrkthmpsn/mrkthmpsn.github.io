@@ -8,6 +8,7 @@ import analyticsLibraryThumb from '@/public/images/home_page_thumbs/analytics_li
 import xGTimelineThumb from '@/public/images/home_page_thumbs/xg_timeline_design_thumb.png';
 import codingTutorialsThumb from '@/public/images/home_page_thumbs/coding_tutorials_thumb.png';
 import realMadridD3Thumb from '@/public/images/home_page_thumbs/real_madrid_d3_thumb.png';
+import trackingDataProjectThumb from '@/public/images/home_page_thumbs/tracking_data_thumb.png';
 import getGoalsideThumb from '@/public/images/home_page_thumbs/get_goalside_thumb.png';
 import statsbombLabellingThumb from "public/images/home_page_thumbs/statsbomb_labelling_thumb.png";
 
@@ -44,6 +45,8 @@ const HomePage = () => {
           football use' descriptionText="An article from 2021 on the release of Twenty3's take on an xG 
             timeline visualisation, giving a bit of thought into the design 
             thinking. [External link]" imageUrl={xGTimelineThumb.src} />
+      
+      <HomePageCard emoji='🧤' linkUrl='/goalkeeper-tracking' linkExternal={false} anchorText="Working with tracking data to investigate goalkeeper pressure" descriptionText="A write-up of a project using tracking data to, first, try and look at how teams prepare themselves for second balls, and then a pivot to looking at how goalkeepers respond to pressure when on the ball." imageUrl={trackingDataProjectThumb.src} />
 
       <HomePageCard emoji='🏷️' linkUrl='https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/' linkExternal={true} anchorText="Creating labels from unlabelled data - football positions and Statsbomb 360" descriptionText="An edition of the 'Get Goalside' newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]" imageUrl={statsbombLabellingThumb.src} />
 
@@ -55,6 +58,8 @@ const HomePage = () => {
 
       <HomePageCard emoji='📊' linkUrl='/real-madrid' linkExternal={false} anchorText="Article: 'The renewal of Real Madrid' (experimenting with d3)" descriptionText="An article from July 2022 about the turnover of Real Madrid men's squad
             featuring some interactive d3 visualisations." imageUrl={realMadridD3Thumb.src} />
+
+      
 
     </div>
     
