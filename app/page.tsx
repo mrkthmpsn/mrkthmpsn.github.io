@@ -32,34 +32,28 @@ const HomePage = () => {
       <p style={{ textAlign: 'right' }}>-- Seth Godin</p>
       <br />
       <p>
-        Hi, I'm Mark. <b>Mark Thompson</b>. I'm usually either making stuff, making sense of stuff, or making sense of it to others. 
+        Hi, I'm Mark. <b>Mark Thompson</b>. I make stuff, make sense of stuff, or make sense of it for others. 
       </p>
       <p>
-        At the moment that's mostly in the world of football, but Python, data science, and a good attitude transfer elsewhere pretty well. 
+        So far, that's mostly been in the world of football, but Python, data science, and a good attitude go a long way.
       </p>
       <p>  
-        You can find some of my projects below:
+        You can find some of my projects (on football data insights, spatio-temporal data, data visualisation design, React and Django Rest Framework use) below:
       </p>
       
-      <HomePageCard emoji='🎨' linkUrl='https://www.twenty3.sport/twenty3-introducing-our-xg-timelines-visualisations/' linkExternal={true} anchorText='Article: Designing a data visualisation for media and professional 
-          football use' descriptionText="An article from 2021 on the release of Twenty3's take on an xG 
-            timeline visualisation, giving a bit of thought into the design 
-            thinking. [External link]" imageUrl={xGTimelineThumb.src} />
+      <HomePageCard emoji='🎨' linkUrl='https://www.twenty3.sport/twenty3-introducing-our-xg-timelines-visualisations/' linkExternal={true} anchorText='Article: Designing a data visualisation for media & professional 
+          football use' descriptionText="A blog for Twenty3 on the design of our take on an xG (expected goals) timeline data visualisation, with considerations for multiple audiences. [External link]" imageUrl={xGTimelineThumb.src} />
       
-      <HomePageCard emoji='🧤' linkUrl='/goalkeeper-tracking' linkExternal={false} anchorText="Working with tracking data to investigate goalkeeper pressure" descriptionText="A write-up of a project using tracking data to, first, try and look at how teams prepare themselves for second balls, and then a pivot to looking at how goalkeepers respond to pressure when on the ball." imageUrl={trackingDataProjectThumb.src} />
+      <HomePageCard emoji='🧤' linkUrl='/goalkeeper-tracking' linkExternal={false} anchorText="Working with spatio-temporal tracking data to investigate goalkeeper pressure" descriptionText="A project write-up on the processing, ideation, and repurposing of prior work, pivoting from a previous idea to looking at how goalkeepers respond to pressure when on the ball in football." imageUrl={trackingDataProjectThumb.src} />
+
+      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal football analytics library app with React and Django' descriptionText='Write-up of a project to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
 
       <HomePageCard emoji='🏷️' linkUrl='https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/' linkExternal={true} anchorText="Creating labels from unlabelled data - football positions and Statsbomb 360" descriptionText="An edition of the 'Get Goalside' newsletter aiming to take existing analytics research and apply it to a slightly different use-case, creating positional labels from unlabelled data. [External link]" imageUrl={statsbombLabellingThumb.src} />
 
-      <HomePageCard emoji='📚' linkUrl='/analytics-library' linkExternal={false} anchorText='Creating a personal football analytics library app' descriptionText='Using React to create an interface for a personal football analytics library database, with files stored in and retrieved from cloud storage.' imageUrl={analyticsLibraryThumb.src} />
-
       <HomePageCard emoji='👨‍‍🏫' linkUrl='https://mrkthmpsn-streamlit-coding-tutorial-home-wk3wn4.streamlit.app/' linkExternal={true} anchorText='Learn-to-code with football data tutorials, using Streamlit' descriptionText="A mini-site of tutorials to help people learn to code using football data (from the website FBref), using the Python framework Streamlit. [External link]" imageUrl={codingTutorialsThumb.src} />
-      
-      {/* <HomePageCard emoji='📰' linkUrl='https://www.getgoalsideanalytics.com/' linkExternal={true} anchorText="The 'Get Goalside' newsletter" descriptionText="A newsletter about football analytics. [External link]" imageUrl={getGoalsideThumb.src} /> */}
 
       <HomePageCard emoji='📊' linkUrl='/real-madrid' linkExternal={false} anchorText="Article: 'The renewal of Real Madrid' (experimenting with d3)" descriptionText="An article from July 2022 about the turnover of Real Madrid men's squad
             featuring some interactive d3 visualisations." imageUrl={realMadridD3Thumb.src} />
-
-      
 
     </div>
     
