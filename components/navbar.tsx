@@ -31,7 +31,7 @@ const CustomNavbar = () => {
         </Nav>
       </Navbar.Collapse>
       <Navbar.Text>
-        💬<i>Data Scientist | Developer | Developing</i>
+        🏗️<i>Building with code, insight, and imagination.</i>
       </Navbar.Text>
       
       </Container>
