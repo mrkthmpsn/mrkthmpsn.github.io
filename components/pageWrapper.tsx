@@ -5,7 +5,7 @@ import CustomNavbar from "./navbar";
 
 interface PageWrapperProps {
   pageTitle: string;
-  pageMarkdown: any;
+  pageMarkdown: string;
   isCategoryPage: boolean;
 }
 

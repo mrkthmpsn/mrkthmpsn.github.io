@@ -1,3 +1,4 @@
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/pages-styles.css";
 import Markdown from "react-markdown";
@@ -5,7 +6,7 @@ import CustomNavbar from "./navbar";
 
 interface ProjectPageWrapperProps {
   pageTitle: string;
-  pageMarkdown: any;
+  pageMarkdown: string;
   dateString: string;
   headerImage: any;
 }

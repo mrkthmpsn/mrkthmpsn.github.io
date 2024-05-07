@@ -1,7 +1,19 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 
-const VideoScrubber = ({ min, max, onChange, currentIndex }) => {
-  const handleSliderChange = (event) => {
+interface VideoScrubberProps {
+  min: number;
+  max: number;
+  onChange: CallableFunction;
+  currentIndex: number;
+}
+
+const VideoScrubber: React.FC<VideoScrubberProps> = ({
+  min,
+  max,
+  onChange,
+  currentIndex,
+}) => {
+  const handleSliderChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newFrame = parseInt(event.target.value, 10);
     onChange(newFrame);
   };

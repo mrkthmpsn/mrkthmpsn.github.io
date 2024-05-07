@@ -1,6 +1,6 @@
-import { FrameData } from "./types";
+import { FramesDataType } from "./types";
 
-export const framesData: FrameData[] = {
+export const framesData: FramesDataType = {
   "64632": {
     frame_idx: 64632,
     period: 1,
@@ -202,7 +202,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 85.81975468266965,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64644": {
@@ -406,7 +406,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 81.245259604588,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64656": {
@@ -610,7 +610,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 77.04671028650672,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64668": {
@@ -814,7 +814,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 73.7111659229733,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64680": {
@@ -1018,7 +1018,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 70.915623057846,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64692": {
@@ -1222,7 +1222,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 68.15929261508,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64704": {
@@ -1426,7 +1426,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 67.85497897713623,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64716": {
@@ -1630,7 +1630,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 68.81368095262452,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64728": {
@@ -1834,7 +1834,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.78024410255097,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64740": {
@@ -2032,7 +2032,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: null,
     distance_from_target_goal: null,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64752": {
@@ -2236,7 +2236,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 52.511389781147486,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64764": {
@@ -2440,7 +2440,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 53.60825930449151,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64776": {
@@ -2644,7 +2644,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 53.873132812967164,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64788": {
@@ -2848,7 +2848,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 54.230903484659926,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64800": {
@@ -3052,7 +3052,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 54.851026243631935,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64812": {
@@ -3256,7 +3256,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 55.61252185150032,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64824": {
@@ -3460,7 +3460,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 56.41272285625026,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64836": {
@@ -3664,7 +3664,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 55.45494861067767,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64848": {
@@ -3868,7 +3868,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 50.55755943554238,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64860": {
@@ -4072,7 +4072,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 47.69192772723808,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64872": {
@@ -4276,7 +4276,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 48.70431761247559,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64884": {
@@ -4480,7 +4480,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 50.671039173433186,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64896": {
@@ -4684,7 +4684,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 53.92884660400591,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64908": {
@@ -4888,7 +4888,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 57.602700365955066,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64920": {
@@ -5092,7 +5092,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.92044783326973,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64932": {
@@ -5296,7 +5296,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.51345535423061,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64944": {
@@ -5500,7 +5500,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.07430618490241,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64956": {
@@ -5704,7 +5704,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 58.638097462848336,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64968": {
@@ -5908,7 +5908,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 57.71965742280874,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64980": {
@@ -6112,7 +6112,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 57.34325505342019,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "64992": {
@@ -6316,7 +6316,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 58.689591518449845,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65004": {
@@ -6520,7 +6520,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.08038472278342,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65016": {
@@ -6724,7 +6724,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.043664845160144,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65028": {
@@ -6928,7 +6928,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 59.23050325169371,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65040": {
@@ -7132,7 +7132,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 60.5375021888292,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65052": {
@@ -7336,7 +7336,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 62.68102486271583,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65064": {
@@ -7540,7 +7540,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 65.04184880399389,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65076": {
@@ -7744,7 +7744,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 67.5985763576157,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65088": {
@@ -7948,7 +7948,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 64.66969636207132,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65100": {
@@ -8152,7 +8152,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 55.24049271180064,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65112": {
@@ -8356,7 +8356,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 50.53260727317462,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65124": {
@@ -8560,7 +8560,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 50.244239486580945,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65136": {
@@ -8764,7 +8764,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 49.14625955871006,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65148": {
@@ -8968,7 +8968,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 47.468581187106274,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65160": {
@@ -9172,7 +9172,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 45.24424084676413,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65172": {
@@ -9376,7 +9376,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 43.003817221377,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65184": {
@@ -9580,7 +9580,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 40.97351854484675,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65196": {
@@ -9784,7 +9784,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 39.291376250573094,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65208": {
@@ -9988,7 +9988,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 33.068091331870065,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65220": {
@@ -10192,7 +10192,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 27.88058077911757,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65232": {
@@ -10396,7 +10396,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 25.068235814993045,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65244": {
@@ -10600,7 +10600,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 22.866287444535033,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65256": {
@@ -10804,7 +10804,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 21.05688555912294,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65268": {
@@ -11008,7 +11008,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 19.501059254563593,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65280": {
@@ -11212,7 +11212,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 18.138173385876,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65292": {
@@ -11416,7 +11416,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 17.230937086484882,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65304": {
@@ -11620,7 +11620,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 93.30473226046415,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65316": {
@@ -11824,7 +11824,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 93.26929550779292,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65328": {
@@ -12028,7 +12028,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 93.32095191422128,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65340": {
@@ -12232,7 +12232,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 93.40046405976845,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65352": {
@@ -12436,7 +12436,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 92.05117376516391,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65364": {
@@ -12640,7 +12640,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 90.7685222885825,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65376": {
@@ -12844,7 +12844,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 89.55640220122791,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65388": {
@@ -13048,7 +13048,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 86.48600714217358,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65400": {
@@ -13252,7 +13252,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 83.11381015701544,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65412": {
@@ -13456,7 +13456,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 79.7635668034498,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65424": {
@@ -13660,7 +13660,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 76.43595789085201,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65436": {
@@ -13864,7 +13864,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 73.13524795090258,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65448": {
@@ -14068,7 +14068,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 32.179448855518025,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65460": {
@@ -14272,7 +14272,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 32.03747497916931,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65472": {
@@ -14476,7 +14476,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 32.51600718799896,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65484": {
@@ -14680,7 +14680,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 32.503746329037206,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65496": {
@@ -14884,7 +14884,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 32.1212635578428,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65508": {
@@ -15082,7 +15082,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: null,
     distance_from_target_goal: null,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65520": {
@@ -15280,7 +15280,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: null,
     distance_from_target_goal: null,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65532": {
@@ -15478,7 +15478,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: null,
     distance_from_target_goal: null,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65544": {
@@ -15682,7 +15682,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 93.49338331983927,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65556": {
@@ -15886,7 +15886,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 92.796987512561,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65568": {
@@ -16090,7 +16090,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 92.23901010440215,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65580": {
@@ -16294,7 +16294,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 91.82209717666004,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65592": {
@@ -16498,7 +16498,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 15.801245802179647,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65604": {
@@ -16702,7 +16702,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 4.628128887574324,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65616": {
@@ -16906,7 +16906,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 102.38794343191195,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65628": {
@@ -17110,7 +17110,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 102.15526549192852,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65640": {
@@ -17314,7 +17314,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 101.93472922046735,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65652": {
@@ -17518,7 +17518,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 101.78763424512873,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65664": {
@@ -17722,7 +17722,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 101.46775864982975,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65676": {
@@ -17926,7 +17926,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 100.91104985758695,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65688": {
@@ -18130,7 +18130,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 99.94707214649961,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65700": {
@@ -18334,7 +18334,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 97.43012040674537,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65712": {
@@ -18538,7 +18538,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 94.64365899687574,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65724": {
@@ -18742,7 +18742,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 92.81223780087623,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65736": {
@@ -18946,7 +18946,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 84.48127951854185,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65748": {
@@ -19150,7 +19150,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 76.35044591832062,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65760": {
@@ -19354,7 +19354,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 68.41039335779396,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65772": {
@@ -19558,7 +19558,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 67.29713276953261,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65784": {
@@ -19762,7 +19762,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 68.70299901501318,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65796": {
@@ -19966,7 +19966,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.9161257721343,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65808": {
@@ -20170,7 +20170,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.29494784026393,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65820": {
@@ -20374,7 +20374,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.25455792988718,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65832": {
@@ -20578,7 +20578,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.86506208072888,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65844": {
@@ -20782,7 +20782,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 70.81682221109897,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65856": {
@@ -20986,7 +20986,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 71.61828186385094,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65868": {
@@ -21190,7 +21190,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 70.59485207766994,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65880": {
@@ -21394,7 +21394,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.81806943050273,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65892": {
@@ -21598,7 +21598,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 69.29682907764322,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65904": {
@@ -21802,7 +21802,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 65.36863595932303,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65916": {
@@ -22006,7 +22006,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 60.8542596248611,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65928": {
@@ -22210,7 +22210,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 56.42423670474329,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65940": {
@@ -22414,7 +22414,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 0,
     distance_from_target_goal: 52.10131816536794,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65952": {
@@ -22618,7 +22618,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 57.08893304502721,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65964": {
@@ -22822,7 +22822,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 49.842178854621714,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65976": {
@@ -23026,7 +23026,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 40.67065510674865,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "65988": {
@@ -23230,7 +23230,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 38.252790475635884,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66000": {
@@ -23434,7 +23434,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 38.658683776053465,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66012": {
@@ -23638,7 +23638,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 39.58247093127967,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66024": {
@@ -23842,7 +23842,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 40.94288270339669,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66036": {
@@ -24046,7 +24046,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 42.576167716486644,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66048": {
@@ -24250,7 +24250,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 46.51404076130561,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66060": {
@@ -24454,7 +24454,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 50.58713049818204,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
   "66072": {
@@ -24658,7 +24658,7 @@ export const framesData: FrameData[] = {
     b_target_goal: [105, 34],
     possession_target_end: 105,
     distance_from_target_goal: 54.76351423297175,
-    in_block_opportunities: [],
+    in_block_opportunities: null,
     pitch_control_field: null,
   },
 };

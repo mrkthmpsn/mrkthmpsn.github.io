@@ -4,7 +4,7 @@ export type FrameData = {
   period: number;
   match_second: number;
   phase_second: number;
-  ball_position: BallPosition | null;
+  ball_position: ObjectPosition | null;
   possession_phase: string;
   passing_opportunity: boolean;
   players: Array<PlayerObject>;
@@ -12,6 +12,7 @@ export type FrameData = {
   closest_opponent_to_ball: number | null;
   a_target_goal: Array<number>;
   b_target_goal: Array<number>;
+  possession_target_end: number | null;
   distance_from_target_goal: number | null;
   in_block_opportunities: null;
   pitch_control_field: null;
@@ -23,23 +24,24 @@ export type DefensiveBlock = {
   left: number;
   right: number;
   area: number;
-  north: number;
-  south: number;
-  east: number;
-  west: number;
+  north?: number;
+  south?: number;
+  east?: number;
+  west?: number;
 };
 
-export type BallPosition = {
+export type ObjectPosition = {
   x: number;
   y: number;
 };
 
-type PlayerObject = {
+export type PlayerObject = {
   x: number;
   y: number;
   team: string;
   closest_opponent: number;
   within_opp_block: boolean;
+  shirt_number: number;
 };
 
 export type KeyFrameData = {
@@ -58,3 +60,17 @@ type MatchFramesInfo = {
 export type MatchFramesInfoWrapper = {
   data: Array<MatchFramesInfo>;
 };
+
+export type PlayersDataProps = {
+  id: string;
+  shirtNumber: number;
+  positions: ObjectPosition[];
+};
+
+export type teamPlayersType = {
+  [index: number]: PlayersDataProps;
+};
+
+export interface FramesDataType {
+  [index: string]: FrameData;
+}

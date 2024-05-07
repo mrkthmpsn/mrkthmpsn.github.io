@@ -1,22 +1,14 @@
 import React, { useRef } from "react";
-import {
-  Coordinate,
-  DefensiveBlockData,
-  InBlockOpportunityList,
-  PitchControlFrameData,
-  PlayerAnimationData,
-} from "../../types/pitchControl";
+
 import PitchControlAnimation from "./pitchAnimation";
-import { BallPosition, DefensiveBlock } from "../../types/api";
+import { ObjectPosition, DefensiveBlock, teamPlayersType } from "@/data/types";
 
 interface PitchAnimationWrapperProps {
-  pitchControlData: PitchControlFrameData[] | null;
-  teamAData: PlayerAnimationData[];
-  teamBData: PlayerAnimationData[];
-  ballData: Array<BallPosition | null> | null;
+  teamAData: teamPlayersType;
+  teamBData: teamPlayersType;
+  ballData: Array<ObjectPosition | null> | null;
   index: number;
   defensiveBlockData: Array<DefensiveBlock | null> | null;
-  inBlockOpportunitiesData: InBlockOpportunityList[];
   possessionPhase: string | null;
 }
 const PitchWrapper: React.FC<PitchAnimationWrapperProps> = ({
@@ -24,11 +16,10 @@ const PitchWrapper: React.FC<PitchAnimationWrapperProps> = ({
   teamBData,
   ballData,
   defensiveBlockData,
-  inBlockOpportunitiesData,
   index,
   possessionPhase,
 }) => {
-  const rootRef = useRef<SVGSVGElement | null>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <>
@@ -43,7 +34,6 @@ const PitchWrapper: React.FC<PitchAnimationWrapperProps> = ({
             teamBData={teamBData}
             ballData={ballData}
             defensiveBlockData={defensiveBlockData}
-            inBlockOpportunitiesData={inBlockOpportunitiesData}
             rootRef={rootRef}
             index={index}
             possessionPhase={possessionPhase}

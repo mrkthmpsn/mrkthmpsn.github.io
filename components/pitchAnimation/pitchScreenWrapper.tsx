@@ -1,8 +1,13 @@
-import { useEffect, useState, Dispatch, SetStateAction } from "react";
+import { useEffect, useState } from "react";
 import PitchWrapper from "./pitchWrapper";
 import React from "react";
 import VideoScrubber from "./basicScrubber";
-import { BallPosition, DefensiveBlock } from "@/data/types";
+import {
+  ObjectPosition,
+  DefensiveBlock,
+  teamPlayersType,
+  FramesDataType,
+} from "@/data/types";
 import { framesData } from "@/data/framesData";
 import "@/app/pages-styles.css";
 
@@ -14,7 +19,7 @@ const PitchScreenWrapper = () => {
   const totalFrames = 120;
 
   useEffect(() => {
-    let intervalId;
+    let intervalId: NodeJS.Timer;
     if (isPlaying) {
       intervalId = setInterval(() => {
         setFrameIndex((currentIndex) => (currentIndex + 1) % totalFrames);
@@ -31,8 +36,8 @@ const PitchScreenWrapper = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const convertPlayersData = (framesData, teamName) => {
-    let teamPlayersResult = {};
+  const convertPlayersData = (framesData: FramesDataType, teamName: string) => {
+    const teamPlayersResult: teamPlayersType = {};
 
     // Iterate over each key in the main data object
     for (const key in framesData) {
@@ -66,11 +71,10 @@ const PitchScreenWrapper = () => {
   const [wrapperTeamA, setWrapperTeamA] = useState({});
   const [wrapperTeamB, setWrapperTeamB] = useState({});
   const [wrapperBallPosition, setWrapperBallPosition] =
-    useState<Array<BallPosition | null> | null>(null);
+    useState<Array<ObjectPosition | null> | null>(null);
   const [wrapperDefensiveBlock, setWrapperDefensiveBlock] =
     useState<Array<DefensiveBlock | null> | null>(null);
-  const [wrapperInBlockOpportunities, setWrapperInBlockOpportunities] =
-    useState([]);
+
   useEffect(() => {
     const wrapperTeamA = framesData
       ? convertPlayersData(framesData, "FIFATMA")
@@ -88,17 +92,12 @@ const PitchScreenWrapper = () => {
           return frame.defensive_block;
         })
       : null;
-    const wrapperInBlockOpportunities = framesData
-      ? Object.values(framesData).map((frame) => {
-          return frame.in_block_opportunities;
-        })
-      : [];
+
     setWrapperPitchControl(wrapperPitchControl);
     setWrapperTeamA(wrapperTeamA);
     setWrapperTeamB(wrapperTeamB);
     setWrapperBallPosition(wrapperBallPosition);
     setWrapperDefensiveBlock(wrapperDefensiveBlock);
-    setWrapperInBlockOpportunities(wrapperInBlockOpportunities);
   }, [framesData]);
 
   return (
@@ -122,7 +121,6 @@ const PitchScreenWrapper = () => {
           teamBData={wrapperTeamB}
           ballData={wrapperBallPosition}
           defensiveBlockData={wrapperDefensiveBlock}
-          inBlockOpportunitiesData={wrapperInBlockOpportunities}
           index={frameIndex}
           possessionPhase={
             framesData

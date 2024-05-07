@@ -1,23 +1,16 @@
-import React, { useEffect } from "react";
+import React, { RefObject, useEffect } from "react";
 import * as d3 from "d3";
-import {
-  Coordinate,
-  DefensiveBlockData,
-  InBlockOpportunityList,
-  PlayerAnimationData,
-} from "../../types/pitchControl";
-import { BallPosition, DefensiveBlock } from "../../types/api";
+import { ObjectPosition, DefensiveBlock, teamPlayersType } from "@/data/types";
 import * as d3_soccer from "d3-soccer";
 
 // Should the pitch control info all be part of the same frame data, or supplied as separate objects?
 interface PitchControlAnimationProps {
-  teamAData: PlayerAnimationData[];
-  teamBData: PlayerAnimationData[];
-  rootRef;
+  teamAData: teamPlayersType;
+  teamBData: teamPlayersType;
+  rootRef: RefObject<HTMLDivElement | null>;
   index: number;
-  ballData: Array<BallPosition | null> | null;
+  ballData: Array<ObjectPosition | null> | null;
   defensiveBlockData: Array<DefensiveBlock | null> | null;
-  inBlockOpportunitiesData: InBlockOpportunityList[];
   possessionPhase: string | null;
 }
 
@@ -26,13 +19,12 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
   teamBData,
   ballData,
   defensiveBlockData,
-  inBlockOpportunitiesData,
   rootRef,
   index,
   possessionPhase,
 }) => {
   useEffect(() => {
-    if (rootRef.current) {
+    if (rootRef?.current) {
       const svgRef = d3.select(rootRef.current);
       svgRef.selectAll("*").remove();
 
@@ -43,33 +35,19 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
       svgRef.call(pitch);
 
       if (defensiveBlockData && defensiveBlockData[index]) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        const defensiveBlock: DefensiveBlock = defensiveBlockData[index]!;
         svgRef
           .selectAll("#above")
           .append("rect")
-          .attr("x", defensiveBlockData[index].left)
-          .attr("y", defensiveBlockData[index].top)
-          .attr(
-            "width",
-            defensiveBlockData[index].right - defensiveBlockData[index].left
-          )
-          .attr(
-            "height",
-            defensiveBlockData[index].bottom - defensiveBlockData[index].top
-          )
+          .attr("x", defensiveBlock.left)
+          .attr("y", defensiveBlock.top)
+          .attr("width", defensiveBlock.right - defensiveBlock.left)
+          .attr("height", defensiveBlock.bottom - defensiveBlock.top)
           .style("fill", possessionPhase === "FIFATMA" ? "#bfa660" : "#899dcb")
           .style("fill-opacity", 0.3);
       }
 
-      if (inBlockOpportunitiesData[index]) {
-        inBlockOpportunitiesData[index].forEach((oppData) => {
-          svgRef
-            .select("#above")
-            .append("polygon")
-            .attr("points", oppData)
-            .attr("fill", "yellow")
-            .attr("fill-opacity", 0.5);
-        });
-      }
       Object.values(teamAData).map((player) => {
         svgRef
           .select("#above")
@@ -92,11 +70,13 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
           .attr("id", player.id);
       });
       if (ballData && ballData[index]) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        const ball: ObjectPosition = ballData[index]!;
         svgRef
           .select("#above")
           .append("circle")
-          .attr("cx", ballData[index].x)
-          .attr("cy", ballData[index].y)
+          .attr("cx", ball.x)
+          .attr("cy", ball.y)
           .attr("fill", "white")
           .attr("stroke", "black")
           .attr("stroke-width", 0.5)

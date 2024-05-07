@@ -1,3 +1,5 @@
+import React from "react";
+
 import "@/app/pages-styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
