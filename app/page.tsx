@@ -54,21 +54,21 @@ const HomePage = () => {
           <div className="col-span-6 md:col-span-3 row-span-1 mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
             <div className="flex space-x-2 justify-center items-center">
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p>
+              <p className="m-0">
                 <a href="/about"> About </a>
               </p>
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
             </div>
             <div className="flex space-x-2 justify-center items-center">
               <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p>
+              <p className="m-0">
                 <a href="/projects"> Projects </a>
               </p>
               <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
             </div>
             <div className="flex space-x-2 justify-center items-center">
               <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p>
+              <p className="m-0">
                 <a href="/contact"> Contact </a>
               </p>
               <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
