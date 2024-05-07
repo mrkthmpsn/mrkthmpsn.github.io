@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <>
       <CustomNavbar />
-      <div className="w-10/12 m-auto space-y-8 md:space-y-16">
+      <div className="w-10/12 mx-auto">
         <div className="w-3/5 md:w-3/5 mx-auto mt-4 md:mt-8 text-left md:text-center text-4xl md:text-5xl lg:text-6xl font-['Roboto_Slab'] relative">
           <span className="inline-block"></span>
           <span className="bg-brandStraw-200 w-full h-full absolute left-0 top-0 z-0 origin-center -rotate-2"></span>
@@ -51,24 +51,24 @@ const HomePage = () => {
           <div className="col-span-4 md:col-span-3 row-span-1 md:row-span-2">
             <PitchScreenWrapper />
           </div>
-          <div className="col-span-6 md:col-span-3 row-span-1 mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
+          <div className="col-span-6 md:col-span-3 row-span-1 mt-12 md:mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
             <div className="flex space-x-2 justify-center items-center">
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="m-0">
+              <p className="mb-0">
                 <a href="/about"> About </a>
               </p>
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
             </div>
             <div className="flex space-x-2 justify-center items-center">
               <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="m-0">
+              <p className="mb-0">
                 <a href="/projects"> Projects </a>
               </p>
               <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
             </div>
             <div className="flex space-x-2 justify-center items-center">
               <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="m-0">
+              <p className="mb-0">
                 <a href="/contact"> Contact </a>
               </p>
               <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
