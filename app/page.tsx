@@ -23,7 +23,7 @@ const HomePage = () => {
             <span className="font-bold tracking-wide"> Thompson</span>
           </span>
         </div>
-        <div className="grid grid-cols-6 grid-rows-2 mt-16 md:mt-2">
+        <div className="grid grid-cols-6 grid-rows-2 mt-16 md:mt-8">
           <div className="col-span-2 md:col-span-3 row-span-1 md:mt-4">
             <div className="flex flex-wrap items-center justify-start md:gap-x-8 md:justify-around font-normal text-sm md:text-base lg:text-lg">
               <p className="mb-2 leading-tight">
