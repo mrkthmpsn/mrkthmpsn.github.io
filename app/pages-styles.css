@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Changa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
 
 main {
   max-width: 740px;
@@ -10,11 +12,11 @@ main {
 
 ul,
 ol {
-  font-family: "Barlow";
+  font-family: "Figtree";
   max-width: 540px;
   margin-left: auto;
   margin-right: auto;
-  list-style-type: "\1F4AD";
+  list-style-type: circle;
 }
 
 ul .in-vis {
@@ -24,7 +26,7 @@ ul .in-vis {
 }
 
 .navbar-title {
-  font-family: "Barlow";
+  font-family: "Roboto Slab";
   font-size: 18pt;
   margin-left: 3vw;
 }
@@ -39,6 +41,18 @@ div.card,
 
 .article {
   padding-top: 20px;
+  min-width: 50%;
+  width: 640px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+}
+
+.article p {
+  min-width: 40%;
+  width: 540px;
+  max-width: 80%;
 }
 
 div.card {
@@ -52,8 +66,7 @@ div.card {
 }
 
 p {
-  max-width: 540px;
-  font-family: "Barlow";
+  font-family: "Figtree";
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
@@ -93,15 +106,38 @@ div.card:hover div.homepage-link {
 
 h1,
 h2 {
-  font-family: "Changa", sans-serif;
+  font-family: "Roboto Slab";
 }
 h3 {
   padding: 20px;
-  font-family: "Barlow";
+  font-family: "Roboto Slab";
 }
 
 header {
   font-family: "Changa", sans-serif;
+}
+
+blockquote {
+  width: 80%;
+  margin: auto !important;
+}
+
+blockquote p {
+  padding: 15px;
+  background: theme("colors.brandStraw.100");
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto Slab";
+  font-size: 18px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
 }
 
 .has-dropcap::first-letter {
