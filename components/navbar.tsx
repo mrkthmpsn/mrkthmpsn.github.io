@@ -1,41 +1,32 @@
-'use client'
+"use client";
 
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 const CustomNavbar = () => {
-  
-  // Added the below block of code when was having some errors I didn't 
-  // understand, but now doesn't seem to be necessary. Don't want to delete in
-  // case the errors come back in.
-
-  // const [mounted, setMounted] = useState(false);
-  // useEffect(() => {
-  //   setMounted(true);
-  // }, []);
-
-  // if (!mounted) return <></>;
-
   return (
     <>
-    <Navbar bg="light" expand="lg">
-      <Container>
-      <Navbar.Brand className="navbar-title" href="/">Home</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="https://www.linkedin.com/in/mark-thompson-a1005184/" target="_blank">
-            LinkedIn
-          </Nav.Link>
-          
-        </Nav>
-      </Navbar.Collapse>
-      <Navbar.Text>
-        🏗️<i>Building with code, insight, and imagination.</i>
-      </Navbar.Text>
-      
-      </Container>
-    </Navbar>
+      <Navbar expand="md" className="bg-brandLightBlue-200">
+        <Container>
+          <Navbar.Brand className="navbar-title" href="/">
+            Home
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/projects">Projects</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link
+                href="https://www.linkedin.com/in/mark-thompson-a1005184/"
+                target="_blank"
+              >
+                LinkedIn
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 };

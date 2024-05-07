@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
+  /* --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +23,30 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Figtree";
+}
+
+button {
+  background-color: theme("colors.brandLightBlue.200");
+  border-color: theme("colors.brandLightBlue.900");
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.6em 1.2em;
+}
+button:hover {
+  background-color: theme("colors.brandLightBlue.300");
+  border-color: theme("colors.brandLightBlue.950");
+}
+button.active {
+  background-color: theme("colors.brandStraw.400");
+  border-color: theme("colors.brandLightBlue.900");
+}
+
+a {
+  color: theme("colors.gray.700");
+}
+a:hover {
+  color: theme("colors.brandLightBlue.600");
 }
