@@ -48,6 +48,11 @@ div.card,
   margin-right: auto;
   font-size: 14px;
 }
+@media (min-width: 768px) {
+  .article {
+    font-size: 16px;
+  }
+}
 
 .article p {
   min-width: 40%;
@@ -238,4 +243,27 @@ div.candles-highlight {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
+}
+
+button {
+  background-color: theme("colors.brandLightBlue.200");
+  border-color: theme("colors.brandLightBlue.900");
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  padding: 0.6em 1.2em;
+}
+button:hover {
+  background-color: theme("colors.brandLightBlue.300");
+  border-color: theme("colors.brandLightBlue.950");
+}
+button.active {
+  background-color: theme("colors.brandStraw.400");
+  border-color: theme("colors.brandLightBlue.900");
+}
+
+a {
+  color: theme("colors.gray.700");
+}
+a:hover {
+  color: theme("colors.brandLightBlue.600");
 }
