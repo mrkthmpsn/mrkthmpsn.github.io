@@ -11,6 +11,7 @@ import debugBuildupThumb from "@/public/images/home_page_thumbs/debug_buildup_ap
 import twenty3VisThumb from "@/public/images/home_page_thumbs/twenty3-vis-1.png";
 import twenty3MatchCentreThumb from "@/public/images/home_page_thumbs/twenty3_match_centre.png";
 import metricsCreatorThumb from "@/public/images/home_page_thumbs/streamlit-metrics-creator-webapp.png";
+import twenty3FontTextSizeThumb from "@/public/images/home_page_thumbs/toolbox-font-translation-japanese.png";
 
 const ProjectsPage = () => {
   return (
@@ -37,6 +38,12 @@ const ProjectsPage = () => {
               subtitle="Python | APIs"
               backgroundImage={twenty3MatchCentreThumb}
               internalLink={"/match-centre"}
+            />
+            <ProjectCard
+              title="Fonts & automatic text size"
+              subtitle="Matplotlib | Development"
+              backgroundImage={twenty3FontTextSizeThumb}
+              internalLink={"/matplotlib-font-text-sizing"}
             />
           </div>
           <br />
