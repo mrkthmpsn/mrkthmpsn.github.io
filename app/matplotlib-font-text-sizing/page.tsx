@@ -1,6 +1,6 @@
 import markdown from "./matplotlib-font-text-sizing.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/toolbox-font-translation-japanese.png";
+import headerImage from "@/public/images/home_page_thumbs/custom-fonts-example-squawka.png";
 
 const FontTextSizingProjectPage = () => {
   return (

@@ -11,7 +11,7 @@ import debugBuildupThumb from "@/public/images/home_page_thumbs/debug_buildup_ap
 import twenty3VisThumb from "@/public/images/home_page_thumbs/twenty3-vis-1.png";
 import twenty3MatchCentreThumb from "@/public/images/home_page_thumbs/twenty3_match_centre.png";
 import metricsCreatorThumb from "@/public/images/home_page_thumbs/streamlit-metrics-creator-webapp.png";
-import twenty3FontTextSizeThumb from "@/public/images/home_page_thumbs/toolbox-font-translation-japanese.png";
+import twenty3FontTextSizeThumb from "@/public/images/home_page_thumbs/custom-fonts-example-squawka.png";
 
 const ProjectsPage = () => {
   return (
