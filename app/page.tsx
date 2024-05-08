@@ -23,9 +23,9 @@ const HomePage = () => {
             <span className="font-bold tracking-wide"> Thompson</span>
           </span>
         </div>
-        <div className="grid grid-cols-6 grid-rows-2 mt-16 md:mt-8">
-          <div className="col-span-2 md:col-span-3 row-span-1 md:mt-4">
-            <div className="flex flex-wrap items-center justify-start md:gap-x-8 md:justify-around font-normal text-sm md:text-base lg:text-lg">
+        <div className="grid grid-cols-6 grid-rows-6 mt-8 md:mt-12">
+          <div className="col-span-6 md:col-span-3 row-span-1 md:row-span-3 md:mt-4">
+            <div className="flex flex-wrap items-center gap-x-8 justify-around font-normal text-sm md:text-base lg:text-lg">
               <p className="mb-2 leading-tight">
                 <span className="text-gray-500">Python </span>
                 developer
@@ -48,10 +48,10 @@ const HomePage = () => {
               <p>React</p>
             </div>
           </div>
-          <div className="col-span-4 md:col-span-3 row-span-1 md:row-span-2">
+          <div className="col-span-6 md:col-span-3 row-span-3 md:row-span-6 mt-4 md:mt-0">
             <PitchScreenWrapper />
           </div>
-          <div className="col-span-6 md:col-span-3 row-span-1 mt-12 md:mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
+          <div className="col-span-6 md:col-span-3 row-span-2 md:row-span-3 mt-12 md:mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
             <div className="flex space-x-2 justify-center items-center">
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
               <p className="mb-0">
