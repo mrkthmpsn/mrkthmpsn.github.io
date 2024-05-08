@@ -5,9 +5,9 @@
 
 ## Summary
 
-I led the research and development of enabling custom fonts in Twenty3 matplotlib visualisations, and text elements on visualisations to be automatically sized inside a bpundary box (a feature which didn't seem to be available elsewhere in matplotlib or add-on packages).
+I led the research and development to enable custom fonts in Twenty3 matplotlib visualisations, and for text elements on visualisations to be automatically sized inside a boundary box (a feature which didn't seem to be available elsewhere in matplotlib or add-on packages).
 
-The task was slightly less trivial than it might otherwise have been due to the way matplotlib deals with custom fonts. The majority of the in-built functionality is based around the idea of having a file locally, which doesn't gel well with a software production environment where users may be uploading fonts as they see fit.
+The task was slightly less trivial than it might otherwise have been due to the way matplotlib deals with custom fonts. The majority of the in-built functionality is based around having a file locally, which doesn't gel well with a software production environment where users may be uploading fonts as they see fit.
 
 ## Learnings
 
@@ -31,4 +31,4 @@ This latter challenge led to a hidden elegance. In visualisations where there ar
 
 Custom fonts had previously been a limitation on some visualisations. The default font that matplotlib uses is inoffensive, but not suitable for a lot of media companies (who often, understandably, want their own fonts). In many circumstances, Smart Graphic templates (which visualisations sit in) had been the workaround - a radar chart might be set up with certain stats, and those stat titles be placed on the Smart Graphic rather than being used from the radar visualisation itself. This work freed up the restrictions that these workarounds had involved, particularly around the use of programmatic visualisation keys.
 
-Shortly after completing this work, an opportunity came up which required translating the Toolbox into Japanese - requiring a different character set to the one used as default in matplotlib images. Fortunately, the work done on variable fonts enabled this more easily fairly easily, as all of our visualisations had just been set up with variable font properties.
+Shortly after completing this work, an opportunity came up which required translating the Toolbox into Japanese - requiring a different character set to the one used as default in matplotlib images. Fortunately, the work done on variable fonts enabled this fairly easily, as all of our visualisations had just been set up with variable font properties.

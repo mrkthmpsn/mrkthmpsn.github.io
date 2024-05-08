@@ -22,7 +22,6 @@ Ultimately, a coach is likely to be football-first, so the pitch visualisation h
 The 'final' design is _largely_ similar to the original, but went through a number of iterations to improve various aspects.
 
 **Data processing**
-
 The other part of 'live' functionality\* is the speed of data processing. This was made particularly acute by using tracking data (a kind of spatiotemporal data), recorded at 25 frames per second. The project didn't need anywhere near this frequency, and was the first and most obvious area of time-saving.
 
 From there, I was more keenly aware of `numpy`'s vectorisation operations than I have usually had cause to be, and experienced the value in shaving time off quite-quick-but-incredibly-frequent functions.
