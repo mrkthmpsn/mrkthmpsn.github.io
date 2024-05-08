@@ -40,7 +40,7 @@ const ProjectsPage = () => {
               internalLink={"/match-centre"}
             />
             <ProjectCard
-              title="Fonts & automatic text size"
+              title="Custom fonts & auto-text size"
               subtitle="Matplotlib | Development"
               backgroundImage={twenty3FontTextSizeThumb}
               internalLink={"/matplotlib-font-text-sizing"}
