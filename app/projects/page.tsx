@@ -44,6 +44,7 @@ const ProjectsPage = () => {
               subtitle="Matplotlib | Development"
               backgroundImage={twenty3FontTextSizeThumb}
               internalLink={"/matplotlib-font-text-sizing"}
+              subtitleColour="white"
             />
           </div>
           <br />

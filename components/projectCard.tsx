@@ -5,6 +5,7 @@ interface ProjectCardProps {
   subtitle: string;
   backgroundImage: any;
   internalLink: string;
+  subtitleColour?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -12,6 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   subtitle,
   backgroundImage,
   internalLink,
+  subtitleColour = "black",
 }) => {
   return (
     <a href={internalLink} className="no-underline">
@@ -25,7 +27,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               {title}
             </p>
           </div>
-          <div className="flex flex-col items-center justify-end text-center text-black w-full h-full absolute bottom-0 md:pb-4 md:!opacity-0 md:text-normal md:group-hover:!opacity-100 transition-opacity duration-150">
+          <div
+            className={`flex flex-col items-center justify-end text-center text-${subtitleColour} w-full h-full absolute bottom-0 md:pb-4 md:!opacity-0 md:text-normal md:group-hover:!opacity-100 transition-opacity duration-150`}
+          >
             <p className="text-sm mb-2 md:mb-4 md:text-lg">{subtitle}</p>
           </div>
         </div>
