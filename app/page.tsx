@@ -51,7 +51,7 @@ const HomePage = () => {
           <div className="col-span-6 md:col-span-3 row-span-3 md:row-span-6 mt-4 md:mt-0">
             <PitchScreenWrapper />
           </div>
-          <div className="col-span-6 md:col-span-3 row-span-2 md:row-span-3 mt-12 md:mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl">
+          <div className="col-span-6 md:col-span-3 row-span-2 md:row-span-3 mt-12 md:mt-8 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl bg-brandStraw-100 md:bg-white content-center md:content-start">
             <div className="flex space-x-2 justify-center items-center">
               <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
               <p className="mb-0">
