@@ -29,7 +29,7 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
       svgRef.selectAll("*").remove();
 
       const containerWidth = rootRef.current.clientWidth;
-      const containerHeight = containerWidth * 0.6;
+      const containerHeight = containerWidth * 0.55;
 
       const pitch = d3_soccer.pitch().height(containerHeight);
       svgRef.call(pitch);
