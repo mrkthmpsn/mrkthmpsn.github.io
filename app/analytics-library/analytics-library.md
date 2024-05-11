@@ -5,18 +5,18 @@
 
 ## Summary
 
-An interface for a 'library' of documents, generally PDFs of football analytics research papers.
+I created an interface for a 'library' of documents, generally PDFs of football analytics research papers.
 
-The collection was something I'd been collecting already, in a Microsoft OneDrive folder, but I wanted to be able to search the documents easier. The idea of categorising the contents in a Django database came first, and then - when ChatGPT launched - creating a front-end interface.
-
-PDFs can be read, accessed from the OneDrive folder, and saved alongside the relevant info for the PostgreSQL database. The project runs locally, started by a bash script saved to my desktop - something I'd like to change to make it easier to use and possible to use across devices.
+The library also features a Django ORM-managed database component, and saves to and draws files from a Microsoft OneDrive folder. The project was also as a personal 'first try' for both ChatGPT as a coding tool, and React. The project runs locally, started by a bash script saved to my desktop - something I'd like to change to make it easier to use and possible to use across devices.
 
 ## Learnings
 
 **Introduction to React**
+
 To be honest, this was throwing myself in at the deep-ish end of the pool. This work introduced my to concepts like components, dealing with state, and React hooks, all of which I understand much better now than when this was first being cobbled together.
 
 **Using ChatGPT**
+
 Using ChatGPT (GPT3.5 at the time) was an interesting experience. There was a marked difference between how accurate its code was when dealing with general Django or React matters and with some more specific packages I wanted to try, such as connecting the project with the OneDrive folder the files are stored in.
 
 Over time - partly with the help of this project - I think I've developed a sense of how to check whether ChatGPT is sure on what it's saying. Often that involves switching to asking a general question, or asking it a repeat of a previous question phrased slightly differently.

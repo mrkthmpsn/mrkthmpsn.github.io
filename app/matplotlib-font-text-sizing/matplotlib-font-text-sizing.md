@@ -7,15 +7,17 @@
 
 I led the research and development to enable custom fonts in Twenty3 matplotlib visualisations, and for text elements on visualisations to be automatically sized inside a boundary box (a feature which didn't seem to be available elsewhere in matplotlib or add-on packages).
 
-The task was slightly less trivial than it might otherwise have been due to the way matplotlib deals with custom fonts. The majority of the in-built functionality is based around having a file locally, which doesn't gel well with a software production environment where users may be uploading fonts as they see fit.
+The task was made complexified by the difference between developing for a custom environment where functionality allows users to upload fonts, and the common uses of fonts in matplotlib (which tend to be around using un-changing local files).
 
 ## Learnings
 
 **Step back from the problem**
-The project was one I returned to at intervals over a period of nine months or so, and the first attempt sent me down a rabbithole a little. I wouldn't have got to the eventual solution without the second learning (below), but I may have moved away from an unsuitable concept sooner if I had been less focused on making that _approach_ work and more focused on achieving the _goal_.
+
+The project was one I returned to at intervals over a period of nine months or so, and the first attempt sent me down a rabbithole a little. In the end it didn't make much meaningful difference, but I may have made a breakthrough slightly quicker if I had been more focused on achieving the _goal_ as opposed to achieving the _approach_.
 
 **Reading technical package documentation**
-The project ended up requiring a lot of reading of matplotlib's technical documentation around `Text` objects and font properties. The resizing aspect of the project involved more reading, around the types/stages of rendering that matplotlib can do. It gave me a finer appreciation for both documentation reading and writing.
+
+The project ended up requiring a lot of reading of matplotlib's technical documentation around `Text` objects and font properties. The resizing aspect of the project involved more reading, around the types of rendering that matplotlib can do. It gave me a finer appreciation for both documentation reading and writing.
 
 ## Deep dive
 

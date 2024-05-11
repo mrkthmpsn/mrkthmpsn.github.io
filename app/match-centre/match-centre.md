@@ -1,17 +1,25 @@
 ## Tech/Skills
 
 - API development
+- Cross-team collaboration
 
 ## Summary
 
-The 'Match Centre' is a part of the Twenty3 Toolbox, an area designed for live in-game use (although which can also be used to review individual matches). After the design process, I led the development of the API endpoints for the front-end team to develop the Match Centre itself from. As with all Toolbox products, the Match Centre is designed to offer the same functionality for different data providers which Twenty3 works with.
+The 'Match Centre' is a part of the Twenty3 Toolbox, an area designed for live in-game use (although which can also be used to review individual matches). After the design process, I led the development of the API endpoints for the front-end team to develop the Match Centre itself from.
+
+As with all Toolbox products, the Match Centre is designed to offer the same functionality for different data providers which Twenty3 works with.
 
 ## Learnings
 
 **Technical scoping**
+
 The scoping involved a number of features, with various different types of statistical presentation and event-based data visualisations. Unlike [Twenty3's main visualisations](/twenty3-visualisations), Match Centre visualisations were designed to have a limited set of quick filters, to help with their use during live matches.
 
 This involved a lot of consideration into how to capture the features required across a range of data providers and their different data schemas. To be dull, it showed the value of notes, planning, and collaboration.
+
+**Collaborating with colleagues in other teams**
+
+The Match Centre project as a whole included collaboration between the product manager, designers, myself, and the front-end team. We frequently collaborate day-to-day anyway, but this project was probably one of the most significant cases of cross-team collaboration, and served to make a substantially better product than if work had been more siloed.
 
 ## Deep dive
 
