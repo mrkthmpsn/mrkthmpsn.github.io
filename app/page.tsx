@@ -39,7 +39,7 @@ const HomePage = () => {
                 unlocker
               </p>
             </div>
-            <div className="flex md:w-3/4 mx-auto lg:mt-2 pt-2 md:pt-8 flex-wrap md:grow gap-x-4 md:gap-x-8 md:gap-y-2 md:text-center justify-center text-xs md:text-sm lg:text-base italic md:not-italic text-gray-500">
+            <div className="flex md:w-3/4 lg:w-3/5 mx-auto lg:mt-2 pt-2 md:pt-8 flex-wrap md:grow gap-x-4 md:gap-x-8 md:gap-y-2 md:text-center justify-center text-xs md:text-sm lg:text-base italic md:not-italic text-gray-500">
               <p>Python</p>
               <p>Django</p>
               <p>SQL</p>
