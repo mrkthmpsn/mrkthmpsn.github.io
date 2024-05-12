@@ -23,16 +23,45 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
   index,
   possessionPhase,
 }) => {
+  const initialiseOrResize = () => {
+    const svgRef = d3.select(rootRef.current);
+    svgRef.selectAll("*").remove();
+
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const containerWidth = rootRef?.current ? rootRef.current.clientWidth : 0;
+    const containerHeight = containerWidth * 0.55;
+
+    const pitch = d3_soccer.pitch().height(containerHeight);
+    svgRef.call(pitch);
+  };
+
+  useEffect(() => {
+    if (rootRef?.current) {
+      initialiseOrResize();
+
+      const handleResize = () => {
+        initialiseOrResize();
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        // svgRef.remove();
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   useEffect(() => {
     if (rootRef?.current) {
       const svgRef = d3.select(rootRef.current);
-      svgRef.selectAll("*").remove();
+      svgRef.select("#above").selectAll("*").remove();
 
-      const containerWidth = rootRef.current.clientWidth;
-      const containerHeight = containerWidth * 0.55;
+      // const containerWidth = rootRef.current.clientWidth;
+      // const containerHeight = containerWidth * 0.55;
 
-      const pitch = d3_soccer.pitch().height(containerHeight);
-      svgRef.call(pitch);
+      // const pitch = d3_soccer.pitch().height(containerHeight);
+      // svgRef.call(pitch);
 
       if (defensiveBlockData && defensiveBlockData[index]) {
         // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
