@@ -23,23 +23,23 @@ const HomePage = () => {
             <span className="font-bold tracking-wide"> Thompson</span>
           </span>
         </div>
-        <div className="grid grid-cols-6 grid-rows-6 mt-8 md:mt-12">
-          <div className="col-span-6 md:col-span-3 row-span-1 md:row-span-3 md:mt-4">
-            <div className="flex flex-wrap items-center gap-x-8 justify-around font-normal text-sm md:text-base lg:text-lg">
-              <p className="mb-2 leading-tight">
-                <span className="text-gray-500">Python </span>
+        <div className="grid grid-cols-6 grid-rows-6 mt-8 md:mt-8">
+          <div className="col-span-6 row-span-1 md:row-span-1 content-center px-2">
+            <div className="flex flex-wrap items-center gap-x-8 justify-around font-normal text-sm md:text-base lg:text-lg md:w-4/5 lg:w-3/4 mx-auto">
+              <p className="mb-2 leading-tight text-gray-700">
+                <span className="text-brandStraw-600">Python </span>
                 developer
               </p>
-              <p className="mb-2 leading-tight">
-                <span className="text-gray-500">Product </span>
+              <p className="mb-2 leading-tight text-gray-700">
+                <span className="text-brandStraw-600">Product </span>
                 developer
               </p>
-              <p className="mb-2 leading-tight">
-                <span className="text-gray-500">Data </span>
+              <p className="mb-2 leading-tight text-gray-700">
+                <span className="text-brandStraw-600">Data </span>
                 unlocker
               </p>
             </div>
-            <div className="flex md:w-3/5 mx-auto lg:mt-2 pt-2 md:pt-8 flex-wrap md:grow gap-x-4 md:gap-x-8 md:gap-y-2 md:text-center justify-center text-xs md:text-base italic md:not-italic text-brandStraw-500">
+            <div className="flex md:w-3/4 mx-auto lg:mt-2 pt-2 md:pt-8 flex-wrap md:grow gap-x-4 md:gap-x-8 md:gap-y-2 md:text-center justify-center text-xs md:text-sm lg:text-base italic md:not-italic text-gray-500">
               <p>Python</p>
               <p>Django</p>
               <p>SQL</p>
@@ -48,30 +48,33 @@ const HomePage = () => {
               <p>React</p>
             </div>
           </div>
-          <div className="col-span-6 md:col-span-3 row-span-3 md:row-span-6 mt-4 md:mt-0">
+          <div className="col-span-6 md:col-span-4 row-span-3 md:col-start-3 md:row-span-5 mt-4 md:mt-0">
             <PitchScreenWrapper />
           </div>
-          <div className="col-span-6 md:col-span-3 row-span-2 md:row-span-3 mt-12 md:mt-0 space-y-4 lg:space-y-6 uppercase text-base md:text-lg lg:text-xl bg-brandStraw-100 md:bg-brandStraw-100 content-center md:content-center">
-            <div className="flex space-x-2 justify-center items-center">
-              <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="mb-0">
-                <a href="/about"> About </a>
-              </p>
-              <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
+          <div
+            id="homepage-links"
+            className="col-span-6 md:col-span-2 row-span-2 md:row-span-4 md:row-start-2 mt-8 md:mt-4 md:flex md:flex-wrap md:grow space-y-4 md:gap-x-8 md:space-y-0 md:gap-y-4 md:justify-center text-base md:text-lg lg:text-xl bg-white md:bg-white content-center  md:sticky md:top-40 lg:top-48"
+          >
+            <div className="flex justify-center items-center">
+              <a href="/about" className="space-x-2">
+                <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
+                <p className="mb-0">About</p>
+                <InformationCircleIcon className="h-4 w-4 md:h-6 md:w-6" />
+              </a>
             </div>
-            <div className="flex space-x-2 justify-center items-center">
-              <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="mb-0">
-                <a href="/projects"> Projects </a>
-              </p>
-              <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
+            <div className="flex justify-center items-center">
+              <a href="/projects" className="space-x-2">
+                <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
+                <p className="mb-0">Projects</p>
+                <BeakerIcon className="h-4 w-4 md:h-6 md:w-6" />
+              </a>
             </div>
-            <div className="flex space-x-2 justify-center items-center">
-              <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
-              <p className="mb-0">
-                <a href="/contact"> Contact </a>
-              </p>
-              <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
+            <div className="flex justify-center items-center">
+              <a href="/contact" className="space-x-2">
+                <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
+                <p className="mb-0">Contact</p>
+                <PaperAirplaneIcon className="h-4 w-4 md:h-6 md:w-6" />
+              </a>
             </div>
           </div>
         </div>

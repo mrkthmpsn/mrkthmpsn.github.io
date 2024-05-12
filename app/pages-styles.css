@@ -261,6 +261,23 @@ button.active {
   border-color: theme("colors.brandLightBlue.900");
 }
 
+#homepage-links a {
+  background-color: theme("colors.brandStraw.100");
+  border-color: theme("colors.brandStraw.700");
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: 9999px;
+  padding: 0.4em 0.8em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#homepage-links a:hover {
+  background-color: theme("colors.brandStraw.200");
+  border-color: theme("colors.brandStraw.800");
+  color: theme("colors.brandStraw.800");
+}
+
 a {
   color: theme("colors.gray.700");
 }
