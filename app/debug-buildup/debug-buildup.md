@@ -12,6 +12,8 @@ The starting idea: what would it look like for football coaches on the sideline 
 
 The resulting application uses [publicly-available data from Metrica Sports](https://github.com/metrica-sports/sample-data). Data processing identifies moments when a team is in a 'build-up' phase, provides playback ability of the tracking data, and gives some basic metrics with mild alerts for certain thresholds being reached.
 
+A more detailed project write-up can be found [in the Python Github repo here](https://github.com/mrkthmpsn/tracking-data-app-project/blob/main/project_writeup.md).
+
 ## Learnings
 
 **Product design**
