@@ -20,8 +20,8 @@ const HomePage = () => {
             <span className="font-bold tracking-wide"> Thompson</span>
           </span>
         </div>
-        <div className="grid grid-cols-6 grid-rows-8 mt-8 md:mt-4 gap-y-10">
-          <div className="col-span-6 row-span-1 md:row-span-1 content-center px-2 mt-10">
+        <div className="grid grid-cols-6 grid-rows-8 mt-8 md:mt-4 gap-y-4 md:gap-y-10">
+          <div className="col-span-6 row-span-1 md:row-span-1 content-center px-2 mt-6 md:mt-10">
             <div className="flex flex-wrap items-center gap-x-8 justify-around font-normal text-sm md:text-base lg:text-lg md:w-4/5 lg:w-3/4 mx-auto">
               <p className="mb-2 leading-tight text-gray-700">
                 <span className="text-brandStraw-600">Python </span>
@@ -50,7 +50,7 @@ const HomePage = () => {
           </div>
           <div
             id="homepage-intro"
-            className="col-span-6 md:col-span-2 row-span-2 md:row-span-4 md:row-start-2 mt-8 md:mt-8 md:flex md:flex-wrap md:grow space-y-4 md:gap-x-8 text-base md:text-md lg:text-lg bg-white md:bg-white content-center md:sticky md:top-40 lg:top-48 text-gray-700"
+            className="col-span-6 md:col-span-2 row-span-2 md:row-span-4 md:row-start-2 mt-8 md:mt-8 md:flex md:flex-wrap md:grow space-y-4 md:gap-x-8 text-sm md:text-md lg:text-lg bg-white md:bg-white content-center md:sticky md:top-40 lg:top-48 text-gray-700"
           >
             <p>I’m Mark. And I have 10 years’ experience with football data, five years of software development, and three of data engineering.</p>
             <p>I’m a Python guy, but really a ‘build something to make things better’ guy.</p>
@@ -58,7 +58,7 @@ const HomePage = () => {
           </div>
           <div
             id="homepage-links"
-            className="col-span-6 row-span-2 row-start-7 mt-8 md:mt-4 md:flex md:flex-wrap md:grow space-y-4 md:gap-x-8 md:space-y-0 md:gap-y-4 md:justify-center text-base md:text-lg lg:text-xl bg-white md:bg-white content-center"
+            className="col-span-6 row-span-2 row-start-7 mt-4 mb-8 md:mb-4 md:flex md:flex-wrap md:grow space-y-4 md:gap-x-8 md:space-y-0 md:gap-y-4 md:justify-center text-base md:text-lg lg:text-xl bg-white md:bg-white content-center"
           >
             <NavIconsGroup/>
           </div>
