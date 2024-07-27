@@ -11,8 +11,8 @@ const HomePage = () => {
   return (
     <>
       <CustomNavbar />
-        <div className="w-3/5 md:w-3/5 mx-auto mt-4 md:!mt-8 text-left md:text-center text-4xl md:text-5xl lg:text-6xl font-['Roboto_Slab'] relative">
       <div className="w-10/12 mx-auto md:my-4 gap-y-6">
+        <div className="w-3/5 md:w-3/5 mx-auto mt-4 md:!mt-8 text-left md:text-center text-4xl md:text-5xl lg:text-6xl relative">
           <span className="inline-block"></span>
           <span className="bg-brandStraw-200 w-full h-full absolute left-0 top-0 z-0 origin-center -rotate-2"></span>
           <span className="z-10 relative">
