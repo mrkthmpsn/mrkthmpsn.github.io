@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CustomNavbar from "@/components/navbar";
 import ProjectCard from "@/components/projectCard";
 
-import analyticsLibraryThumb from "@/public/images/home_page_thumbs/analytics_library_thumb.png";
+import analyticsLibraryThumb from "@/public/images/analytics_library/new_analytics_library_landing.png";
 import debugBuildupThumb from "@/public/images/home_page_thumbs/debug_buildup_app.png";
 import twenty3VisThumb from "@/public/images/home_page_thumbs/twenty3-vis-1.png";
 import twenty3MatchCentreThumb from "@/public/images/home_page_thumbs/twenty3_match_centre.png";
