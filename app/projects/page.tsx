@@ -13,6 +13,7 @@ import twenty3MatchCentreThumb from "@/public/images/home_page_thumbs/twenty3_ma
 import metricsCreatorThumb from "@/public/images/home_page_thumbs/streamlit-metrics-creator-webapp.png";
 import twenty3FontTextSizeThumb from "@/public/images/home_page_thumbs/custom-fonts-example-squawka.png";
 import personalSiteProjectThumb from "@/public/images/home_page_thumbs/personal-site-may-2024.png";
+import footballTrackerAppThumb from "@/public/images/home_page_thumbs/football-tracker-app-thumb.png";
 
 const ProjectsPage = () => {
   return (
@@ -66,6 +67,12 @@ const ProjectsPage = () => {
               subtitle="Django | React"
               backgroundImage={analyticsLibraryThumb}
               internalLink={"/analytics-library"}
+            />
+            <ProjectCard
+              title="Football tracker app"
+              subtitle="React Native | Product design"
+              backgroundImage={footballTrackerAppThumb}
+              internalLink={"/football-tracker-app"}
             />
             <ProjectCard
               title="Create-your-own-metric app"
