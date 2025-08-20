@@ -23,10 +23,18 @@ const PitchWrapper: React.FC<PitchAnimationWrapperProps> = ({
 
   return (
     <>
-      <div style={{ position: "relative", height: "100%" }}>
+      <div className="w-full h-full flex items-center justify-center overflow-hidden">
         <div
           id="animation-container"
-          className="grid grid-cols-1 justify-items-center"
+          className="max-w-full max-h-full flex items-center justify-center"
+          style={{ 
+            width: "100%", 
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
+          }}
           ref={rootRef}
         >
           <PitchControlAnimation

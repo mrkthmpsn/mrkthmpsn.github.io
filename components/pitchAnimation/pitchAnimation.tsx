@@ -27,26 +27,84 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
     const svgRef = d3.select(rootRef.current);
     svgRef.selectAll("*").remove();
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const containerWidth = rootRef?.current ? rootRef.current.clientWidth : 0;
-    const containerHeight = containerWidth * 0.55;
+    if (!rootRef?.current) return;
+    
+    const containerWidth = rootRef.current.clientWidth;
+    const containerHeight = rootRef.current.clientHeight;
+    
+    // Screen orientation detection
+    const screenIsLandscape = containerWidth > containerHeight;
+    
+    let pitchHeight: number;
+    
+    if (screenIsLandscape) {
+      // Landscape screen (mobile): pitch in portrait orientation (rotated 90°)
+      // After rotation, pitch length must fit within container height
+      // When rotated, the d3-soccer "height" parameter becomes the final rendered width
+      // We want the rotated pitch length to fit in containerHeight
+      // Since pitch ratio is 1.6:1, and after rotation "height" becomes width:
+      // originalPitchLength = pitchHeight * 1.6, and we want this ≤ containerHeight
+      // Now using actual measured container space with minimal buffer
+      const maxByHeight = (containerHeight * 0.95) / 1.6;
+      const maxByWidth = containerWidth * 0.95;
+      pitchHeight = Math.min(maxByHeight, maxByWidth);
+    } else {
+      // Portrait screen (desktop/tablet): pitch in landscape orientation (normal)  
+      // Pitch length must fit within container width
+      // In d3-soccer, .height() sets the shorter dimension (pitch width)
+      // pitchLength = pitchHeight * 1.6, and we want this ≤ containerWidth
+      // Now using actual measured container space with minimal buffer
+      const maxByWidth = (containerWidth * 0.95) / 1.6;
+      const maxByHeight = containerHeight * 0.95;
+      pitchHeight = Math.min(maxByWidth, maxByHeight);
+    }
 
-    const pitch = d3_soccer.pitch().height(containerHeight);
+    const pitch = d3_soccer.pitch()
+      .height(pitchHeight)
+      .rotate(screenIsLandscape ? 90 : 0);
+      
     svgRef.call(pitch);
+    
+    // Size SVG properly with percentage-based approach but constrain aspect ratio
+    const svg = svgRef.select("svg");
+    if (!svg.empty()) {
+      // Fix viewBox for rotated pitch
+      if (screenIsLandscape) {
+        // Landscape screen: pitch rotated 90°, so swap viewBox dimensions
+        svg.attr("viewBox", "-2 -2 72 109");
+      } else {
+        // Portrait screen: pitch normal orientation
+        svg.attr("viewBox", "-2 -2 109 72");
+      }
+      
+      // Use percentage sizing but with strict containment
+      svg
+        .style("width", "100%")
+        .style("height", "100%")
+        .style("max-width", "100%")
+        .style("max-height", "100%")
+        .style("display", "block")
+        .style("margin", "auto")
+        .style("object-fit", "contain")
+        .style("object-position", "center");
+    }
   };
 
   useEffect(() => {
     if (rootRef?.current) {
-      initialiseOrResize();
+      // Small delay to ensure container is fully rendered and sized
+      const timer = setTimeout(() => {
+        initialiseOrResize();
+      }, 50);
 
       const handleResize = () => {
-        initialiseOrResize();
+        setTimeout(initialiseOrResize, 10);
       };
 
       window.addEventListener("resize", handleResize);
 
       return () => {
-        // svgRef.remove();
+        clearTimeout(timer);
         window.removeEventListener("resize", handleResize);
       };
     }

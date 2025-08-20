@@ -102,33 +102,36 @@ const PitchScreenWrapper = () => {
 
   return (
     <>
-      <div className="col-span-2">
-        <div className="grid grid-cols-3 space-x-4 items-center">
-          <div className="col-span-1 justify-self-end rounded-full text-xs md:text-sm lg:text-base">
-            <button onClick={togglePlayPause}>
-              {isPlaying ? "Pause" : "Play"}
-            </button>
-          </div>
+      <div className="w-full flex flex-col" style={{ height: 'calc(100vh - 120px)' }}>
+        {/* <div className="flex items-center justify-center space-x-4 mb-4 flex-shrink-0">
+          <button 
+            onClick={togglePlayPause}
+            className="px-4 py-2 bg-brandLightBlue-200 rounded text-sm md:text-base"
+          >
+            {isPlaying ? "Pause" : "Play"}
+          </button>
           <VideoScrubber
             min={0}
             max={totalFrames}
             onChange={setFrameIndex}
             currentIndex={frameIndex}
           />
+        </div> */}
+        <div className="flex-1 min-h-0 w-full flex items-center justify-center">
+          <PitchWrapper
+            teamAData={wrapperTeamA}
+            teamBData={wrapperTeamB}
+            ballData={wrapperBallPosition}
+            defensiveBlockData={wrapperDefensiveBlock}
+            index={frameIndex}
+            possessionPhase={
+              framesData
+                ? Object.values(framesData)[frameIndex].possession_phase
+                : null
+            }
+          />
         </div>
-        <PitchWrapper
-          teamAData={wrapperTeamA}
-          teamBData={wrapperTeamB}
-          ballData={wrapperBallPosition}
-          defensiveBlockData={wrapperDefensiveBlock}
-          index={frameIndex}
-          possessionPhase={
-            framesData
-              ? Object.values(framesData)[frameIndex].possession_phase
-              : null
-          }
-        />
-        <p className="text-xs text-right italic">
+        <p className="text-xs text-center italic mt-2 flex-shrink-0">
           Animation using{" "}
           <a href="https://github.com/metrica-sports/sample-data">
             Metrica Sports data
