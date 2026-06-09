@@ -4,14 +4,16 @@ import GalleryPageWrapper from "@/components/galleryPageWrapper";
 import { getGalleryConfig } from "@/data/gallery-config";
 
 // Import gallery items
-import placeholderCollaborationItem from "@/data/gallery-items/placeholder-collaboration.json";
+import matchCentreCollaborationItem from "@/data/gallery-items/match-centre-collaboration.json";
+import twenty3WorkingWithDesignersItem from "@/data/gallery-items/twenty3-working-with-designers.json";
 
 const InterpersonalGallery = () => {
   const galleryConfig = getGalleryConfig("communication/interpersonal")!;
-  
+
   // Create items map for easy lookup
   const itemsMap = {
-    "placeholder-collaboration": placeholderCollaborationItem,
+    "match-centre-collaboration": matchCentreCollaborationItem,
+    "twenty3-working-with-designers": twenty3WorkingWithDesignersItem,
   };
 
   // Order items according to gallery config

@@ -1,0 +1,7 @@
+{
+  "slug": "match-centre-architecture",
+  "title": "'Match Centre' provider-agnostic design",
+  "image": "/images/galleries/twenty3_match_centre.png",
+  "text": "[2023] Designing the Match Centre API to work across multiple data providers while minimising provider-specific code. The up-front architecture decisions around shared schemas and terminology glossaries paid off in a cleaner, more maintainable codebase.",
+  "caseStudySlug": "/match-centre"
+}

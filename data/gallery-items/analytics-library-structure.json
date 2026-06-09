@@ -1,0 +1,7 @@
+{
+  "slug": "analytics-library-structure",
+  "title": "'Analytics library' front-end refresh",
+  "image": "/images/analytics_library/new_analytics_library_landing.png",
+  "text": "[2025] A front-end refresh of the analytics library webapp, producing a much more well-structured project repo. Separating Django ORM, DRF APIs, and React frontend into clearer responsibilities, with better search and a streamlined upload flow.",
+  "caseStudySlug": "/analytics-library"
+}

@@ -9,56 +9,64 @@ export const galleryConfigs: GalleryConfig[] = [
   {
     id: "technical/react-fe",
     title: "React & Frontend Development",
-    defaultLanding: "football-tracker",
+    defaultLanding: "debug-buildup",
     itemOrder: [
+      "debug-buildup",
+      "data-feature-ranker",
       "football-tracker",
       "analytics-library-react",
-      "debug-buildup",
-      "nextjs-personal-site",
-      "data-feature-ranker"
+      "nextjs-personal-site"
     ]
   },
   {
     id: "technical/python-development",
     title: "Python Development",
-    defaultLanding: "custom-metrics",
+    defaultLanding: "tracking-data-python",
     itemOrder: [
+      "tracking-data-python",
+      "custom-fonts-python",
       "custom-metrics",
-      "statsbomb-open-data",
-      "tracking-data-python"
+      "statsbomb-open-data"
     ]
   },
   {
     id: "technical/api-development",
     title: "API Development",
-    defaultLanding: "analytics-library-react",
+    defaultLanding: "match-centre",
     itemOrder: [
-      "analytics-library-react",
-      "debug-buildup"
+      "match-centre",
+      "debug-buildup",
+      "analytics-library-react"
     ]
   },
   {
     id: "industry-knowledge/market",
     title: "Market Knowledge",
-    defaultLanding: "placeholder",
+    defaultLanding: "twenty3-market-audiences",
     itemOrder: [
-      "placeholder"
+      "twenty3-market-audiences",
+      "data-feature-ranker-market",
+      "get-goalside-market"
     ]
   },
   {
     id: "industry-knowledge/data-usage",
     title: "Data Usage",
-    defaultLanding: "data-feature-ranker",
+    defaultLanding: "twenty3-data-usage",
     itemOrder: [
+      "twenty3-data-usage",
+      "custom-metrics-data-usage",
       "data-feature-ranker"
     ]
   },
   {
     id: "industry-knowledge/data-providers",
     title: "Data Providers",
-    defaultLanding: "placeholder",
+    defaultLanding: "match-centre-providers",
     itemOrder: [
-      "placeholder"
+      "match-centre-providers",
+      "statsbomb-provider-knowledge",
+      "goalkeeper-tracking-providers"
     ]
   },
   {
@@ -67,55 +75,60 @@ export const galleryConfigs: GalleryConfig[] = [
     defaultLanding: "twenty3-visualisations",
     itemOrder: [
       "twenty3-visualisations",
+      "debug-buildup",
       "matplotlib-styling"
     ]
   },
   {
     id: "dream-big-build-manageable/ideas-pragmatism",
     title: "Ideas & Pragmatism",
-    defaultLanding: "debug-buildup",
+    defaultLanding: "data-feature-ranker",
     itemOrder: [
-      "custom-metrics",
-      "match-centre",
+      "data-feature-ranker",
       "debug-buildup",
       "football-tracker",
-      "data-feature-ranker"
+      "custom-metrics",
+      "match-centre"
     ]
   },
   {
     id: "dream-big-build-manageable/code-structure",
     title: "Code Structure",
-    defaultLanding: "placeholder-architecture",
+    defaultLanding: "match-centre-architecture",
     itemOrder: [
-      "placeholder-architecture",
+      "match-centre-architecture",
+      "analytics-library-structure"
     ]
   },
   {
     id: "communication/written",
     title: "Written Communication",
-    defaultLanding: "about-page",
+    defaultLanding: "get-goalside",
     itemOrder: [
-      "about-page",
+      "get-goalside",
       "personal-site-project",
+      "about-page"
     ]
   },
   {
     id: "communication/visual",
     title: "Visual Communication",
-    defaultLanding: "mobile-ux-design",
+    defaultLanding: "twenty3-visualisations",
     itemOrder: [
+      "twenty3-visualisations",
+      "xg-timeline-visual-design",
       "mobile-ux-design",
       "product-design-hierarchy",
-      "twenty3-visualisations",
-      "user-guided-design",
+      "user-guided-design"
     ]
   },
   {
     id: "communication/interpersonal",
     title: "Interpersonal Communication",
-    defaultLanding: "placeholder-collaboration",
+    defaultLanding: "match-centre-collaboration",
     itemOrder: [
-      "placeholder-collaboration",
+      "match-centre-collaboration",
+      "twenty3-working-with-designers"
     ]
   }
 ];

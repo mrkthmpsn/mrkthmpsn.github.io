@@ -1,0 +1,7 @@
+{
+  "slug": "goalkeeper-tracking-providers",
+  "title": "Working with SkillCorner tracking data",
+  "image": "/images/galleries/tracking_data_thumb.png",
+  "text": "[2022] Using SkillCorner's open broadcast tracking data to investigate goalkeeper behaviour. Working with raw positional data involved understanding the provider's data format, smoothing noisy coordinates, and deriving events from tracking frames.",
+  "caseStudySlug": "/goalkeeper-tracking"
+}

@@ -4,14 +4,18 @@ import GalleryPageWrapper from "@/components/galleryPageWrapper";
 import { getGalleryConfig } from "@/data/gallery-config";
 
 // Import gallery items
-import placeholderItem from "@/data/gallery-items/placeholder.json";
+import twenty3MarketAudiencesItem from "@/data/gallery-items/twenty3-market-audiences.json";
+import dataFeatureRankerMarketItem from "@/data/gallery-items/data-feature-ranker-market.json";
+import getGoalsideMarketItem from "@/data/gallery-items/get-goalside-market.json";
 
 const MarketGallery = () => {
   const galleryConfig = getGalleryConfig("industry-knowledge/market")!;
-  
+
   // Create items map for easy lookup
   const itemsMap = {
-    "placeholder": placeholderItem,
+    "twenty3-market-audiences": twenty3MarketAudiencesItem,
+    "data-feature-ranker-market": dataFeatureRankerMarketItem,
+    "get-goalside-market": getGoalsideMarketItem,
   };
 
   // Order items according to gallery config

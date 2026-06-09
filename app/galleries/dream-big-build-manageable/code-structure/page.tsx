@@ -4,14 +4,16 @@ import GalleryPageWrapper from "@/components/galleryPageWrapper";
 import { getGalleryConfig } from "@/data/gallery-config";
 
 // Import gallery items
-import placeholderArchitectureItem from "@/data/gallery-items/placeholder-architecture.json";
+import matchCentreArchitectureItem from "@/data/gallery-items/match-centre-architecture.json";
+import analyticsLibraryStructureItem from "@/data/gallery-items/analytics-library-structure.json";
 
 const CodeStructureGallery = () => {
   const galleryConfig = getGalleryConfig("dream-big-build-manageable/code-structure")!;
-  
+
   // Create items map for easy lookup
   const itemsMap = {
-    "placeholder-architecture": placeholderArchitectureItem,
+    "match-centre-architecture": matchCentreArchitectureItem,
+    "analytics-library-structure": analyticsLibraryStructureItem,
   };
 
   // Order items according to gallery config

@@ -1,0 +1,7 @@
+{
+  "slug": "match-centre-providers",
+  "title": "Multi-provider data in the Match Centre",
+  "image": "/images/galleries/twenty3_match_centre.png",
+  "text": "[2023] Designing API endpoints to work across data providers with different schemas, terminology, and capabilities. Accounting for glossary differences and provider-specific features while keeping the infrastructure as general as possible.",
+  "caseStudySlug": "/match-centre"
+}

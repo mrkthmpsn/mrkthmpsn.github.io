@@ -6,14 +6,16 @@ import { getGalleryConfig } from "@/data/gallery-config";
 // Import gallery items
 import analyticsLibraryReactItem from "@/data/gallery-items/analytics-library-react.json";
 import debugBuildupItem from "@/data/gallery-items/debug-buildup.json";
+import matchCentreItem from "@/data/gallery-items/match-centre.json";
 
 const ApiDevelopmentGallery = () => {
   const galleryConfig = getGalleryConfig("technical/api-development")!;
-  
+
   // Create items map for easy lookup
   const itemsMap = {
     "analytics-library-react": analyticsLibraryReactItem,
     "debug-buildup": debugBuildupItem,
+    "match-centre": matchCentreItem,
   };
 
   // Order items according to gallery config

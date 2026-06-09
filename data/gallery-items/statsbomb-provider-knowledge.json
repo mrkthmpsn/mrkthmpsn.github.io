@@ -1,0 +1,7 @@
+{
+  "slug": "statsbomb-provider-knowledge",
+  "title": "StatsBomb360 freezeframe labelling",
+  "image": "/images/galleries/statsbomb_labelling_thumb.png",
+  "text": "Working with StatsBomb's open 360 dataset, which provides broadcast-derived freezeframes alongside event data. The freezeframes contain positional information without player identity, requiring an understanding of the data format to label players with probable positions.",
+  "caseStudySlug": "/label-unlabelled-statsbomb"
+}

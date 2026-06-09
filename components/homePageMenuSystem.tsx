@@ -51,23 +51,14 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
       id: 'dream-big-build-manageable',
       label: 'Dream Big, Build Manageable',
       subItems: [
-        { id: 'visualisations', label: 'Visualisations', href: '/galleries/dream-big-build-manageable/visualisations', linkType: 'gallery' },
         { id: 'code-structure', label: 'Code Structure', href: '/galleries/dream-big-build-manageable/code-structure', linkType: 'gallery', thumbnail: '/images/galleries/debug_buildup_app.png' },
-        { id: 'ideas-pragmatism', label: 'Ideas & Pragmatism', href: '/galleries/dream-big-build-manageable/ideas-pragmatism', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/battle-screen.png' }
-      ]
-    },
-    {
-      id: 'communication',
-      label: 'Communication',
-      subItems: [
-        { id: 'written', label: 'Written', href: '/galleries/communication/written', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
-        { id: 'interpersonal', label: 'Interpersonal', href: '/galleries/communication/interpersonal', linkType: 'gallery', thumbnail: '/images/galleries/xg_timeline_design_thumb.png' },
-        { id: 'visual', label: 'Visual', href: '/galleries/communication/visual', linkType: 'gallery' }
+        { id: 'ideas-pragmatism', label: 'Ideas & Pragmatism', href: '/galleries/dream-big-build-manageable/ideas-pragmatism', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/battle-screen.png' },
+        { id: 'visualisations', label: 'Visualisations', href: '/galleries/dream-big-build-manageable/visualisations', linkType: 'gallery' }
       ]
     },
     {
       id: 'technical',
-      label: 'Technical',
+      label: 'Technical is Foundational',
       subItems: [
         { id: 'api-development', label: 'API Development', href: '/galleries/technical/api-development', linkType: 'gallery' },
         { id: 'python-development', label: 'Python Development', href: '/galleries/technical/python-development', linkType: 'gallery', thumbnail: '/images/galleries/custom-fonts-example-squawka.png' },
@@ -75,12 +66,21 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
       ]
     },
     {
-      id: 'industry-knowledge',
-      label: 'Industry Knowledge',
+      id: 'communication',
+      label: 'Communicate Strongly',
       subItems: [
-        { id: 'data-providers', label: 'Data Providers', href: '/galleries/industry-knowledge/data-providers', linkType: 'gallery' },
+        { id: 'written', label: 'Written', href: '/galleries/communication/written', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
+        { id: 'interpersonal', label: 'Interpersonal', href: '/galleries/communication/interpersonal', linkType: 'gallery', thumbnail: '/images/galleries/xg_timeline_design_thumb.png' },
+        { id: 'visual', label: 'Visual', href: '/galleries/communication/visual', linkType: 'gallery' }
+      ]
+    },
+    {
+      id: 'industry-knowledge',
+      label: 'Know the Industry',
+      subItems: [
         { id: 'market', label: 'Market', href: '/galleries/industry-knowledge/market', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
-        { id: 'data-usage', label: 'Data Usage', href: '/galleries/industry-knowledge/data-usage', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/global-rankings.png' }
+        { id: 'data-usage', label: 'Data Usage', href: '/galleries/industry-knowledge/data-usage', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/global-rankings.png' },
+        { id: 'data-providers', label: 'Data Providers', href: '/galleries/industry-knowledge/data-providers', linkType: 'gallery' }
       ]
     }
   ];
