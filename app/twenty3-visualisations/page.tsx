@@ -1,6 +1,6 @@
 import markdown from "./twenty3-visualisations.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/twenty3-vis-1.png";
+import headerImage from "@/public/images/galleries/twenty3-vis-1.png";
 
 const Twenty3VisualisationsProjectPage = () => {
   return (

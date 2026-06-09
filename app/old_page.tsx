@@ -4,12 +4,12 @@ import "./pages-styles.css";
 import Head from "next/head";
 import CustomNavbar from "@/components/navbar";
 import HomePageCard from "@/components/homePageCard";
-import analyticsLibraryThumb from "@/public/images/home_page_thumbs/analytics_library_thumb.png";
-import xGTimelineThumb from "@/public/images/home_page_thumbs/xg_timeline_design_thumb.png";
-import codingTutorialsThumb from "@/public/images/home_page_thumbs/coding_tutorials_thumb.png";
-import realMadridD3Thumb from "@/public/images/home_page_thumbs/real_madrid_d3_thumb.png";
-import trackingDataProjectThumb from "@/public/images/home_page_thumbs/tracking_data_thumb.png";
-import statsbombLabellingThumb from "public/images/home_page_thumbs/statsbomb_labelling_thumb.png";
+import analyticsLibraryThumb from "@/public/images/galleries/analytics_library_thumb.png";
+import xGTimelineThumb from "@/public/images/galleries/xg_timeline_design_thumb.png";
+import codingTutorialsThumb from "@/public/images/galleries/coding_tutorials_thumb.png";
+import realMadridD3Thumb from "@/public/images/galleries/real_madrid_d3_thumb.png";
+import trackingDataProjectThumb from "@/public/images/galleries/tracking_data_thumb.png";
+import statsbombLabellingThumb from "public/images/galleries/statsbomb_labelling_thumb.png";
 
 const HomePage = () => {
   return (

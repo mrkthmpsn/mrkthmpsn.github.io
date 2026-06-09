@@ -7,13 +7,14 @@ import CustomNavbar from "@/components/navbar";
 import ProjectCard from "@/components/projectCard";
 
 import analyticsLibraryThumb from "@/public/images/analytics_library/new_analytics_library_landing.png";
-import debugBuildupThumb from "@/public/images/home_page_thumbs/debug_buildup_app.png";
-import twenty3VisThumb from "@/public/images/home_page_thumbs/twenty3-vis-1.png";
-import twenty3MatchCentreThumb from "@/public/images/home_page_thumbs/twenty3_match_centre.png";
-import metricsCreatorThumb from "@/public/images/home_page_thumbs/streamlit-metrics-creator-webapp.png";
-import twenty3FontTextSizeThumb from "@/public/images/home_page_thumbs/custom-fonts-example-squawka.png";
-import personalSiteProjectThumb from "@/public/images/home_page_thumbs/personal-site-may-2024.png";
-import footballTrackerAppThumb from "@/public/images/home_page_thumbs/football-tracker-app-thumb.png";
+import debugBuildupThumb from "@/public/images/galleries/debug_buildup_app.png";
+import twenty3VisThumb from "@/public/images/galleries/twenty3-vis-1.png";
+import twenty3MatchCentreThumb from "@/public/images/galleries/twenty3_match_centre.png";
+import metricsCreatorThumb from "@/public/images/galleries/streamlit-metrics-creator-webapp.png";
+import twenty3FontTextSizeThumb from "@/public/images/galleries/custom-fonts-example-squawka.png";
+import personalSiteProjectThumb from "@/public/images/galleries/personal-site-may-2024.png";
+import footballTrackerAppThumb from "@/public/images/galleries/football-tracker-app-thumb.png";
+import dataFeatureRankerThumb from "@/public/images/data-feature-ranker/landing-page.png"
 
 const ProjectsPage = () => {
   return (
@@ -63,16 +64,22 @@ const ProjectsPage = () => {
               internalLink={"/debug-buildup"}
             />
             <ProjectCard
-              title="Analytics library"
-              subtitle="Django | React"
-              backgroundImage={analyticsLibraryThumb}
-              internalLink={"/analytics-library"}
+              title="Football data ranker"
+              subtitle="Upstash Redis | Game design"
+              backgroundImage={dataFeatureRankerThumb}
+              internalLink={"/data-feature-ranker"}
             />
             <ProjectCard
               title="Football tracker app"
               subtitle="React Native | Product design"
               backgroundImage={footballTrackerAppThumb}
               internalLink={"/football-tracker-app"}
+            />
+            <ProjectCard
+              title="Analytics library"
+              subtitle="Django | React"
+              backgroundImage={analyticsLibraryThumb}
+              internalLink={"/analytics-library"}
             />
             <ProjectCard
               title="Create-your-own-metric app"

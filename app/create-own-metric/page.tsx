@@ -1,6 +1,6 @@
 import markdown from "./create-own-metric.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/streamlit-metrics-creator-webapp.png";
+import headerImage from "@/public/images/galleries/streamlit-metrics-creator-webapp.png";
 
 const CreateOwnMetricProjectPage = () => {
   return (
