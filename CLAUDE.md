@@ -15,7 +15,7 @@ Next.js automatically handles page routing. Individual pages can be tested by na
 
 ## Architecture Overview
 
-This is a **Next.js 13+ personal portfolio website** using the App Router architecture, featuring football data visualizations and project showcases.
+This is a **Next.js 15 personal portfolio website** using the App Router architecture, featuring football data visualizations and project showcases.
 
 ### Key Architecture Patterns
 
@@ -33,12 +33,12 @@ This is a **Next.js 13+ personal portfolio website** using the App Router archit
 
 **Content Management**:
 - Markdown files (`.md`) co-located with pages for project content
-- Raw-loader webpack configuration for importing markdown
+- Webpack 5 `asset/source` configuration for importing markdown
 - ProjectPageWrapper component for consistent project page layouts
 
 ### Styling System
 - **Tailwind CSS** for utility-first styling
-- **Bootstrap React** for navbar and grid components
+- **Bootstrap** for grid components (navbar is custom)
 - **Custom color scheme**: brandStraw, brandLightBlue, ggOrange variants defined in tailwind.config.js
 - **Fonts**: Roboto Slab for headings, Inter (via next/font) for body text
 
@@ -56,7 +56,7 @@ This is a **Next.js 13+ personal portfolio website** using the App Router archit
 
 ## Development Notes
 
-**Webpack Configuration**: Custom setup handles markdown import and filesystem fallbacks for client-side rendering
+**Webpack Configuration**: Uses `asset/source` for markdown import and filesystem fallbacks for client-side rendering
 **Component Naming**: Use PascalCase for components, camelCase for utilities
 **Asset Imports**: Static imports for images, dynamic imports for markdown content
 **Responsive Design**: Mobile-first approach with Tailwind responsive prefixes (md:, lg:)
