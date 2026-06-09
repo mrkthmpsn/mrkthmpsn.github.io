@@ -7,6 +7,7 @@ interface GalleryItem {
   image: string;
   text?: string;
   description?: string;
+  caseStudySlug?: string | null;
 }
 
 interface GalleryProps {
@@ -45,15 +46,15 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
       
       <div className="flex flex-col items-center">
         {/* Main Gallery Area with fixed navigation */}
-        <div className="relative w-full mb-8">
+        <div className="relative w-full mb-4">
           {/* Previous Button - Positioned exactly halfway between column edge and screen edge */}
           <button
             onClick={goToPrevious}
-            className="fixed left-[calc((50vw-24rem)/2)] top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandStraw hover:bg-brandLightBlue transition-colors duration-200 shadow-lg md:left-[calc((50vw-20rem)/2)] lg:left-[calc((50vw-24rem)/2)]"
+            className="group/nav fixed left-[calc((50vw-24rem)/2)] top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandLightBlue-700 transition-all duration-200 shadow-lg md:left-[calc((50vw-20rem)/2)] lg:left-[calc((50vw-24rem)/2)]"
             disabled={items.length <= 1}
           >
             <svg
-              className="w-6 h-6 text-gray-800"
+              className="w-6 h-6 text-brandLightBlue-200 group-hover/nav:text-brandLightBlue-100 transition-colors duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -75,7 +76,7 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
             <img
               src={currentItem.image}
               alt={currentItem.title}
-              className="max-w-2xl max-h-[50vh] h-auto object-contain rounded-lg shadow-lg border-2 border-gray-200 mb-8"
+              className="max-w-2xl max-h-[50vh] lg:max-h-[40vh] h-auto object-contain rounded-lg shadow-lg border-2 border-gray-200 mb-4"
             />
             <p className="text-lg text-gray-700 leading-relaxed">
               {currentItem.text}
@@ -85,11 +86,11 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
           {/* Next Button - Positioned exactly halfway between column edge and screen edge */}
           <button
             onClick={goToNext}
-            className="fixed right-[calc((50vw-24rem)/2)] top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandStraw hover:bg-brandLightBlue transition-colors duration-200 shadow-lg md:right-[calc((50vw-20rem)/2)] lg:right-[calc((50vw-24rem)/2)]"
+            className="group/nav fixed right-[calc((50vw-24rem)/2)] top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandLightBlue-700 transition-all duration-200 shadow-lg md:right-[calc((50vw-20rem)/2)] lg:right-[calc((50vw-24rem)/2)]"
             disabled={items.length <= 1}
           >
             <svg
-              className="w-6 h-6 text-gray-800"
+              className="w-6 h-6 text-brandLightBlue-200 group-hover/nav:text-brandLightBlue-100 transition-colors duration-200"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -106,9 +107,27 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
 
         {/* Description Text */}
         <div className="w-full max-w-3xl text-center">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            {currentItem.description}
-          </p>
+          {currentItem.caseStudySlug && (
+            <a
+              href={currentItem.caseStudySlug}
+              className="group inline-flex items-center px-4 py-2 rounded-full font-medium no-underline text-brandLightBlue-700 hover:text-white bg-brandLightBlue-100 bg-gradient-to-r from-brandLightBlue-600 to-brandLightBlue-600 bg-[length:0%_100%] bg-no-repeat bg-left hover:bg-[length:100%_100%] shadow-md hover:shadow-lg transition-all duration-500 ease-out"
+            >
+              Read More
+              <svg
+                className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </a>
+          )}
         </div>
 
         {/* Pagination Dots */}
