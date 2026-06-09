@@ -19,8 +19,9 @@ interface HomePageMenuSystemProps {
   className?: string;
 }
 
-// 2x2 grid layout: [0][1] / [2][3] — clockwise order
+// 2x2 grid: clockwise on desktop, sequential on mobile
 const CLOCKWISE_ORDER = [0, 1, 3, 2];
+const SEQUENTIAL_ORDER = [0, 1, 2, 3];
 const IDLE_RESUME_DELAY = 4000;
 
 const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
@@ -160,7 +161,8 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
     }
   }, []);
 
-  const previewIndex = CLOCKWISE_ORDER[clockwiseStep];
+  const cycleOrder = isLandscape ? CLOCKWISE_ORDER : SEQUENTIAL_ORDER;
+  const previewIndex = cycleOrder[clockwiseStep];
   const previewButtonId = isIdle ? buttonData[previewIndex].id : null;
   const activeButtonId = hoveredButtonId || previewButtonId;
   const activeButton = buttonData.find(button => button.id === activeButtonId);
