@@ -1,0 +1,7 @@
+{
+  "slug": "matplotlib-styling",
+  "title": "Custom fonts & text auto-sizing",
+  "image": "/images/galleries/custom-fonts-example-squawka.png",
+  "text": "[2023] Implementing custom font use and text auto-sizing in matplotlib visualisation suite. An intricate technical challenge across a codebase, requiring a fair amount of delving into documentation depths. A largely self-propelled project, driven by the belief that it would provide value to the product offering.",
+  "caseStudySlug": "/matplotlib-font-text-sizing"
+}

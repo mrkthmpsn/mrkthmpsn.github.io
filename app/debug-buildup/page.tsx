@@ -1,6 +1,6 @@
 import markdown from "./debug-buildup.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/debug_buildup_app.png";
+import headerImage from "@/public/images/galleries/debug_buildup_app.png";
 
 const DebugBuildupProjectPage = () => {
   return (

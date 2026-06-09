@@ -1,0 +1,7 @@
+{
+  "slug": "data-pipelines-providers",
+  "title": "Provider-agnostic data ingestion",
+  "image": "/images/galleries/twenty3-sport-homepage.png",
+  "text": "[2019-] Building pipelines that handle the differences between data providers - not just format variations but fundamental differences in what they consider an event, how they categorise it, and when they deliver it. Normalising at the point of consumption rather than ingestion to preserve provider-specific fidelity.",
+  "caseStudySlug": "/twenty3-data-pipelines"
+}

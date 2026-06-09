@@ -1,0 +1,7 @@
+{
+  "slug": "analytics-library-react",
+  "title": "'Analytics library' webapp",
+  "image": "/images/galleries/analytics_library_thumb.png",
+  "text": "[2024] An 'analytics library' to save, categorise, and read football analytics papers. Built with a React frontend, Django ORM and Django Rest Framework for APIs, and Microsoft OneDrive integration.",
+  "caseStudySlug": "/analytics-library"
+}

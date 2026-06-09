@@ -1,0 +1,7 @@
+{
+  "slug": "statsbomb-python",
+  "title": "Python Data Manipulation & Processing",
+  "image": "/images/galleries/statsbomb_labelling_thumb.png",
+  "text": "Python data manipulation and StatsBomb data processing, demonstrating ETL pipelines, data validation, and advanced pandas operations.",
+  "caseStudySlug": "/label-unlabelled-statsbomb"
+}

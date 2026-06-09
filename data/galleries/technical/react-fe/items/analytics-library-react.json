@@ -1,0 +1,7 @@
+{
+  "slug": "analytics-library-react",
+  "title": "React Frontend Architecture",
+  "image": "/images/galleries/analytics_library_thumb.png",
+  "text": "React frontend architecture with Django integration, demonstrating component design, state management, and API integration patterns.",
+  "caseStudySlug": "/analytics-library"
+}

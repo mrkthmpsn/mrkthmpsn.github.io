@@ -1,0 +1,7 @@
+{
+  "slug": "data-pipelines-architecture",
+  "title": "Multi-provider data pipeline design",
+  "image": "/images/galleries/twenty3-sport-homepage.png",
+  "text": "[2021-] Designing data pipelines to ingest, transform, and serve football data from multiple providers. Architectural decisions around where provider-specific logic lives, normalisation boundaries, and maintaining reliability and fidelity of the latest data.",
+  "caseStudySlug": "/twenty3-data-pipelines"
+}

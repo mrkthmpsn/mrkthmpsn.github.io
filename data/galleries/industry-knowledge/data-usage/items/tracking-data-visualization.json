@@ -1,0 +1,7 @@
+{
+  "slug": "tracking-data-visualization",
+  "title": "Player Tracking Data Processing",
+  "image": "/images/galleries/tracking_data_thumb.png",
+  "text": "Processing high-frequency player tracking data to create visualizations of player movement patterns, defensive lines, and spatial analysis. Shows techniques for handling large datasets efficiently.",
+  "caseStudySlug": "/goalkeeper-tracking"
+}

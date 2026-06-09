@@ -1,0 +1,7 @@
+{
+  "slug": "custom-metrics-data-usage",
+  "title": "Bridging data and football concepts",
+  "image": "/images/galleries/streamlit-metrics-creator-webapp.png",
+  "text": "[2023] A webapp letting non-technical users construct custom statistics from tracking data. Built around the insight that data sources don't directly reflect the football concepts coaches use day-to-day, and that terminology can differ from coach to coach.",
+  "caseStudySlug": "/create-own-metric"
+}

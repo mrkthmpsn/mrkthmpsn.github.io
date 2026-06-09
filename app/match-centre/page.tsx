@@ -1,6 +1,6 @@
 import markdown from "./match-centre.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/twenty3_match_centre.png";
+import headerImage from "@/public/images/galleries/twenty3_match_centre.png";
 
 const Twenty3MatchCentreProjectPage = () => {
   return (

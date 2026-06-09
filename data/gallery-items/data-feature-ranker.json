@@ -1,0 +1,7 @@
+{
+  "slug": "data-feature-ranker",
+  "title": "Football Data Feature Ranker",
+  "image": "/images/data-feature-ranker/battle-screen.png",
+  "text": "[2026] A game-like web app where users rank football data features through head-to-head battles, generating global community rankings via Upstash Redis.",
+  "caseStudySlug": "/data-feature-ranker"
+}

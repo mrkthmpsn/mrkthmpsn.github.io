@@ -4,6 +4,7 @@ My career is typical for a twenty-first century worker:
 - A hobby writing and reading about football analytics
 - A first job as a football writer
 - Transitioning to a software developer
+- Becoming genuinely interested in data engineering and software architecture
 
 I primarily work in Python, but take an interest in things beyond that - the Typescript site you're reading this on, for example.
 The [Projects](/projects) page gives a sense of where my curiousities lie, although my day-to-day involves more API development and data engineering too.
@@ -14,7 +15,7 @@ It's all a case of right place, right time. In 2013/2014 I fell into the crowd o
 
 I've written about [understanding AI](https://www.getgoalsideanalytics.com/understand-football-and-youll-understand-ai/), ['possession adjusting' statistics](https://www.getgoalsideanalytics.com/duels-position-possession-adjusting/), [labelling unlabelled data](https://www.getgoalsideanalytics.com/high-fat-data-for-low-er-fat-costs/), [football analytics history](https://www.getgoalsideanalytics.com/36315087-analytics-is-older-than-you-think/), [why 'ball-in-play time' measures had no sensible grounding](https://www.getgoalsideanalytics.com/ball-in-play-kick-into-touch/), and [how much we actually understand football](https://www.getgoalsideanalytics.com/what-do-we-actually-know-about-football/). 
 
-The number of data providers whose data I've worked with in some capacity currently stands at **10**. In alphabetical order: Impect, Metrica Sports, Opta, Ortec, Second Spectrum, Skillcorner, Sportlogiq, StatsBomb, Strategem, Wyscout. Sadly, the number of analytics conferences I've attended stands at just **3**: Opta Pro Forum, StatsBomb, Training Ground Guru. 
+The number of data providers whose data I've worked with in some capacity currently stands at **11**. In alphabetical order: Impect, Metrica Sports, Opta, Ortec, Second Spectrum, Skillcorner, Sportlogiq, Sportradar, StatsBomb, Strategem, Wyscout. Sadly, the number of analytics conferences I've attended stands at just **4**: Field of Play, Opta Pro Forum, StatsBomb, Training Ground Guru. 
 
 ---
 

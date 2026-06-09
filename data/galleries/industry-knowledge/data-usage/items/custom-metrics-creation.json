@@ -1,0 +1,7 @@
+{
+  "slug": "custom-metrics-creation",
+  "title": "Custom Football Metrics Development",
+  "image": "/images/galleries/streamlit-metrics-creator-webapp.png",
+  "text": "Building bespoke football metrics from raw data sources. Demonstrates the process of metric design, validation, and implementation for performance analysis and scouting applications.",
+  "caseStudySlug": "/create-own-metric"
+}

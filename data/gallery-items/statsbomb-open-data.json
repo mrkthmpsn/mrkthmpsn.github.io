@@ -1,0 +1,7 @@
+{
+  "slug": "statsbomb-open-data",
+  "title": "StatsBomb Open Data Analysis",
+  "image": "/images/galleries/statsbomb_labelling_thumb.png",
+  "text": "Leveraging StatsBomb's open dataset to analyze match events, player positioning, and tactical patterns. This example demonstrates how to extract meaningful insights from event-level football data.",
+  "caseStudySlug": "/label-unlabelled-statsbomb"
+}

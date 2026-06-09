@@ -1,0 +1,7 @@
+{
+  "slug": "data-pipelines-usage",
+  "title": "Making data reliably available across products",
+  "image": "/images/galleries/twenty3-sport-homepage.png",
+  "text": "[2019-] The data pipelines serve as the foundation of Twenty3's product stack. Visualisations, the Match Centre, and other Toolbox features all depend on processed data being available. Understanding how downstream products consume data has shaped pipeline design decisions.",
+  "caseStudySlug": "/twenty3-data-pipelines"
+}

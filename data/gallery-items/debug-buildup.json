@@ -1,0 +1,7 @@
+{
+  "slug": "debug-buildup",
+  "title": "'Football Pitwall' build-up debugger",
+  "image": "/images/galleries/debug_buildup_app.png",
+  "text": "[2024] A React app aimed at 'debugging' build-up situations, using tracking data. The app is inspired by Formula One in-race telemetry, where a mixture of speed and insight is important.",
+  "caseStudySlug": "/debug-buildup"
+}

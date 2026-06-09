@@ -1,0 +1,35 @@
+"use client";
+import React from "react";
+import GalleryPageWrapper from "@/components/galleryPageWrapper";
+import { getGalleryConfig } from "@/data/gallery-config";
+
+// Import gallery items
+import aboutPageItem from "@/data/gallery-items/about-page.json";
+import personalSiteItem from "@/data/gallery-items/personal-site-project.json";
+import getGoalsideItem from "@/data/gallery-items/get-goalside.json";
+
+const WrittenGallery = () => {
+  const galleryConfig = getGalleryConfig("communication/written")!;
+
+  // Create items map for easy lookup
+  const itemsMap = {
+    "about-page": aboutPageItem,
+    "personal-site-project": personalSiteItem,
+    "get-goalside": getGoalsideItem,
+  };
+
+  // Order items according to gallery config
+  const orderedItems = galleryConfig.itemOrder.map(slug => ({
+    id: slug,
+    ...itemsMap[slug as keyof typeof itemsMap]
+  }));
+
+  return (
+    <GalleryPageWrapper
+      pageTitle={galleryConfig.title}
+      items={orderedItems}
+    />
+  );
+};
+
+export default WrittenGallery;

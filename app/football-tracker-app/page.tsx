@@ -1,6 +1,6 @@
 import markdown from "./football-tracker-app.md";
 import ProjectPageWrapper from "@/components/projectPageWrapper";
-import headerImage from "@/public/images/home_page_thumbs/football-tracker-app-full-screen.png";
+import headerImage from "@/public/images/galleries/football-tracker-app-full-screen.png";
 
 const FootballTrackerAppProjectPage = () => {
   return (
