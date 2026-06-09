@@ -50,8 +50,9 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
           {/* Previous Button - Positioned exactly halfway between column edge and screen edge */}
           <button
             onClick={goToPrevious}
-            className="group/nav fixed left-[calc((50vw-24rem)/2)] top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandLightBlue-700 transition-all duration-200 shadow-lg md:left-[calc((50vw-20rem)/2)] lg:left-[calc((50vw-24rem)/2)]"
+            className="group/nav fixed left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 rounded-full bg-brandLightBlue-700 transition-all duration-200 shadow-lg md:left-[calc((50vw-20rem)/2)] lg:left-[calc((50vw-24rem)/2)]"
             disabled={items.length <= 1}
+            aria-label="Previous item"
           >
             <svg
               className="w-6 h-6 text-brandLightBlue-200 group-hover/nav:text-brandLightBlue-100 transition-colors duration-200"
