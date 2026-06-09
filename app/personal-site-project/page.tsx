@@ -7,7 +7,7 @@ const PersonalSiteProjectPage = () => {
     <ProjectPageWrapper
       pageTitle={"This site!"}
       pageMarkdown={markdown}
-      dateString="April-May 2024"
+      dateString="April-May 2024, June 2026"
       headerImage={headerImage}
     />
   );
