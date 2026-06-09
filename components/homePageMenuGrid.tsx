@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import HomePageMenuButton from './homePageMenuButton';
 
 interface MenuButtonData {
@@ -16,16 +16,20 @@ interface MenuButtonData {
 interface HomePageMenuGridProps {
   buttons: MenuButtonData[];
   onButtonSelect: (buttonId: string | null) => void;
-  onSubItemClick: (buttonId: string, subItemId: string, href: string) => void;
+  onButtonHover: (buttonId: string) => void;
   selectedButtonId?: string | null;
+  previewButtonId?: string | null;
+  isLeafHovered?: boolean;
   className?: string;
 }
 
 const HomePageMenuGrid: React.FC<HomePageMenuGridProps> = ({
   buttons,
   onButtonSelect,
-  onSubItemClick,
+  onButtonHover,
   selectedButtonId = null,
+  previewButtonId = null,
+  isLeafHovered = false,
   className = ''
 }) => {
   return (
@@ -40,7 +44,11 @@ const HomePageMenuGrid: React.FC<HomePageMenuGridProps> = ({
           key={button.id}
           label={button.label}
           isSelected={selectedButtonId === button.id}
+          isPreview={!selectedButtonId && previewButtonId === button.id}
+          isLeafHovered={selectedButtonId === button.id && isLeafHovered}
+          onMouseEnter={() => onButtonHover(button.id)}
           onClick={() => {
+            // Toggle on tap (mobile) — if already selected, deselect
             if (selectedButtonId === button.id) {
               onButtonSelect(null);
             } else {
