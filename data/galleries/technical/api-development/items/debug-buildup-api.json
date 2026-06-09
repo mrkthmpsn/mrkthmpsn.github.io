@@ -1,0 +1,7 @@
+{
+  "slug": "debug-buildup-api",
+  "title": "FastAPI Backend Architecture",
+  "image": "/images/galleries/debug_buildup_app.png",
+  "text": "FastAPI backend architecture with database integration, demonstrating modern Python API development patterns and cloud deployment strategies.",
+  "caseStudySlug": "/debug-buildup"
+}

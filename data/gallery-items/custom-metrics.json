@@ -1,0 +1,7 @@
+{
+  "slug": "custom-metrics",
+  "title": "'Build your own tracking data metrics'",
+  "image": "/images/galleries/streamlit-metrics-creator-webapp.png",
+  "text": "[2023] A basic webapp to intuitively construct stats using tracking data. The features let a user define their phase of play and then pick certain actions in a pattern of play to count up.",
+  "caseStudySlug": "/create-own-metric"
+}

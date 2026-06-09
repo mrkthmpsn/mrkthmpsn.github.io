@@ -1,0 +1,7 @@
+{
+  "slug": "analytics-library-api",
+  "title": "Django REST API Implementation",
+  "image": "/images/galleries/analytics_library_thumb.png",
+  "text": "Django REST API implementation for document management, featuring file handling, database ORM, and third-party service integration.",
+  "caseStudySlug": "/analytics-library"
+}

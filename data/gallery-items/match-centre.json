@@ -1,0 +1,7 @@
+{
+  "slug": "match-centre",
+  "title": "'Match Centre' API design",
+  "image": "/images/galleries/twenty3_match_centre.png",
+  "text": "[2023] API design for Twenty3 Match Centre to cover the breadth of features available in the product, across different data providers. There was a need to work out how to supply data in a manageable way, without limiting the scope of features that had been drawn up for the product.",
+  "caseStudySlug": "/match-centre"
+}
