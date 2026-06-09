@@ -19,9 +19,16 @@ const HomePage = () => {
           {/* Subtle dimming overlay to soften pitch animation */}
           <div className="absolute inset-0 bg-white bg-opacity-10 z-[5] pointer-events-none" />
 
-          {/* Overlay menu buttons */}
+          {/* Overlay menu with name and container */}
           <div className="absolute inset-0 flex items-center justify-center z-10">
-            <HomePageMenuSystem />
+            <div className="flex flex-col items-start">
+              <span className="text-sm md:text-base font-['Roboto_Slab'] text-brandLightBlue-700 tracking-wide uppercase ml-3 mb-1">
+                THE <span className="font-bold">MARK THOMPSON</span> PORTFOLIO
+              </span>
+              <div className="bg-[rgba(255,255,255,0.3)] rounded-2xl shadow-lg px-6 py-3 md:px-8 md:py-4">
+                <HomePageMenuSystem />
+              </div>
+            </div>
           </div>
         </div>
       </div>

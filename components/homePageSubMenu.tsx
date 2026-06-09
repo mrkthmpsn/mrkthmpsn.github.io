@@ -53,7 +53,7 @@ const HomePageSubMenu: React.FC<HomePageSubMenuProps> = ({
           onMouseEnter={() => onItemHoverChange?.(true)}
           onMouseLeave={() => onItemHoverChange?.(false)}
           className="
-            px-3 py-2 text-lg md:text-xl
+            px-2 py-1.5 text-sm md:text-base
             bg-white bg-opacity-60 hover:bg-opacity-90
             border border-brandLightBlue-300 border-opacity-40
             hover:border-brandLightBlue-500 hover:border-opacity-60

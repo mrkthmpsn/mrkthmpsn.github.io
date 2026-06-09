@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import HomePageMenuGrid from './homePageMenuGrid';
-import HomePageSubMenu from './homePageSubMenu';
 
 interface MenuButtonData {
   id: string;
@@ -52,36 +51,36 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
       id: 'dream-big-build-manageable',
       label: 'Dream Big, Build Manageable',
       subItems: [
-        { id: 'visualisations', label: 'Visualisations', href: '/galleries/dream-big-build-manageable/visualisations', linkType: 'gallery', thumbnail: '/images/galleries/twenty3-vis-1.png' },
-        { id: 'code-structure', label: 'Code Structure', href: '/galleries/dream-big-build-manageable/code-structure', linkType: 'gallery', thumbnail: '/images/galleries/coding_tutorials_thumb.png' },
-        { id: 'ideas-pragmatism', label: 'Ideas & Pragmatism', href: '/galleries/dream-big-build-manageable/ideas-pragmatism', linkType: 'gallery', thumbnail: '/images/galleries/streamlit-metrics-creator-webapp.png' }
+        { id: 'visualisations', label: 'Visualisations', href: '/galleries/dream-big-build-manageable/visualisations', linkType: 'gallery' },
+        { id: 'code-structure', label: 'Code Structure', href: '/galleries/dream-big-build-manageable/code-structure', linkType: 'gallery', thumbnail: '/images/galleries/debug_buildup_app.png' },
+        { id: 'ideas-pragmatism', label: 'Ideas & Pragmatism', href: '/galleries/dream-big-build-manageable/ideas-pragmatism', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/battle-screen.png' }
       ]
     },
     {
       id: 'communication',
       label: 'Communication',
       subItems: [
-        { id: 'written', label: 'Written', href: '/galleries/communication/written', linkType: 'gallery', thumbnail: '/images/galleries/personal-site-may-2024.png' },
-        { id: 'interpersonal', label: 'Interpersonal', href: '/galleries/communication/interpersonal', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
-        { id: 'visual', label: 'Visual', href: '/galleries/communication/visual', linkType: 'gallery', thumbnail: '/images/galleries/football-tracker-app-thumb.png' }
+        { id: 'written', label: 'Written', href: '/galleries/communication/written', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
+        { id: 'interpersonal', label: 'Interpersonal', href: '/galleries/communication/interpersonal', linkType: 'gallery', thumbnail: '/images/galleries/xg_timeline_design_thumb.png' },
+        { id: 'visual', label: 'Visual', href: '/galleries/communication/visual', linkType: 'gallery' }
       ]
     },
     {
       id: 'technical',
       label: 'Technical',
       subItems: [
-        { id: 'api-development', label: 'API Development', href: '/galleries/technical/api-development', linkType: 'gallery', thumbnail: '/images/galleries/analytics_library_thumb.png' },
-        { id: 'python-development', label: 'Python Development', href: '/galleries/technical/python-development', linkType: 'gallery', thumbnail: '/images/galleries/tracking_data_thumb.png' },
-        { id: 'react-fe', label: 'React & FE', href: '/galleries/technical/react-fe', linkType: 'gallery', thumbnail: '/images/galleries/football-tracker-app-thumb.png' }
+        { id: 'api-development', label: 'API Development', href: '/galleries/technical/api-development', linkType: 'gallery' },
+        { id: 'python-development', label: 'Python Development', href: '/galleries/technical/python-development', linkType: 'gallery', thumbnail: '/images/galleries/custom-fonts-example-squawka.png' },
+        { id: 'react-fe', label: 'React & FE', href: '/galleries/technical/react-fe', linkType: 'gallery', thumbnail: '/images/galleries/football-tracker-app-full-screen.png' }
       ]
     },
     {
       id: 'industry-knowledge',
       label: 'Industry Knowledge',
       subItems: [
-        { id: 'data-providers', label: 'Data Providers', href: '/galleries/industry-knowledge/data-providers', linkType: 'gallery', thumbnail: '/images/galleries/statsbomb_labelling_thumb.png' },
-        { id: 'market', label: 'Market', href: '/galleries/industry-knowledge/market', linkType: 'gallery', thumbnail: '/images/galleries/analytics_library_thumb.png' },
-        { id: 'data-usage', label: 'Data Usage', href: '/galleries/industry-knowledge/data-usage', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/battle-screen.png' }
+        { id: 'data-providers', label: 'Data Providers', href: '/galleries/industry-knowledge/data-providers', linkType: 'gallery' },
+        { id: 'market', label: 'Market', href: '/galleries/industry-knowledge/market', linkType: 'gallery', thumbnail: '/images/galleries/get_goalside_thumb.png' },
+        { id: 'data-usage', label: 'Data Usage', href: '/galleries/industry-knowledge/data-usage', linkType: 'gallery', thumbnail: '/images/data-feature-ranker/global-rankings.png' }
       ]
     }
   ];
@@ -170,27 +169,6 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
     window.location.href = item.href;
   };
 
-  // Determine position based on active button and screen orientation
-  const getSubMenuPosition = () => {
-    if (!activeButtonId) return '';
-
-    const buttonIndex = buttonData.findIndex(button => button.id === activeButtonId);
-
-    if (isLandscape) {
-      return buttonIndex === 0 || buttonIndex === 2
-        ? 'absolute right-full top-0 mr-4'
-        : 'absolute left-full top-0 ml-4';
-    } else {
-      return buttonIndex <= 1
-        ? 'absolute bottom-full left-0 mb-4'
-        : 'absolute top-full left-0 mt-4';
-    }
-  };
-
-  // Collect thumbnails for the active category
-  const activeThumbnails = activeButton?.subItems.filter(item => item.thumbnail) || [];
-  const isUserActive = !isIdle;
-
   return (
     <div
       className={`relative flex flex-col items-center gap-4 ${className}`}
@@ -201,50 +179,16 @@ const HomePageMenuSystem: React.FC<HomePageMenuSystemProps> = ({
         buttons={buttonData}
         onButtonSelect={handleButtonSelect}
         onButtonHover={handleButtonHover}
+        onItemClick={handleSubMenuItemClick}
+        onMenuMouseEnter={handleMenuMouseEnter}
+        onMenuMouseLeave={handleMenuMouseLeave}
+        onItemHoverChange={setIsLeafHovered}
         selectedButtonId={hoveredButtonId}
         previewButtonId={previewButtonId}
+        activeButtonId={activeButtonId}
+        isIdle={isIdle}
         isLeafHovered={isLeafHovered}
       />
-
-      {activeButton && (
-        <HomePageSubMenu
-          items={activeButton.subItems}
-          onItemClick={handleSubMenuItemClick}
-          isPreview={isIdle}
-          onMouseEnter={handleMenuMouseEnter}
-          onMouseLeave={handleMenuMouseLeave}
-          onItemHoverChange={setIsLeafHovered}
-          className={getSubMenuPosition()}
-        />
-      )}
-
-      {/* Thumbnail strip below the menu grid */}
-      <div
-        className={`
-          flex gap-3 justify-center items-center
-          transition-all duration-700 ease-in-out
-          ${activeThumbnails.length > 0 ? 'translate-y-0' : '-translate-y-2 pointer-events-none'}
-          ${isUserActive ? 'opacity-100' : activeThumbnails.length > 0 ? 'opacity-40' : 'opacity-0'}
-        `}
-      >
-        {activeThumbnails.map((item) => (
-          <a
-            key={item.id}
-            href={item.href}
-            className={`
-              block rounded-md overflow-hidden shadow-md border border-white border-opacity-30
-              transition-all duration-300
-              ${isIdle ? 'pointer-events-none' : 'hover:scale-105 hover:shadow-lg'}
-            `}
-          >
-            <img
-              src={item.thumbnail}
-              alt={item.label}
-              className="w-20 h-14 md:w-28 md:h-20 object-cover"
-            />
-          </a>
-        ))}
-      </div>
     </div>
   );
 };
