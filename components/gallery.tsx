@@ -137,6 +137,8 @@ const Gallery: React.FC<GalleryProps> = ({ items, title }) => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to item ${index + 1} of ${items.length}`}
+                aria-current={index === currentIndex ? "true" : undefined}
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                   index === currentIndex
                     ? "bg-brandLightBlue"
