@@ -7,6 +7,7 @@ import { getGalleryConfig } from "@/data/gallery-config";
 import matchCentreProvidersItem from "@/data/gallery-items/match-centre-providers.json";
 import goalkeeperTrackingProvidersItem from "@/data/gallery-items/goalkeeper-tracking-providers.json";
 import statsbombProviderKnowledgeItem from "@/data/gallery-items/statsbomb-provider-knowledge.json";
+import dataPipelinesProvidersItem from "@/data/gallery-items/data-pipelines-providers.json";
 
 const DataProvidersGallery = () => {
   const galleryConfig = getGalleryConfig("industry-knowledge/data-providers")!;
@@ -16,6 +17,7 @@ const DataProvidersGallery = () => {
     "match-centre-providers": matchCentreProvidersItem,
     "goalkeeper-tracking-providers": goalkeeperTrackingProvidersItem,
     "statsbomb-provider-knowledge": statsbombProviderKnowledgeItem,
+    "data-pipelines-providers": dataPipelinesProvidersItem,
   };
 
   // Order items according to gallery config

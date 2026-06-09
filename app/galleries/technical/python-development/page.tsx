@@ -8,6 +8,7 @@ import customMetricsItem from "@/data/gallery-items/custom-metrics.json";
 import statsbombOpenDataItem from "@/data/gallery-items/statsbomb-open-data.json";
 import trackingDataPythonItem from "@/data/gallery-items/tracking-data-python.json";
 import customFontsPythonItem from "@/data/gallery-items/custom-fonts-python.json";
+import dataPipelinesPythonItem from "@/data/gallery-items/data-pipelines-python.json";
 
 const PythonDevelopmentGallery = () => {
   const galleryConfig = getGalleryConfig("technical/python-development")!;
@@ -18,6 +19,7 @@ const PythonDevelopmentGallery = () => {
     "statsbomb-open-data": statsbombOpenDataItem,
     "tracking-data-python": trackingDataPythonItem,
     "custom-fonts-python": customFontsPythonItem,
+    "data-pipelines-python": dataPipelinesPythonItem,
   };
 
   // Order items according to gallery config

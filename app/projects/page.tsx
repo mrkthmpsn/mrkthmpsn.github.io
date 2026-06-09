@@ -10,6 +10,7 @@ import analyticsLibraryThumb from "@/public/images/analytics_library/new_analyti
 import debugBuildupThumb from "@/public/images/galleries/debug_buildup_app.png";
 import twenty3VisThumb from "@/public/images/galleries/twenty3-vis-1.png";
 import twenty3MatchCentreThumb from "@/public/images/galleries/twenty3_match_centre.png";
+import twenty3DataPipelinesThumb from "@/public/images/galleries/twenty3-sport-homepage.png";
 import metricsCreatorThumb from "@/public/images/galleries/streamlit-metrics-creator-webapp.png";
 import twenty3FontTextSizeThumb from "@/public/images/galleries/custom-fonts-example-squawka.png";
 import personalSiteProjectThumb from "@/public/images/galleries/personal-site-may-2024.png";
@@ -41,6 +42,12 @@ const ProjectsPage = () => {
               subtitle="Python | APIs"
               backgroundImage={twenty3MatchCentreThumb}
               internalLink={"/match-centre"}
+            />
+            <ProjectCard
+              title="Data pipelines"
+              subtitle="Python | Data architecture"
+              backgroundImage={twenty3DataPipelinesThumb}
+              internalLink={"/twenty3-data-pipelines"}
             />
             <ProjectCard
               title="Custom fonts & auto-text size"

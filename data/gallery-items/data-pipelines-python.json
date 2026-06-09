@@ -1,0 +1,7 @@
+{
+  "slug": "data-pipelines-python",
+  "title": "Python data pipeline development",
+  "image": "/images/galleries/twenty3-sport-homepage.png",
+  "text": "[2019-] Building and maintaining Python data pipelines for processing football data at scale across multiple providers and competitions. Focus on reliability, clear failure modes, and efficient batch processing for both live match data and historical backfills.",
+  "caseStudySlug": "/twenty3-data-pipelines"
+}

@@ -24,6 +24,7 @@ export const galleryConfigs: GalleryConfig[] = [
     defaultLanding: "tracking-data-python",
     itemOrder: [
       "tracking-data-python",
+      "data-pipelines-python",
       "custom-fonts-python",
       "custom-metrics",
       "statsbomb-open-data"
@@ -55,6 +56,7 @@ export const galleryConfigs: GalleryConfig[] = [
     defaultLanding: "twenty3-data-usage",
     itemOrder: [
       "twenty3-data-usage",
+      "data-pipelines-usage",
       "custom-metrics-data-usage",
       "data-feature-ranker"
     ]
@@ -65,6 +67,7 @@ export const galleryConfigs: GalleryConfig[] = [
     defaultLanding: "match-centre-providers",
     itemOrder: [
       "match-centre-providers",
+      "data-pipelines-providers",
       "statsbomb-provider-knowledge",
       "goalkeeper-tracking-providers"
     ]
@@ -97,6 +100,7 @@ export const galleryConfigs: GalleryConfig[] = [
     defaultLanding: "match-centre-architecture",
     itemOrder: [
       "match-centre-architecture",
+      "data-pipelines-architecture",
       "analytics-library-structure"
     ]
   },

@@ -6,6 +6,7 @@ import { getGalleryConfig } from "@/data/gallery-config";
 // Import gallery items
 import matchCentreArchitectureItem from "@/data/gallery-items/match-centre-architecture.json";
 import analyticsLibraryStructureItem from "@/data/gallery-items/analytics-library-structure.json";
+import dataPipelinesArchitectureItem from "@/data/gallery-items/data-pipelines-architecture.json";
 
 const CodeStructureGallery = () => {
   const galleryConfig = getGalleryConfig("dream-big-build-manageable/code-structure")!;
@@ -14,6 +15,7 @@ const CodeStructureGallery = () => {
   const itemsMap = {
     "match-centre-architecture": matchCentreArchitectureItem,
     "analytics-library-structure": analyticsLibraryStructureItem,
+    "data-pipelines-architecture": dataPipelinesArchitectureItem,
   };
 
   // Order items according to gallery config
