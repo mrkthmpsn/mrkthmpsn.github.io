@@ -8,10 +8,10 @@ module.exports = {
       config.resolve.fallback.fs = false;
     }
 
-    // Add markdown file handling
+    // Add markdown file handling (asset/source is built into webpack 5)
     config.module.rules.push({
       test: /\.md$/,
-      use: "raw-loader",
+      type: "asset/source",
     });
 
     return config;

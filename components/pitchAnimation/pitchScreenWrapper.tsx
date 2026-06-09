@@ -19,7 +19,7 @@ const PitchScreenWrapper = () => {
   const totalFrames = 120;
 
   useEffect(() => {
-    let intervalId: NodeJS.Timer;
+    let intervalId: ReturnType<typeof setInterval>;
     if (isPlaying) {
       intervalId = setInterval(() => {
         setFrameIndex((currentIndex) => (currentIndex + 1) % totalFrames);

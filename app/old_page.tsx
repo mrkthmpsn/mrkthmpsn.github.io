@@ -9,7 +9,7 @@ import xGTimelineThumb from "@/public/images/galleries/xg_timeline_design_thumb.
 import codingTutorialsThumb from "@/public/images/galleries/coding_tutorials_thumb.png";
 import realMadridD3Thumb from "@/public/images/galleries/real_madrid_d3_thumb.png";
 import trackingDataProjectThumb from "@/public/images/galleries/tracking_data_thumb.png";
-import statsbombLabellingThumb from "public/images/galleries/statsbomb_labelling_thumb.png";
+import statsbombLabellingThumb from "@/public/images/galleries/statsbomb_labelling_thumb.png";
 
 const HomePage = () => {
   return (
