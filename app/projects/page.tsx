@@ -75,6 +75,7 @@ const ProjectsPage = () => {
               subtitle="Upstash Redis | Game design"
               backgroundImage={dataFeatureRankerThumb}
               internalLink={"/data-feature-ranker"}
+              subtitleColour="white"
             />
             <ProjectCard
               title="Football tracker app"
