@@ -38,43 +38,34 @@ const PitchControlAnimation: React.FC<PitchControlAnimationProps> = ({
     let pitchHeight: number;
     
     if (screenIsLandscape) {
-      // Landscape screen (mobile): pitch in portrait orientation (rotated 90°)
-      // After rotation, pitch length must fit within container height
-      // When rotated, the d3-soccer "height" parameter becomes the final rendered width
-      // We want the rotated pitch length to fit in containerHeight
-      // Since pitch ratio is 1.6:1, and after rotation "height" becomes width:
-      // originalPitchLength = pitchHeight * 1.6, and we want this ≤ containerHeight
-      // Now using actual measured container space with minimal buffer
-      const maxByHeight = (containerHeight * 0.95) / 1.6;
-      const maxByWidth = containerWidth * 0.95;
-      pitchHeight = Math.min(maxByHeight, maxByWidth);
-    } else {
-      // Portrait screen (desktop/tablet): pitch in landscape orientation (normal)  
-      // Pitch length must fit within container width
-      // In d3-soccer, .height() sets the shorter dimension (pitch width)
-      // pitchLength = pitchHeight * 1.6, and we want this ≤ containerWidth
-      // Now using actual measured container space with minimal buffer
+      // Landscape screen: pitch renders natively in landscape (no rotation)
+      // Pitch length runs along containerWidth
       const maxByWidth = (containerWidth * 0.95) / 1.6;
       const maxByHeight = containerHeight * 0.95;
       pitchHeight = Math.min(maxByWidth, maxByHeight);
+    } else {
+      // Portrait screen: pitch rotated 90° to fit vertically
+      // Pitch length runs along containerHeight
+      const maxByHeight = (containerHeight * 0.95) / 1.6;
+      const maxByWidth = containerWidth * 0.95;
+      pitchHeight = Math.min(maxByHeight, maxByWidth);
     }
 
     const pitch = d3_soccer.pitch()
       .height(pitchHeight)
-      .rotate(screenIsLandscape ? 90 : 0);
-      
+      .rotate(screenIsLandscape ? 0 : 90);
+
     svgRef.call(pitch);
-    
+
     // Size SVG properly with percentage-based approach but constrain aspect ratio
     const svg = svgRef.select("svg");
     if (!svg.empty()) {
-      // Fix viewBox for rotated pitch
       if (screenIsLandscape) {
-        // Landscape screen: pitch rotated 90°, so swap viewBox dimensions
-        svg.attr("viewBox", "-2 -2 72 109");
-      } else {
-        // Portrait screen: pitch normal orientation
+        // Landscape screen: no rotation, standard landscape viewBox
         svg.attr("viewBox", "-2 -2 109 72");
+      } else {
+        // Portrait screen: rotated 90°, swap viewBox dimensions
+        svg.attr("viewBox", "-2 -2 72 109");
       }
       
       // Use percentage sizing but with strict containment

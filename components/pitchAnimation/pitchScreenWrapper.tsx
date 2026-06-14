@@ -98,11 +98,11 @@ const PitchScreenWrapper = () => {
     setWrapperTeamB(wrapperTeamB);
     setWrapperBallPosition(wrapperBallPosition);
     setWrapperDefensiveBlock(wrapperDefensiveBlock);
-  }, [framesData]);
+  }, []);
 
   return (
     <>
-      <div className="w-full flex flex-col" style={{ height: 'calc(100vh - 120px)' }}>
+      <div className="w-full flex flex-col h-full">
         {/* <div className="flex items-center justify-center space-x-4 mb-4 flex-shrink-0">
           <button 
             onClick={togglePlayPause}
@@ -131,14 +131,14 @@ const PitchScreenWrapper = () => {
             }
           />
         </div>
-        <p className="text-xs text-center italic mt-2 flex-shrink-0">
+        <p className="text-[10px] text-right italic mt-1 flex-shrink-0 text-gray-400">
           Animation using{" "}
           <a href="https://github.com/metrica-sports/sample-data">
             Metrica Sports data
           </a>{" "}
-          and{" "}
+          &{" "}
           <a href="https://github.com/probberechts/d3-soccer">
-            d3-soccer package
+            d3-soccer
           </a>
         </p>
       </div>
