@@ -25,17 +25,18 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ transparent = false }) => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a
           href="/"
-          className="text-sm font-['Roboto_Slab'] text-brandLightBlue-600 no-underline tracking-wide uppercase opacity-60 hover:opacity-100 transition-opacity"
+          className="text-sm font-['Barlow'] text-brandLightBlue-950 no-underline tracking-wide uppercase opacity-60 hover:opacity-100 transition-opacity"
         >
           Home
         </a>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden bg-transparent border-0 p-0 text-brandLightBlue-500 opacity-60"
+          className="md:hidden bg-transparent border-0 p-0 text-brandLightBlue-950 opacity-60 flex items-center gap-1.5"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
+          <span className="text-sm font-['Barlow'] tracking-wide uppercase">More</span>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
             {mobileOpen ? (
               <path d="M4 4l12 12M16 4L4 16" />
@@ -52,7 +53,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ transparent = false }) => {
               key={link.label}
               href={link.href}
               {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="text-sm text-brandLightBlue-600 no-underline tracking-wide opacity-60 hover:opacity-100 transition-opacity"
+              className="text-sm text-brandLightBlue-950 no-underline tracking-wide opacity-60 hover:opacity-100 transition-opacity"
             >
               {link.label}
             </a>
@@ -68,7 +69,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ transparent = false }) => {
               key={link.label}
               href={link.href}
               {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="text-sm text-brandLightBlue-600 no-underline tracking-wide opacity-60 hover:opacity-100 transition-opacity"
+              className="text-sm text-brandLightBlue-950 no-underline tracking-wide opacity-60 hover:opacity-100 transition-opacity"
             >
               {link.label}
             </a>

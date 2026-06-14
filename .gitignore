@@ -7,6 +7,8 @@
 
 # testing
 /coverage
+/playwright-report
+/test-results
 
 # next.js
 /.next/
@@ -39,3 +41,6 @@ next-env.d.ts
 
 # project log
 project-log.txt
+
+# Windows NUL device artifact
+nul
