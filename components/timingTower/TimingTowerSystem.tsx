@@ -144,7 +144,6 @@ const TimingTowerSystem: React.FC = () => {
           isIdle={isIdle}
           onSelectItem={handleSelectItem}
           onHoverItem={handleSelectItem}
-          onMouseLeave={handleMouseLeave}
         />
       </div>
 

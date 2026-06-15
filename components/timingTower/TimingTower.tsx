@@ -9,7 +9,6 @@ interface TimingTowerProps {
   isIdle: boolean;
   onSelectItem: (id: string) => void;
   onHoverItem: (id: string) => void;
-  onMouseLeave: () => void;
 }
 
 const TimingTower: React.FC<TimingTowerProps> = ({
@@ -18,7 +17,6 @@ const TimingTower: React.FC<TimingTowerProps> = ({
   isIdle,
   onSelectItem,
   onHoverItem,
-  onMouseLeave,
 }) => {
   const activeItem = items.find((item) => item.id === activeItemId) ?? null;
 
@@ -52,7 +50,6 @@ const TimingTower: React.FC<TimingTowerProps> = ({
                 isLast={index === items.length - 1}
                 onSelect={onSelectItem}
                 onHover={onHoverItem}
-                onMouseLeave={onMouseLeave}
               />
               {/* Mobile inline preview — rendered after active row */}
               {activeItemId === item.id && (
