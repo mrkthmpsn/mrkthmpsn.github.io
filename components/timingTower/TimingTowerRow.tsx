@@ -9,7 +9,6 @@ interface TimingTowerRowProps {
   isLast: boolean;
   onSelect: (id: string) => void;
   onHover: (id: string) => void;
-  onMouseLeave: () => void;
 }
 
 const TimingTowerRow: React.FC<TimingTowerRowProps> = ({
@@ -19,7 +18,6 @@ const TimingTowerRow: React.FC<TimingTowerRowProps> = ({
   isLast,
   onSelect,
   onHover,
-  onMouseLeave,
 }) => {
   const positionBg =
     item.position === 1
@@ -43,7 +41,6 @@ const TimingTowerRow: React.FC<TimingTowerRowProps> = ({
       className={`flex items-center gap-0 cursor-pointer transition-colors duration-300 ${rowBg} ${!isLast ? 'border-b border-white/10' : ''}`}
       onClick={() => onSelect(item.id)}
       onMouseEnter={() => onHover(item.id)}
-      onMouseLeave={onMouseLeave}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();

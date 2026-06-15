@@ -13,11 +13,12 @@ const TimingTowerPreview: React.FC<TimingTowerPreviewProps> = ({
   if (variant === 'desktop') {
     return (
       <div
-        className={`hidden md:block transition-all duration-500 ease-in-out ${
+        data-testid="desktop-preview"
+        className={`hidden md:block w-72 transition-all duration-500 ease-in-out ${
           item
-            ? 'opacity-100 translate-x-0 max-w-sm'
-            : 'opacity-0 -translate-x-4 max-w-0'
-        } overflow-hidden`}
+            ? 'opacity-100 translate-x-0'
+            : 'opacity-0 -translate-x-4 pointer-events-none'
+        }`}
       >
         {item && <PreviewContent item={item} />}
       </div>
@@ -27,6 +28,7 @@ const TimingTowerPreview: React.FC<TimingTowerPreviewProps> = ({
   // Mobile: inline accordion
   return (
     <div
+      data-testid="mobile-preview"
       className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${
         item ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
       }`}
@@ -39,8 +41,7 @@ const TimingTowerPreview: React.FC<TimingTowerPreviewProps> = ({
 const PreviewContent: React.FC<{ item: TimingTowerItem }> = ({ item }) => {
   return (
     <div
-      key={item.id}
-      className="bg-gray-300 md:bg-gray-300/70 md:backdrop-blur-xl border border-white/40 rounded-none md:rounded-xl p-2 md:p-4 animate-fadeIn w-full md:w-72"
+      className="bg-gray-300 md:bg-gray-300/70 md:backdrop-blur-xl border border-white/40 rounded-none md:rounded-xl p-2 md:p-4 w-full md:w-72"
     >
       {/* Thumbnail */}
       <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-sm">
