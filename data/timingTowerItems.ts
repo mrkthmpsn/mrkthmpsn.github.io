@@ -184,18 +184,18 @@ const timingTowerItems: TimingTowerItem[] = [
     tags: ['React', 'Web Game'],
   },
   {
-    id: 'processing-war',
+    id: 'analytics-library',
     position: 12,
-    title: 'Who Will Win the Processing War?',
-    subtitle: 'The Biz.',
-    type: 'blog',
-    team: 'writing',
-    href: 'https://www.getgoalsideanalytics.com/who-will-win-processing-war/',
-    isExternal: true,
-    thumbnail: '/images/galleries/get_goalside_thumb.png',
+    title: 'Analytics Library',
+    subtitle: 'Full Stack',
+    type: 'project',
+    team: 'react',
+    href: '/analytics-library',
+    isExternal: false,
+    thumbnail: '/images/analytics_library/analytics_library_2026_home.png',
     description:
-      'A blog poking at the competing (and sometimes conflicting) interests in the football data provision industry.',
-    tags: ['Industry analysis', 'Writing'],
+      'A personal library for reading, rating and annotating football analytics papers, deployed on Scaleway with a mobile-first frontend.',
+    tags: ['Django', 'React', 'Scaleway'],
   },
 ];
 

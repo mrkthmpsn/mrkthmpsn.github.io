@@ -13,7 +13,7 @@ import twenty3MatchCentreThumb from "@/public/images/galleries/twenty3_match_cen
 import twenty3DataPipelinesThumb from "@/public/images/galleries/twenty3-sport-homepage.png";
 import metricsCreatorThumb from "@/public/images/galleries/streamlit-metrics-creator-webapp.png";
 import twenty3FontTextSizeThumb from "@/public/images/galleries/custom-fonts-example-squawka.png";
-import personalSiteProjectThumb from "@/public/images/galleries/personal-site-may-2024.png";
+import personalSiteProjectThumb from "@/public/images/galleries/personal-site-sep-2026.png";
 import footballTrackerAppThumb from "@/public/images/galleries/football-tracker-app-thumb.png";
 import dataFeatureRankerThumb from "@/public/images/data-feature-ranker/landing-page.png"
 
