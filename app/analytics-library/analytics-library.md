@@ -2,6 +2,7 @@
 
 - Django
 - React
+- Scaleway
 
 ## Summary
 
